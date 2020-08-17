@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		63490CA624EA619400E09BF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63490CA524EA619400E09BF5 /* AppDelegate.swift */; };
-		63490CA824EA619400E09BF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63490CA724EA619400E09BF5 /* SceneDelegate.swift */; };
 		63490CAA24EA619400E09BF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63490CA924EA619400E09BF5 /* ViewController.swift */; };
 		63490CAD24EA619400E09BF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63490CAB24EA619400E09BF5 /* Main.storyboard */; };
 		63490CAF24EA619400E09BF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63490CAE24EA619400E09BF5 /* Assets.xcassets */; };
@@ -20,6 +19,12 @@
 		63490CDB24EA664900E09BF5 /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63490CDA24EA664900E09BF5 /* BaseWebViewController.swift */; };
 		63490CDE24EA7E5B00E09BF5 /* H5Bridge.html in Resources */ = {isa = PBXBuildFile; fileRef = 63490CDD24EA7E5A00E09BF5 /* H5Bridge.html */; };
 		63490CE024EA84B400E09BF5 /* LBSJSHandleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63490CDF24EA84B400E09BF5 /* LBSJSHandleService.swift */; };
+		635E6D1824EAC67E000BACC9 /* TagsViewDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D1624EAC67E000BACC9 /* TagsViewDemoController.swift */; };
+		635E6D1924EAC67E000BACC9 /* TagsViewDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635E6D1724EAC67E000BACC9 /* TagsViewDemoController.xib */; };
+		635E6D1B24EAC7BE000BACC9 /* LBSTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D1A24EAC7BE000BACC9 /* LBSTagsView.swift */; };
+		635E6D1E24EAC95E000BACC9 /* TagsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D1C24EAC95E000BACC9 /* TagsTableViewCell.swift */; };
+		635E6D1F24EAC95E000BACC9 /* TagsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635E6D1D24EAC95E000BACC9 /* TagsTableViewCell.xib */; };
+		635E6D2124EACF01000BACC9 /* LBSTagsViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D2024EACF01000BACC9 /* LBSTagsViewItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +47,6 @@
 /* Begin PBXFileReference section */
 		63490CA224EA619400E09BF5 /* iOS-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63490CA524EA619400E09BF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		63490CA724EA619400E09BF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		63490CA924EA619400E09BF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		63490CAC24EA619400E09BF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63490CAE24EA619400E09BF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +63,12 @@
 		63490CDA24EA664900E09BF5 /* BaseWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
 		63490CDD24EA7E5A00E09BF5 /* H5Bridge.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = H5Bridge.html; sourceTree = "<group>"; };
 		63490CDF24EA84B400E09BF5 /* LBSJSHandleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBSJSHandleService.swift; sourceTree = "<group>"; };
+		635E6D1624EAC67E000BACC9 /* TagsViewDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsViewDemoController.swift; sourceTree = "<group>"; };
+		635E6D1724EAC67E000BACC9 /* TagsViewDemoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagsViewDemoController.xib; sourceTree = "<group>"; };
+		635E6D1A24EAC7BE000BACC9 /* LBSTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBSTagsView.swift; sourceTree = "<group>"; };
+		635E6D1C24EAC95E000BACC9 /* TagsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsTableViewCell.swift; sourceTree = "<group>"; };
+		635E6D1D24EAC95E000BACC9 /* TagsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagsTableViewCell.xib; sourceTree = "<group>"; };
+		635E6D2024EACF01000BACC9 /* LBSTagsViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBSTagsViewItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,11 +119,11 @@
 		63490CA424EA619400E09BF5 /* iOS-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				635E6D1324EAC63A000BACC9 /* TagsViewDemo */,
 				63490CD924EA65F600E09BF5 /* Web */,
 				63490CA524EA619400E09BF5 /* AppDelegate.swift */,
 				63490CD524EA625300E09BF5 /* Test_EntryViewController.swift */,
 				63490CD724EA62E600E09BF5 /* Test_EntryViewControllerExt.swift */,
-				63490CA724EA619400E09BF5 /* SceneDelegate.swift */,
 				63490CA924EA619400E09BF5 /* ViewController.swift */,
 				63490CAB24EA619400E09BF5 /* Main.storyboard */,
 				63490CAE24EA619400E09BF5 /* Assets.xcassets */,
@@ -149,6 +159,19 @@
 				63490CDF24EA84B400E09BF5 /* LBSJSHandleService.swift */,
 			);
 			path = Web;
+			sourceTree = "<group>";
+		};
+		635E6D1324EAC63A000BACC9 /* TagsViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				635E6D1A24EAC7BE000BACC9 /* LBSTagsView.swift */,
+				635E6D2024EACF01000BACC9 /* LBSTagsViewItem.swift */,
+				635E6D1624EAC67E000BACC9 /* TagsViewDemoController.swift */,
+				635E6D1C24EAC95E000BACC9 /* TagsTableViewCell.swift */,
+				635E6D1D24EAC95E000BACC9 /* TagsTableViewCell.xib */,
+				635E6D1724EAC67E000BACC9 /* TagsViewDemoController.xib */,
+			);
+			path = TagsViewDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +280,9 @@
 			files = (
 				63490CB224EA619400E09BF5 /* LaunchScreen.storyboard in Resources */,
 				63490CAF24EA619400E09BF5 /* Assets.xcassets in Resources */,
+				635E6D1924EAC67E000BACC9 /* TagsViewDemoController.xib in Resources */,
 				63490CDE24EA7E5B00E09BF5 /* H5Bridge.html in Resources */,
+				635E6D1F24EAC95E000BACC9 /* TagsTableViewCell.xib in Resources */,
 				63490CAD24EA619400E09BF5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,13 +308,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635E6D2124EACF01000BACC9 /* LBSTagsViewItem.swift in Sources */,
 				63490CAA24EA619400E09BF5 /* ViewController.swift in Sources */,
 				63490CDB24EA664900E09BF5 /* BaseWebViewController.swift in Sources */,
+				635E6D1824EAC67E000BACC9 /* TagsViewDemoController.swift in Sources */,
 				63490CD624EA625300E09BF5 /* Test_EntryViewController.swift in Sources */,
 				63490CA624EA619400E09BF5 /* AppDelegate.swift in Sources */,
-				63490CA824EA619400E09BF5 /* SceneDelegate.swift in Sources */,
 				63490CE024EA84B400E09BF5 /* LBSJSHandleService.swift in Sources */,
 				63490CD824EA62E600E09BF5 /* Test_EntryViewControllerExt.swift in Sources */,
+				635E6D1B24EAC7BE000BACC9 /* LBSTagsView.swift in Sources */,
+				635E6D1E24EAC95E000BACC9 /* TagsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "iOS-Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,6 +510,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "iOS-Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -26,6 +26,14 @@ extension Test_EntryViewController {
         }
         dataSource.append(h5Bridge)
         
+        let tagsView = Test_CellModel.init(name: "TagsView") { () -> (Void) in
+            let ctrl = TagsViewDemoController.init()
+            self.navigationController?.pushViewController(ctrl, animated: true)
+        }
+        dataSource.append(tagsView)
+        
+        
+        
         return dataSource
     }
 }
