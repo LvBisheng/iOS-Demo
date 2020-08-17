@@ -24,6 +24,7 @@ class BaseWebViewController: UIViewController {
         let configuration = WKWebViewConfiguration()
         configuration.preferences = preferences
         let userContentCtrl = WKUserContentController.init()
+        userContentCtrl.add(self, name: kLBSJSToNativeMsgName)
         configuration.userContentController = userContentCtrl
         let webView = WKWebView(frame: view.bounds, configuration: configuration)
         view.addSubview(webView)
@@ -42,6 +43,8 @@ class BaseWebViewController: UIViewController {
         webView.removeObserver(self, forKeyPath: "canGoBack", context: nil)
         webView.removeObserver(self, forKeyPath: "estimatedProgress", context: nil)
         webView.removeObserver(self, forKeyPath: "title", context: nil)
+        
+        print("销毁了")
     }
     
     override func viewDidLoad() {
@@ -148,5 +151,10 @@ extension BaseWebViewController {
             }
         }
     }
-    
+}
+
+extension BaseWebViewController: WKScriptMessageHandler {
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        LBSJSHandleService.shared.handleJSMessage(message, currentController: self)
+    }
 }

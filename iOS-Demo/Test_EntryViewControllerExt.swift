@@ -19,6 +19,12 @@ extension Test_EntryViewController {
         }
         dataSource.append(html)
         
+        let h5Bridge = Test_CellModel.init(name: "和H5交互") { () -> (Void) in
+            let ctrl = BaseWebViewController.init()
+            ctrl.type = .loadHtml(fileName: "H5Bridge")
+            self.navigationController?.pushViewController(ctrl, animated: true)
+        }
+        dataSource.append(h5Bridge)
         
         return dataSource
     }
