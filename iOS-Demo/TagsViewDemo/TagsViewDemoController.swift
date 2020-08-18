@@ -10,9 +10,17 @@ import UIKit
 
 class TagsViewDemoController: UIViewController {
 
+    var dataSource: [TagsTableViewCellModel] = []
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for _ in 0...15 {
+            let cellModel = TagsTableViewCellModel.init()
+            cellModel.test()
+            dataSource.append(cellModel)
+        }
+     
         
         tableView.register(UINib.init(nibName: "TagsTableViewCell", bundle: nil), forCellReuseIdentifier: "TagsTableViewCell")
 
@@ -25,13 +33,14 @@ class TagsViewDemoController: UIViewController {
 
 extension TagsViewDemoController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TagsTableViewCell")
-        
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TagsTableViewCell") as! TagsTableViewCell
+        let model = dataSource[indexPath.row]
+        cell.cellModel = model
+        return cell
     }
 }
 

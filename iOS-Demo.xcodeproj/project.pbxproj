@@ -24,7 +24,11 @@
 		635E6D1B24EAC7BE000BACC9 /* LBSTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D1A24EAC7BE000BACC9 /* LBSTagsView.swift */; };
 		635E6D1E24EAC95E000BACC9 /* TagsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D1C24EAC95E000BACC9 /* TagsTableViewCell.swift */; };
 		635E6D1F24EAC95E000BACC9 /* TagsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635E6D1D24EAC95E000BACC9 /* TagsTableViewCell.xib */; };
-		635E6D2124EACF01000BACC9 /* LBSTagsViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D2024EACF01000BACC9 /* LBSTagsViewItem.swift */; };
+		635E6D2124EACF01000BACC9 /* LBSTagsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D2024EACF01000BACC9 /* LBSTagsItemView.swift */; };
+		63A0B79E24EB706F00F2C9DA /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A0B79D24EB706F00F2C9DA /* UIViewControllerExtension.swift */; };
+		63A0B7A024EB720B00F2C9DA /* UIApplicatonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A0B79F24EB720B00F2C9DA /* UIApplicatonExtension.swift */; };
+		63A0B7A224EBB41F00F2C9DA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A0B7A124EBB41F00F2C9DA /* StringExtension.swift */; };
+		63A0B7A424EBB7FC00F2C9DA /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A0B7A324EBB7FC00F2C9DA /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +72,11 @@
 		635E6D1A24EAC7BE000BACC9 /* LBSTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBSTagsView.swift; sourceTree = "<group>"; };
 		635E6D1C24EAC95E000BACC9 /* TagsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsTableViewCell.swift; sourceTree = "<group>"; };
 		635E6D1D24EAC95E000BACC9 /* TagsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagsTableViewCell.xib; sourceTree = "<group>"; };
-		635E6D2024EACF01000BACC9 /* LBSTagsViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBSTagsViewItem.swift; sourceTree = "<group>"; };
+		635E6D2024EACF01000BACC9 /* LBSTagsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBSTagsItemView.swift; sourceTree = "<group>"; };
+		63A0B79D24EB706F00F2C9DA /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		63A0B79F24EB720B00F2C9DA /* UIApplicatonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicatonExtension.swift; sourceTree = "<group>"; };
+		63A0B7A124EBB41F00F2C9DA /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		63A0B7A324EBB7FC00F2C9DA /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,7 @@
 		63490CA424EA619400E09BF5 /* iOS-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				63A0B79C24EB700A00F2C9DA /* Extension */,
 				635E6D1324EAC63A000BACC9 /* TagsViewDemo */,
 				63490CD924EA65F600E09BF5 /* Web */,
 				63490CA524EA619400E09BF5 /* AppDelegate.swift */,
@@ -165,13 +174,24 @@
 			isa = PBXGroup;
 			children = (
 				635E6D1A24EAC7BE000BACC9 /* LBSTagsView.swift */,
-				635E6D2024EACF01000BACC9 /* LBSTagsViewItem.swift */,
+				635E6D2024EACF01000BACC9 /* LBSTagsItemView.swift */,
 				635E6D1624EAC67E000BACC9 /* TagsViewDemoController.swift */,
 				635E6D1C24EAC95E000BACC9 /* TagsTableViewCell.swift */,
 				635E6D1D24EAC95E000BACC9 /* TagsTableViewCell.xib */,
 				635E6D1724EAC67E000BACC9 /* TagsViewDemoController.xib */,
 			);
 			path = TagsViewDemo;
+			sourceTree = "<group>";
+		};
+		63A0B79C24EB700A00F2C9DA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				63A0B79D24EB706F00F2C9DA /* UIViewControllerExtension.swift */,
+				63A0B79F24EB720B00F2C9DA /* UIApplicatonExtension.swift */,
+				63A0B7A324EBB7FC00F2C9DA /* UIColorExtension.swift */,
+				63A0B7A124EBB41F00F2C9DA /* StringExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,7 +328,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				635E6D2124EACF01000BACC9 /* LBSTagsViewItem.swift in Sources */,
+				63A0B7A024EB720B00F2C9DA /* UIApplicatonExtension.swift in Sources */,
+				63A0B7A424EBB7FC00F2C9DA /* UIColorExtension.swift in Sources */,
+				635E6D2124EACF01000BACC9 /* LBSTagsItemView.swift in Sources */,
+				63A0B79E24EB706F00F2C9DA /* UIViewControllerExtension.swift in Sources */,
 				63490CAA24EA619400E09BF5 /* ViewController.swift in Sources */,
 				63490CDB24EA664900E09BF5 /* BaseWebViewController.swift in Sources */,
 				635E6D1824EAC67E000BACC9 /* TagsViewDemoController.swift in Sources */,
@@ -317,6 +340,7 @@
 				63490CE024EA84B400E09BF5 /* LBSJSHandleService.swift in Sources */,
 				63490CD824EA62E600E09BF5 /* Test_EntryViewControllerExt.swift in Sources */,
 				635E6D1B24EAC7BE000BACC9 /* LBSTagsView.swift in Sources */,
+				63A0B7A224EBB41F00F2C9DA /* StringExtension.swift in Sources */,
 				635E6D1E24EAC95E000BACC9 /* TagsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

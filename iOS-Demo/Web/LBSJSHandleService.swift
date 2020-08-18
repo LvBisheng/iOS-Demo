@@ -16,7 +16,7 @@ struct LBSJSHandleService {
     static let shared = LBSJSHandleService.init()
     func handleJSMessage(_ message: WKScriptMessage, currentController: UIViewController) {
         if message.name == kLBSJSToNativeMsgName {
-            print("js调用原生")
+            UIApplication.currentViewController()?.alert(message: "js调用原生")
             return
         }
     }
