@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6317DAED24EBD2DE000E6DC4 /* LBSNomalTagsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6317DAEC24EBD2DE000E6DC4 /* LBSNomalTagsItemView.swift */; };
 		63490CA624EA619400E09BF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63490CA524EA619400E09BF5 /* AppDelegate.swift */; };
 		63490CAA24EA619400E09BF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63490CA924EA619400E09BF5 /* ViewController.swift */; };
 		63490CAD24EA619400E09BF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63490CAB24EA619400E09BF5 /* Main.storyboard */; };
@@ -19,8 +20,8 @@
 		63490CDB24EA664900E09BF5 /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63490CDA24EA664900E09BF5 /* BaseWebViewController.swift */; };
 		63490CDE24EA7E5B00E09BF5 /* H5Bridge.html in Resources */ = {isa = PBXBuildFile; fileRef = 63490CDD24EA7E5A00E09BF5 /* H5Bridge.html */; };
 		63490CE024EA84B400E09BF5 /* LBSJSHandleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63490CDF24EA84B400E09BF5 /* LBSJSHandleService.swift */; };
-		635E6D1824EAC67E000BACC9 /* TagsViewDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D1624EAC67E000BACC9 /* TagsViewDemoController.swift */; };
-		635E6D1924EAC67E000BACC9 /* TagsViewDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635E6D1724EAC67E000BACC9 /* TagsViewDemoController.xib */; };
+		635E6D1824EAC67E000BACC9 /* TableTagsDemoCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D1624EAC67E000BACC9 /* TableTagsDemoCtrl.swift */; };
+		635E6D1924EAC67E000BACC9 /* TableTagsDemoCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635E6D1724EAC67E000BACC9 /* TableTagsDemoCtrl.xib */; };
 		635E6D1B24EAC7BE000BACC9 /* LBSTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D1A24EAC7BE000BACC9 /* LBSTagsView.swift */; };
 		635E6D1E24EAC95E000BACC9 /* TagsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D1C24EAC95E000BACC9 /* TagsTableViewCell.swift */; };
 		635E6D1F24EAC95E000BACC9 /* TagsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635E6D1D24EAC95E000BACC9 /* TagsTableViewCell.xib */; };
@@ -29,6 +30,8 @@
 		63A0B7A024EB720B00F2C9DA /* UIApplicatonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A0B79F24EB720B00F2C9DA /* UIApplicatonExtension.swift */; };
 		63A0B7A224EBB41F00F2C9DA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A0B7A124EBB41F00F2C9DA /* StringExtension.swift */; };
 		63A0B7A424EBB7FC00F2C9DA /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A0B7A324EBB7FC00F2C9DA /* UIColorExtension.swift */; };
+		63A0B7AC24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A0B7AA24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.swift */; };
+		63A0B7AD24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63A0B7AB24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6317DAEC24EBD2DE000E6DC4 /* LBSNomalTagsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBSNomalTagsItemView.swift; sourceTree = "<group>"; };
 		63490CA224EA619400E09BF5 /* iOS-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63490CA524EA619400E09BF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63490CA924EA619400E09BF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,8 +71,8 @@
 		63490CDA24EA664900E09BF5 /* BaseWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
 		63490CDD24EA7E5A00E09BF5 /* H5Bridge.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = H5Bridge.html; sourceTree = "<group>"; };
 		63490CDF24EA84B400E09BF5 /* LBSJSHandleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBSJSHandleService.swift; sourceTree = "<group>"; };
-		635E6D1624EAC67E000BACC9 /* TagsViewDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsViewDemoController.swift; sourceTree = "<group>"; };
-		635E6D1724EAC67E000BACC9 /* TagsViewDemoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagsViewDemoController.xib; sourceTree = "<group>"; };
+		635E6D1624EAC67E000BACC9 /* TableTagsDemoCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTagsDemoCtrl.swift; sourceTree = "<group>"; };
+		635E6D1724EAC67E000BACC9 /* TableTagsDemoCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableTagsDemoCtrl.xib; sourceTree = "<group>"; };
 		635E6D1A24EAC7BE000BACC9 /* LBSTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBSTagsView.swift; sourceTree = "<group>"; };
 		635E6D1C24EAC95E000BACC9 /* TagsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsTableViewCell.swift; sourceTree = "<group>"; };
 		635E6D1D24EAC95E000BACC9 /* TagsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagsTableViewCell.xib; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 		63A0B79F24EB720B00F2C9DA /* UIApplicatonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicatonExtension.swift; sourceTree = "<group>"; };
 		63A0B7A124EBB41F00F2C9DA /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		63A0B7A324EBB7FC00F2C9DA /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		63A0B7AA24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomalTagsDemoCtrl.swift; sourceTree = "<group>"; };
+		63A0B7AB24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NomalTagsDemoCtrl.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,12 +179,9 @@
 		635E6D1324EAC63A000BACC9 /* TagsViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				635E6D1A24EAC7BE000BACC9 /* LBSTagsView.swift */,
-				635E6D2024EACF01000BACC9 /* LBSTagsItemView.swift */,
-				635E6D1624EAC67E000BACC9 /* TagsViewDemoController.swift */,
-				635E6D1C24EAC95E000BACC9 /* TagsTableViewCell.swift */,
-				635E6D1D24EAC95E000BACC9 /* TagsTableViewCell.xib */,
-				635E6D1724EAC67E000BACC9 /* TagsViewDemoController.xib */,
+				63A0B7A724EBCAF100F2C9DA /* NomalDemo */,
+				63A0B7A624EBCAD900F2C9DA /* TableDemo */,
+				63A0B7A524EBCABB00F2C9DA /* LBSTagsView */,
 			);
 			path = TagsViewDemo;
 			sourceTree = "<group>";
@@ -192,6 +195,36 @@
 				63A0B7A124EBB41F00F2C9DA /* StringExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		63A0B7A524EBCABB00F2C9DA /* LBSTagsView */ = {
+			isa = PBXGroup;
+			children = (
+				635E6D1A24EAC7BE000BACC9 /* LBSTagsView.swift */,
+				6317DAEC24EBD2DE000E6DC4 /* LBSNomalTagsItemView.swift */,
+			);
+			path = LBSTagsView;
+			sourceTree = "<group>";
+		};
+		63A0B7A624EBCAD900F2C9DA /* TableDemo */ = {
+			isa = PBXGroup;
+			children = (
+				635E6D2024EACF01000BACC9 /* LBSTagsItemView.swift */,
+				635E6D1624EAC67E000BACC9 /* TableTagsDemoCtrl.swift */,
+				635E6D1724EAC67E000BACC9 /* TableTagsDemoCtrl.xib */,
+				635E6D1C24EAC95E000BACC9 /* TagsTableViewCell.swift */,
+				635E6D1D24EAC95E000BACC9 /* TagsTableViewCell.xib */,
+			);
+			path = TableDemo;
+			sourceTree = "<group>";
+		};
+		63A0B7A724EBCAF100F2C9DA /* NomalDemo */ = {
+			isa = PBXGroup;
+			children = (
+				63A0B7AA24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.swift */,
+				63A0B7AB24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.xib */,
+			);
+			path = NomalDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +333,8 @@
 			files = (
 				63490CB224EA619400E09BF5 /* LaunchScreen.storyboard in Resources */,
 				63490CAF24EA619400E09BF5 /* Assets.xcassets in Resources */,
-				635E6D1924EAC67E000BACC9 /* TagsViewDemoController.xib in Resources */,
+				635E6D1924EAC67E000BACC9 /* TableTagsDemoCtrl.xib in Resources */,
+				63A0B7AD24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.xib in Resources */,
 				63490CDE24EA7E5B00E09BF5 /* H5Bridge.html in Resources */,
 				635E6D1F24EAC95E000BACC9 /* TagsTableViewCell.xib in Resources */,
 				63490CAD24EA619400E09BF5 /* Main.storyboard in Resources */,
@@ -333,8 +367,10 @@
 				635E6D2124EACF01000BACC9 /* LBSTagsItemView.swift in Sources */,
 				63A0B79E24EB706F00F2C9DA /* UIViewControllerExtension.swift in Sources */,
 				63490CAA24EA619400E09BF5 /* ViewController.swift in Sources */,
+				63A0B7AC24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.swift in Sources */,
+				6317DAED24EBD2DE000E6DC4 /* LBSNomalTagsItemView.swift in Sources */,
 				63490CDB24EA664900E09BF5 /* BaseWebViewController.swift in Sources */,
-				635E6D1824EAC67E000BACC9 /* TagsViewDemoController.swift in Sources */,
+				635E6D1824EAC67E000BACC9 /* TableTagsDemoCtrl.swift in Sources */,
 				63490CD624EA625300E09BF5 /* Test_EntryViewController.swift in Sources */,
 				63490CA624EA619400E09BF5 /* AppDelegate.swift in Sources */,
 				63490CE024EA84B400E09BF5 /* LBSJSHandleService.swift in Sources */,

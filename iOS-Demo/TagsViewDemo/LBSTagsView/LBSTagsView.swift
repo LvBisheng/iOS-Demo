@@ -8,7 +8,25 @@
 
 import UIKit
 
+enum LBSTagsViewSelectFailReaon {
+    case beyond
+    case disable
+}
+
+protocol LBSTagsViewDelegate: NSObjectProtocol {
+    func LBSTagsViewSelectedFail(view: LBSTagsView, selectedItemModel: LBSTagsItemViewModel, failReason: LBSTagsViewSelectFailReaon)
+    func LBSTagsViewSelected(view: LBSTagsView, selectedItemModel: LBSTagsItemViewModel)
+}
+
+extension LBSTagsViewDelegate {
+    func LBSTagsViewSelectedFail(view: LBSTagsView, selectedItemModel: LBSTagsItemViewModel, failReason: LBSTagsViewSelectFailReaon) {}
+    func LBSTagsViewSelected(view: LBSTagsView, selectedItemModel: LBSTagsItemViewModel) {}
+}
+
 class LBSTagsView: UIView {
+    
+    weak var delegate: LBSTagsViewDelegate?
+
     
     var maxWidth: CGFloat = 0
     private var itemViewList: [LBSTagsItemView] = []
@@ -20,7 +38,6 @@ class LBSTagsView: UIView {
     var maxSelectCount = 3
     
     override var intrinsicContentSize: CGSize {
-        print("intrinsicContentSize")
         
         guard itemViewList.count >= 0, itemModelList.count > 0 else {
             return CGSize.zero
@@ -68,13 +85,19 @@ class LBSTagsView: UIView {
     }
     
    override func layoutSubviews() {
-    print("layoutSubviews")
         for (idx,subView) in itemViewList.enumerated() {
             
             let itemModel = itemModelList[idx]
             subView.frame = itemModel.cacheFrame
         }
         
+    }
+    
+    func setTags(_ tags: [LBSTagsItemViewModel]) {
+        removeAllTag()
+        tags.forEach { (subModel) in
+            addTag(subModel)
+        }
     }
     
     func removeAllTag() {
@@ -104,8 +127,13 @@ class LBSTagsView: UIView {
     
     @objc func itemTapAction(sender: LBSTagsItemView) {
         
+        guard let currentTapModel = sender.model else {
+            return
+        }
+
         if maxSelectCount <= 0 || sender.model?.canSelected == false {
             // 不能点击
+                delegate?.LBSTagsViewSelectedFail(view: self, selectedItemModel: currentTapModel, failReason: .disable)
             return;
         }
         
@@ -134,14 +162,17 @@ class LBSTagsView: UIView {
                 sender.isSelected = true
                 sender.model?.isSelected = true
                 selectedItemViewList.append(sender)
+                delegate?.LBSTagsViewSelected(view: self, selectedItemModel: currentTapModel)
             } else { // 多选
                 // 不能再选了，已经足够了
                 if maxSelectCount <= selectedItemViewList.count {
+                    delegate?.LBSTagsViewSelectedFail(view: self, selectedItemModel: currentTapModel, failReason: .beyond)
                     return
                 }
                 sender.isSelected = true
                 sender.model?.isSelected = true
                 selectedItemViewList.append(sender)
+                delegate?.LBSTagsViewSelected(view: self, selectedItemModel: currentTapModel)
             }
         }
     }

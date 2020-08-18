@@ -26,12 +26,17 @@ extension Test_EntryViewController {
         }
         dataSource.append(h5Bridge)
         
-        let tagsView = Test_CellModel.init(name: "TagsView") { () -> (Void) in
-            let ctrl = TagsViewDemoController.init()
+        let tagsView = Test_CellModel.init(name: "在tableViewCell中使用tagsView") { () -> (Void) in
+            let ctrl = TableTagsDemoCtrl.init()
             self.navigationController?.pushViewController(ctrl, animated: true)
         }
         dataSource.append(tagsView)
         
+        let nomalTags = Test_CellModel.init(name: "普通的tags") { () -> (Void) in
+            let ctrl = NomalTagsDemoCtrl.init()
+            self.navigationController?.pushViewController(ctrl, animated: true)
+        }
+        dataSource.append(nomalTags)
         
         
         return dataSource

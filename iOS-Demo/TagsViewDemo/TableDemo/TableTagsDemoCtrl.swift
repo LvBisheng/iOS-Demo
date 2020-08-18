@@ -1,5 +1,5 @@
 //
-//  TagsViewDemoController.swift
+//  TableTagsDemoCtrl.swift
 //  iOS-Demo
 //
 //  Created by lbs on 2020/8/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TagsViewDemoController: UIViewController {
+class TableTagsDemoCtrl: UIViewController {
 
     var dataSource: [TagsTableViewCellModel] = []
     @IBOutlet weak var tableView: UITableView!
@@ -31,7 +31,7 @@ class TagsViewDemoController: UIViewController {
 
 }
 
-extension TagsViewDemoController: UITableViewDelegate, UITableViewDataSource {
+extension TableTagsDemoCtrl: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }

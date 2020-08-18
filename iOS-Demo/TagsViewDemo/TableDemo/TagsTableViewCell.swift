@@ -11,8 +11,8 @@ import UIKit
 class TagsTableViewCell: UITableViewCell {
     @IBOutlet weak var tagsView: LBSTagsView!
     @IBOutlet weak var titleLab: UILabel!
-    
     @IBOutlet weak var contentLab: UILabel!
+    
     var cellModel: TagsTableViewCellModel? {
         didSet {
             titleLab.text = cellModel?.title
@@ -28,7 +28,7 @@ class TagsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         tagsView.maxWidth = UIScreen.main.bounds.size.width - 30
-    
+        tagsView.delegate = self
         // Initialization code
     }
 
@@ -38,6 +38,17 @@ class TagsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+extension TagsTableViewCell: LBSTagsViewDelegate {
+    func LBSTagsViewSelectedFail(view: LBSTagsView, selectedItemModel: LBSTagsItemViewModel, failReason: LBSTagsViewSelectFailReaon) {
+        let msg = failReason == .beyond ? "不能再选择了" : "这个不能选喔"
+        UIApplication.currentViewController()?.alert(message: msg)
+    }
+    
+    func LBSTagsViewSelected(view: LBSTagsView, selectedItemModel: LBSTagsItemViewModel) {
+        UIApplication.currentViewController()?.alert(message: "选中了:\(selectedItemModel.title ?? "")")
+    }
 }
 
 class TagsTableViewCellModel {
