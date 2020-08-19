@@ -26,19 +26,19 @@ class NomalTagsDemoCtrl: UIViewController {
         // 单选
         tagsView.maxWidth = UIScreen.main.bounds.size.width - 30
         tagsView.maxSelectCount = 1
-        let model0 = LBSBaseTagsItemViewModel.init()
+        let model0 = LBSNomalTagsItemViewModel.init()
         model0.title = "胡萝卜🥕"
         
-        let model1 = LBSBaseTagsItemViewModel.init()
+        let model1 = LBSNomalTagsItemViewModel.init()
         model1.title = "非常好吃的荔枝"
         
-        let model2 = LBSBaseTagsItemViewModel.init()
+        let model2 = LBSNomalTagsItemViewModel.init()
         model2.title = "又酸又甜的很大的青芒"
         
-        let model3 = LBSBaseTagsItemViewModel.init()
+        let model3 = LBSNomalTagsItemViewModel.init()
         model3.title = "芭乐"
         
-        var tempList: [LBSBaseTagsItemViewModel] = []
+        var tempList: [LBSNomalTagsItemViewModel] = []
         tempList.append(model0)
         tempList.append(model1)
         tempList.append(model2)
