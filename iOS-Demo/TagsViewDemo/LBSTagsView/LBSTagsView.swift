@@ -14,24 +14,30 @@ enum LBSTagsViewSelectFailReaon {
 }
 
 protocol LBSTagsViewDelegate: NSObjectProtocol {
-    func LBSTagsViewSelectedFail(view: LBSTagsView, selectedItemModel: LBSTagsItemViewModel, failReason: LBSTagsViewSelectFailReaon)
-    func LBSTagsViewSelected(view: LBSTagsView, selectedItemModel: LBSTagsItemViewModel)
+    func LBSTagsViewSelectedFail(view: LBSTagsView, selectedItemModel: LBSBaseTagsItemViewModel, failReason: LBSTagsViewSelectFailReaon)
+    func LBSTagsViewSelected(view: LBSTagsView, selectedItemModel: LBSBaseTagsItemViewModel)
+}
+
+protocol LBSTagsViewDataSource: NSObjectProtocol {
+    func tagsView(_ tagsView: LBSTagsView, itemAt index: Int) -> LBSBaseTagsItemView
+    func tagNumber(in tagsView: LBSTagsView) -> Int
 }
 
 extension LBSTagsViewDelegate {
-    func LBSTagsViewSelectedFail(view: LBSTagsView, selectedItemModel: LBSTagsItemViewModel, failReason: LBSTagsViewSelectFailReaon) {}
-    func LBSTagsViewSelected(view: LBSTagsView, selectedItemModel: LBSTagsItemViewModel) {}
+    func LBSTagsViewSelectedFail(view: LBSTagsView, selectedItemModel: LBSBaseTagsItemViewModel, failReason: LBSTagsViewSelectFailReaon) {}
+    func LBSTagsViewSelected(view: LBSTagsView, selectedItemModel: LBSBaseTagsItemViewModel) {}
 }
 
 class LBSTagsView: UIView {
     
     weak var delegate: LBSTagsViewDelegate?
+    weak var dataSource: LBSTagsViewDataSource?
 
     
     var maxWidth: CGFloat = 0
-    private var itemViewList: [LBSTagsItemView] = []
-    private var itemModelList: [LBSTagsItemViewModel] = []
-    private var selectedItemViewList: [LBSTagsItemView] = []
+    private var itemViewList: [LBSBaseTagsItemView] = []
+    private var itemModelList: [LBSBaseTagsItemViewModel] = []
+    private var selectedItemViewList: [LBSBaseTagsItemView] = []
     var itemSpacingV: CGFloat = 10; // 内部元素 垂直间距
     var itemSpacingH: CGFloat = 5; // 内部元素 水平间距
     var contentMarging: UIEdgeInsets = UIEdgeInsets.init(top: 10, left: 5, bottom: 10, right: 5)
@@ -93,7 +99,7 @@ class LBSTagsView: UIView {
         
     }
     
-    func setTags(_ tags: [LBSTagsItemViewModel]) {
+    func setTags(_ tags: [LBSBaseTagsItemViewModel]) {
         removeAllTag()
         tags.forEach { (subModel) in
             addTag(subModel)
@@ -110,10 +116,10 @@ class LBSTagsView: UIView {
         invalidateIntrinsicContentSize()
     }
     
-    func addTag(_ tag: LBSTagsItemViewModel) {
-        let itemView = LBSTagsItemView.init()
+    func addTag(_ tag: LBSBaseTagsItemViewModel) {
+        let itemView = LBSBaseTagsItemView.init()
         addSubview(itemView)
-        itemView.model = tag
+        itemView.tagModel = tag
         itemViewList.append(itemView)
         itemModelList.append(tag)
         if tag.isSelected && selectedItemViewList.count < self.maxSelectCount {
@@ -125,13 +131,31 @@ class LBSTagsView: UIView {
         invalidateIntrinsicContentSize()
     }
     
-    @objc func itemTapAction(sender: LBSTagsItemView) {
+    func reloadData() {
         
-        guard let currentTapModel = sender.model else {
-            return
+        removeAllTag()
+        let count = dataSource?.tagNumber(in: self) ?? 0
+        for idx in 0..<count {
+            let itemView = dataSource?.tagsView(self, itemAt: idx) ?? LBSBaseTagsItemView.init()
+            addSubview(itemView)
+            itemViewList.append(itemView)
+            
+            itemModelList.append(itemView.tagModel)
+            if itemView.tagModel.isSelected && selectedItemViewList.count < self.maxSelectCount {
+                selectedItemViewList.append(itemView)
+            }
+            
+            itemView.addTarget(self, action: #selector(itemTapAction(sender:)), for: .touchUpInside)
+            
+            invalidateIntrinsicContentSize()
         }
+    }
+    
+    @objc func itemTapAction(sender: LBSBaseTagsItemView) {
+        
+       let currentTapModel = sender.tagModel
 
-        if maxSelectCount <= 0 || sender.model?.canSelected == false {
+        if maxSelectCount <= 0 || sender.tagModel.canSelected == false {
             // 不能点击
                 delegate?.LBSTagsViewSelectedFail(view: self, selectedItemModel: currentTapModel, failReason: .disable)
             return;
@@ -143,7 +167,7 @@ class LBSTagsView: UIView {
             // 1.要设置为不选中
             
             sender.isSelected = false
-            sender.model?.isSelected = false
+            sender.tagModel.isSelected = false
             selectedItemViewList.removeAll { (subView) -> Bool in
                 return subView === sender
             }
@@ -153,14 +177,14 @@ class LBSTagsView: UIView {
                 // 置反以前的
                 if let preItem = selectedItemViewList.first {
                     preItem.isSelected = false
-                    preItem.model?.isSelected = false
+                    preItem.tagModel.isSelected = false
                     selectedItemViewList.removeAll { (subView) -> Bool in
                         return subView === preItem
                     }
                 }
                 // 选中当前的
                 sender.isSelected = true
-                sender.model?.isSelected = true
+                sender.tagModel.isSelected = true
                 selectedItemViewList.append(sender)
                 delegate?.LBSTagsViewSelected(view: self, selectedItemModel: currentTapModel)
             } else { // 多选
@@ -170,7 +194,7 @@ class LBSTagsView: UIView {
                     return
                 }
                 sender.isSelected = true
-                sender.model?.isSelected = true
+                sender.tagModel.isSelected = true
                 selectedItemViewList.append(sender)
                 delegate?.LBSTagsViewSelected(view: self, selectedItemModel: currentTapModel)
             }
@@ -178,13 +202,16 @@ class LBSTagsView: UIView {
     }
 }
 
+class LBSBaseTagsItemView: UIControl {
+    var tagModel: LBSBaseTagsItemViewModel = LBSBaseTagsItemViewModel.init()
+}
 
 
 protocol LBSTagsViewItemProtocol where Self: UIView {
     
 }
 
-class LBSTagsItemViewModel {
+class LBSBaseTagsItemViewModel {
     var cacheFrame: CGRect = .zero
     var isSelected: Bool = false
     var canSelected: Bool = true

@@ -8,15 +8,15 @@
 
 import UIKit
 
-class LBSTagsItemView: UIControl, LBSTagsViewItemProtocol {
+class LBSTagsItemView: LBSBaseTagsItemView {
     
     private var titeLabFrame = CGRect.zero
     private var iconImgvFrame = CGRect.zero
 
-    var model: LBSTagsItemViewModel? {
+    override var tagModel: LBSBaseTagsItemViewModel {
         didSet {
-            self.isSelected = model?.isSelected ?? false
-            titleLab.text = model?.title
+            self.isSelected = tagModel.isSelected ?? false
+            titleLab.text = tagModel.title
         }
     }
     

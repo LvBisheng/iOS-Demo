@@ -41,19 +41,19 @@ class TagsTableViewCell: UITableViewCell {
 }
 
 extension TagsTableViewCell: LBSTagsViewDelegate {
-    func LBSTagsViewSelectedFail(view: LBSTagsView, selectedItemModel: LBSTagsItemViewModel, failReason: LBSTagsViewSelectFailReaon) {
+    func LBSTagsViewSelectedFail(view: LBSTagsView, selectedItemModel: LBSBaseTagsItemViewModel, failReason: LBSTagsViewSelectFailReaon) {
         let msg = failReason == .beyond ? "不能再选择了" : "这个不能选喔"
         UIApplication.currentViewController()?.alert(message: msg)
     }
     
-    func LBSTagsViewSelected(view: LBSTagsView, selectedItemModel: LBSTagsItemViewModel) {
+    func LBSTagsViewSelected(view: LBSTagsView, selectedItemModel: LBSBaseTagsItemViewModel) {
         UIApplication.currentViewController()?.alert(message: "选中了:\(selectedItemModel.title ?? "")")
     }
 }
 
 class TagsTableViewCellModel {
     var title: String?
-    var list: [LBSTagsItemViewModel] = []
+    var list: [LBSBaseTagsItemViewModel] = []
     var content: String?
     
     func test() {
@@ -79,7 +79,7 @@ class TagsTableViewCellModel {
         }
         
         for idx in 0...count {
-            let item = LBSTagsItemViewModel.init()
+            let item = LBSBaseTagsItemViewModel.init()
             if idx % 2 == 0 {
                 if idx % 3 == 0 {
                     item.title = "一个人的厨房"

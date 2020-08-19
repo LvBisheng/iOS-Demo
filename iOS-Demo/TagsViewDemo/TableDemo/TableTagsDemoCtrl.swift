@@ -20,7 +20,7 @@ class TableTagsDemoCtrl: UIViewController {
             cellModel.test()
             dataSource.append(cellModel)
         }
-     
+        
         
         tableView.register(UINib.init(nibName: "TagsTableViewCell", bundle: nil), forCellReuseIdentifier: "TagsTableViewCell")
 
@@ -42,5 +42,6 @@ extension TableTagsDemoCtrl: UITableViewDelegate, UITableViewDataSource {
         cell.cellModel = model
         return cell
     }
+    
 }
 
