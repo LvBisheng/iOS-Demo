@@ -20,7 +20,6 @@ class TagsTableViewCell: UITableViewCell {
             self.tagsView.removeAllTag()
             let list = cellModel?.list
             list?.forEach({ (subModel) in
-                self.tagsView.addTag(subModel)
             })
         }
     }

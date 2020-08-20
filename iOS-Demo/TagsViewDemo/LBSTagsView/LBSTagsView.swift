@@ -8,18 +8,25 @@
 
 import UIKit
 
+/// 不能选中时的类型
 enum LBSTagsViewSelectFailReaon {
+    /// 已经超过可选的数目了
     case beyond
+    /// 不能选的
     case disable
 }
 
 protocol LBSTagsViewDelegate: NSObjectProtocol {
+    /// 选中失败时的回调
     func LBSTagsViewSelectedFail(view: LBSTagsView, selectedItemModel: LBSBaseTagsItemViewModel, failReason: LBSTagsViewSelectFailReaon)
+    /// 选中标签时的回调
     func LBSTagsViewSelected(view: LBSTagsView, selectedItemModel: LBSBaseTagsItemViewModel)
 }
 
 protocol LBSTagsViewDataSource: NSObjectProtocol {
+    /// 返回item的view
     func tagsView(_ tagsView: LBSTagsView, itemAt index: Int) -> LBSBaseTagsItemView
+    /// item的个数
     func tagNumber(in tagsView: LBSTagsView) -> Int
 }
 
@@ -33,16 +40,19 @@ class LBSTagsView: UIView {
     weak var delegate: LBSTagsViewDelegate?
     weak var dataSource: LBSTagsViewDataSource?
 
-    
-    var maxWidth: CGFloat = 0
-    private var itemViewList: [LBSBaseTagsItemView] = []
-    private var itemModelList: [LBSBaseTagsItemViewModel] = []
-    private var selectedItemViewList: [LBSBaseTagsItemView] = []
+    /// 整个视图的最大宽度
+    var maxWidth: CGFloat = UIScreen.main.bounds.size.width
     var itemSpacingV: CGFloat = 10; // 内部元素 垂直间距
     var itemSpacingH: CGFloat = 5; // 内部元素 水平间距
     var contentMarging: UIEdgeInsets = UIEdgeInsets.init(top: 10, left: 5, bottom: 10, right: 5)
+    /// 最大选中标签的数目，等于0时，说明所有标签不可选
     var maxSelectCount = 3
-    
+
+    private var itemViewList: [LBSBaseTagsItemView] = []
+    private var itemModelList: [LBSBaseTagsItemViewModel] = []
+    private var selectedItemViewList: [LBSBaseTagsItemView] = []
+        
+    /// 返回整个视图的size
     override var intrinsicContentSize: CGSize {
         
         guard itemViewList.count >= 0, itemModelList.count > 0 else {
@@ -56,7 +66,10 @@ class LBSTagsView: UIView {
         var x = leftMargin
         var y = topMargin
         
+        /// 最终包裹tags item所需的高度
         var needHeight = topMargin
+        /// 上一行的最大Y值
+        var maxItemBottomY = y
         
         
         for (idx,subView) in itemViewList.enumerated() {
@@ -74,16 +87,19 @@ class LBSTagsView: UIView {
             // 容不下，需要换行
             if preItemRight > self.maxWidth {
                 x = leftMargin
-                y = y + itemSize.height + self.itemSpacingV
+                y = maxItemBottomY + self.itemSpacingV
             }
             // 设置item最新的frame
             itemModel.cacheFrame = CGRect(x: x, y: y, width: itemSize.width, height: itemSize.height)
             // 设置下次的x
             x = itemModel.cacheFrame.maxX + self.itemSpacingH
             
+            maxItemBottomY = max(maxItemBottomY, itemModel.cacheFrame.maxY)
+            
             // 设置最新的容器高度
-            let preMaxY = itemModelList[max(idx - 1, 0)].cacheFrame.maxY
-            needHeight = max(itemModel.cacheFrame.maxY, preMaxY) + bottomMargin
+//            let preMaxY = itemModelList[max(idx - 1, 0)].cacheFrame.maxY
+//            needHeight = max(itemModel.cacheFrame.maxY, preMaxY) + bottomMargin
+            needHeight = maxItemBottomY + bottomMargin
         }
         
 
@@ -99,13 +115,6 @@ class LBSTagsView: UIView {
         
     }
     
-    func setTags(_ tags: [LBSBaseTagsItemViewModel]) {
-        removeAllTag()
-        tags.forEach { (subModel) in
-            addTag(subModel)
-        }
-    }
-    
     func removeAllTag() {
         itemViewList.forEach { $0.removeFromSuperview() }
         itemViewList.removeAll()
@@ -114,41 +123,6 @@ class LBSTagsView: UIView {
         selectedItemViewList.removeAll()
         
         invalidateIntrinsicContentSize()
-    }
-    
-    func addTag(_ tag: LBSBaseTagsItemViewModel) {
-        let itemView = LBSBaseTagsItemView.init()
-        addSubview(itemView)
-        itemView.tagModel = tag
-        itemViewList.append(itemView)
-        itemModelList.append(tag)
-        if tag.isSelected && selectedItemViewList.count < self.maxSelectCount {
-            selectedItemViewList.append(itemView)
-        }
-        
-        itemView.addTarget(self, action: #selector(itemTapAction(sender:)), for: .touchUpInside)
-        
-        invalidateIntrinsicContentSize()
-    }
-    
-    func reloadData() {
-        
-        removeAllTag()
-        let count = dataSource?.tagNumber(in: self) ?? 0
-        for idx in 0..<count {
-            let itemView = dataSource?.tagsView(self, itemAt: idx) ?? LBSBaseTagsItemView.init()
-            addSubview(itemView)
-            itemViewList.append(itemView)
-            
-            itemModelList.append(itemView.tagModel)
-            if itemView.tagModel.isSelected && selectedItemViewList.count < self.maxSelectCount {
-                selectedItemViewList.append(itemView)
-            }
-            
-            itemView.addTarget(self, action: #selector(itemTapAction(sender:)), for: .touchUpInside)
-            
-            invalidateIntrinsicContentSize()
-        }
     }
     
     @objc func itemTapAction(sender: LBSBaseTagsItemView) {
@@ -202,19 +176,37 @@ class LBSTagsView: UIView {
     }
 }
 
+extension LBSTagsView {
+    func reloadData() {
+        
+        removeAllTag()
+        let count = dataSource?.tagNumber(in: self) ?? 0
+        for idx in 0..<count {
+            let itemView = dataSource?.tagsView(self, itemAt: idx) ?? LBSBaseTagsItemView.init()
+            addSubview(itemView)
+            itemViewList.append(itemView)
+            
+            itemModelList.append(itemView.tagModel)
+            if itemView.tagModel.isSelected && selectedItemViewList.count < self.maxSelectCount {
+                selectedItemViewList.append(itemView)
+            }
+            
+            itemView.addTarget(self, action: #selector(itemTapAction(sender:)), for: .touchUpInside)
+            
+            invalidateIntrinsicContentSize()
+        }
+    }
+}
+
+/// 需要自定义item 时要继承这个view
 class LBSBaseTagsItemView: UIControl {
     var tagModel: LBSBaseTagsItemViewModel = LBSBaseTagsItemViewModel.init()
 }
 
-
-protocol LBSTagsViewItemProtocol where Self: UIView {
-    
-}
-
 class LBSBaseTagsItemViewModel {
+    /// 缓存item的frame值。外部适用时不要去变更它
     var cacheFrame: CGRect = .zero
     var isSelected: Bool = false
     var canSelected: Bool = true
-    
     var title: String?
 }
