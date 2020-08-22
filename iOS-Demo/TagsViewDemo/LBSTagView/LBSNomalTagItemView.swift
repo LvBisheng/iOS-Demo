@@ -10,7 +10,6 @@ import UIKit
 
 class LBSNomalTagItemView: LBSBaseTagItemView {
 
-    let count = arc4random() % 2
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -50,11 +49,7 @@ class LBSNomalTagItemView: LBSBaseTagItemView {
     
     /// 返回item对应的尺寸。这里很重要
     override var intrinsicContentSize: CGSize {
-        if count == 0 {
-            return CGSize(width: self.titleLab.intrinsicContentSize.width + 10, height: self.titleLab.intrinsicContentSize.height + 10)
-        } else {
-            return CGSize(width: self.titleLab.intrinsicContentSize.width + 10, height: self.titleLab.intrinsicContentSize.height + 30)
-        }
+        return CGSize(width: self.titleLab.intrinsicContentSize.width + 10, height: self.titleLab.intrinsicContentSize.height + 10)
     }
     
     override func layoutSubviews() {

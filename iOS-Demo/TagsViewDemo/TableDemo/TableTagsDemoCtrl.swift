@@ -21,7 +21,7 @@ class TableTagsDemoCtrl: UIViewController {
             dataSource.append(cellModel)
         }
         
-        
+        tableView.estimatedRowHeight = 100
         tableView.register(UINib.init(nibName: "TagsTableViewCell", bundle: nil), forCellReuseIdentifier: "TagsTableViewCell")
 
         // Do any additional setup after loading the view.

@@ -97,8 +97,6 @@ class LBSTagView: UIView {
             maxItemBottomY = max(maxItemBottomY, itemModel.cacheFrame.maxY)
             
             // 设置最新的容器高度
-//            let preMaxY = itemModelList[max(idx - 1, 0)].cacheFrame.maxY
-//            needHeight = max(itemModel.cacheFrame.maxY, preMaxY) + bottomMargin
             needHeight = maxItemBottomY + bottomMargin
         }
         
