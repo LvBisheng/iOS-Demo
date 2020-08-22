@@ -1,5 +1,5 @@
 //
-//  LBSTagsView.swift
+//  LBSTagView.swift
 //  iOS-Demo
 //
 //  Created by lbs on 2020/8/17.
@@ -9,36 +9,36 @@
 import UIKit
 
 /// 不能选中时的类型
-enum LBSTagsViewSelectFailReaon {
+enum LBSTagViewSelectFailReaon {
     /// 已经超过可选的数目了
     case beyond
     /// 不能选的
     case disable
 }
 
-protocol LBSTagsViewDelegate: NSObjectProtocol {
+protocol LBSTagViewDelegate: NSObjectProtocol {
     /// 选中失败时的回调
-    func LBSTagsViewSelectedFail(view: LBSTagsView, selectedItemModel: LBSBaseTagsItemViewModel, failReason: LBSTagsViewSelectFailReaon)
+    func LBSTagViewSelectedFail(view: LBSTagView, selectedItemModel: LBSBaseTagItemViewModel, failReason: LBSTagViewSelectFailReaon)
     /// 选中标签时的回调
-    func LBSTagsViewSelected(view: LBSTagsView, selectedItemModel: LBSBaseTagsItemViewModel)
+    func LBSTagViewSelected(view: LBSTagView, selectedItemModel: LBSBaseTagItemViewModel)
 }
 
-protocol LBSTagsViewDataSource: NSObjectProtocol {
+protocol LBSTagViewDataSource: NSObjectProtocol {
     /// 返回item的view
-    func tagsView(_ tagsView: LBSTagsView, itemAt index: Int) -> LBSBaseTagsItemView
+    func tagsView(_ tagsView: LBSTagView, itemAt index: Int) -> LBSBaseTagItemView
     /// item的个数
-    func tagNumber(in tagsView: LBSTagsView) -> Int
+    func tagNumber(in tagsView: LBSTagView) -> Int
 }
 
-extension LBSTagsViewDelegate {
-    func LBSTagsViewSelectedFail(view: LBSTagsView, selectedItemModel: LBSBaseTagsItemViewModel, failReason: LBSTagsViewSelectFailReaon) {}
-    func LBSTagsViewSelected(view: LBSTagsView, selectedItemModel: LBSBaseTagsItemViewModel) {}
+extension LBSTagViewDelegate {
+    func LBSTagViewSelectedFail(view: LBSTagView, selectedItemModel: LBSBaseTagItemViewModel, failReason: LBSTagViewSelectFailReaon) {}
+    func LBSTagViewSelected(view: LBSTagView, selectedItemModel: LBSBaseTagItemViewModel) {}
 }
 
-class LBSTagsView: UIView {
+class LBSTagView: UIView {
     
-    weak var delegate: LBSTagsViewDelegate?
-    weak var dataSource: LBSTagsViewDataSource?
+    weak var delegate: LBSTagViewDelegate?
+    weak var dataSource: LBSTagViewDataSource?
 
     /// 整个视图的最大宽度
     var maxWidth: CGFloat = UIScreen.main.bounds.size.width
@@ -48,9 +48,9 @@ class LBSTagsView: UIView {
     /// 最大选中标签的数目，等于0时，说明所有标签不可选
     var maxSelectCount = 3
 
-    private var itemViewList: [LBSBaseTagsItemView] = []
-    private var itemModelList: [LBSBaseTagsItemViewModel] = []
-    private var selectedItemViewList: [LBSBaseTagsItemView] = []
+    private var itemViewList: [LBSBaseTagItemView] = []
+    private var itemModelList: [LBSBaseTagItemViewModel] = []
+    private var selectedItemViewList: [LBSBaseTagItemView] = []
         
     /// 返回整个视图的size
     override var intrinsicContentSize: CGSize {
@@ -125,13 +125,13 @@ class LBSTagsView: UIView {
         invalidateIntrinsicContentSize()
     }
     
-    @objc func itemTapAction(sender: LBSBaseTagsItemView) {
+    @objc func itemTapAction(sender: LBSBaseTagItemView) {
         
        let currentTapModel = sender.tagModel
 
         if maxSelectCount <= 0 || sender.tagModel.canSelected == false {
             // 不能点击
-                delegate?.LBSTagsViewSelectedFail(view: self, selectedItemModel: currentTapModel, failReason: .disable)
+                delegate?.LBSTagViewSelectedFail(view: self, selectedItemModel: currentTapModel, failReason: .disable)
             return;
         }
         
@@ -160,29 +160,29 @@ class LBSTagsView: UIView {
                 sender.isSelected = true
                 sender.tagModel.isSelected = true
                 selectedItemViewList.append(sender)
-                delegate?.LBSTagsViewSelected(view: self, selectedItemModel: currentTapModel)
+                delegate?.LBSTagViewSelected(view: self, selectedItemModel: currentTapModel)
             } else { // 多选
                 // 不能再选了，已经足够了
                 if maxSelectCount <= selectedItemViewList.count {
-                    delegate?.LBSTagsViewSelectedFail(view: self, selectedItemModel: currentTapModel, failReason: .beyond)
+                    delegate?.LBSTagViewSelectedFail(view: self, selectedItemModel: currentTapModel, failReason: .beyond)
                     return
                 }
                 sender.isSelected = true
                 sender.tagModel.isSelected = true
                 selectedItemViewList.append(sender)
-                delegate?.LBSTagsViewSelected(view: self, selectedItemModel: currentTapModel)
+                delegate?.LBSTagViewSelected(view: self, selectedItemModel: currentTapModel)
             }
         }
     }
 }
 
-extension LBSTagsView {
+extension LBSTagView {
     func reloadData() {
         
         removeAllTag()
         let count = dataSource?.tagNumber(in: self) ?? 0
         for idx in 0..<count {
-            let itemView = dataSource?.tagsView(self, itemAt: idx) ?? LBSBaseTagsItemView.init()
+            let itemView = dataSource?.tagsView(self, itemAt: idx) ?? LBSBaseTagItemView.init()
             addSubview(itemView)
             itemViewList.append(itemView)
             
@@ -199,11 +199,11 @@ extension LBSTagsView {
 }
 
 /// 需要自定义item 时要继承这个view
-class LBSBaseTagsItemView: UIControl {
-    var tagModel: LBSBaseTagsItemViewModel = LBSBaseTagsItemViewModel.init()
+class LBSBaseTagItemView: UIControl {
+    var tagModel: LBSBaseTagItemViewModel = LBSBaseTagItemViewModel.init()
 }
 
-class LBSBaseTagsItemViewModel {
+class LBSBaseTagItemViewModel {
     /// 缓存item的frame值。外部适用时不要去变更它
     var cacheFrame: CGRect = .zero
     var isSelected: Bool = false

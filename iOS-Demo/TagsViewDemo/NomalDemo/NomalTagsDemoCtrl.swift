@@ -10,8 +10,8 @@ import UIKit
 
 class NomalTagsDemoCtrl: UIViewController {
 
-    var tags: [LBSBaseTagsItemViewModel] = []
-    @IBOutlet weak var tagsView: LBSTagsView!
+    var tags: [LBSBaseTagItemViewModel] = []
+    @IBOutlet weak var tagsView: LBSTagView!
     override func viewDidLoad() {
         super.viewDidLoad()
        testSingleTap()
@@ -28,7 +28,7 @@ class NomalTagsDemoCtrl: UIViewController {
         tagsView.maxWidth = UIScreen.main.bounds.size.width - 30
         tagsView.maxSelectCount = 1
         
-        var tempList: [LBSNomalTagsItemViewModel] = []
+        var tempList: [LBSNomalTagItemViewModel] = []
         for title in ["只能单选",
                       "高度不等",
                       "又酸又甜的很大的青芒",
@@ -38,7 +38,7 @@ class NomalTagsDemoCtrl: UIViewController {
                       "樱桃🍒"
             ] {
                 
-                let model = LBSNomalTagsItemViewModel.init()
+                let model = LBSNomalTagItemViewModel.init()
                 model.title = title
                 tempList.append(model)
                 
@@ -48,24 +48,24 @@ class NomalTagsDemoCtrl: UIViewController {
     }
 }
 
-extension NomalTagsDemoCtrl: LBSTagsViewDelegate, LBSTagsViewDataSource {
-    func tagsView(_ tagsView: LBSTagsView, itemAt index: Int) -> LBSBaseTagsItemView {
-        let itemView = LBSNomalTagsItemView.init()
+extension NomalTagsDemoCtrl: LBSTagViewDelegate, LBSTagViewDataSource {
+    func tagsView(_ tagsView: LBSTagView, itemAt index: Int) -> LBSBaseTagItemView {
+        let itemView = LBSNomalTagItemView.init()
         let model = tags[index]
         itemView.tagModel = model
         return itemView
     }
     
-    func tagNumber(in tagsView: LBSTagsView) -> Int {
+    func tagNumber(in tagsView: LBSTagView) -> Int {
         return tags.count
     }
     
-    func LBSTagsViewSelectedFail(view: LBSTagsView, selectedItemModel: LBSBaseTagsItemViewModel, failReason: LBSTagsViewSelectFailReaon) {
+    func LBSTagViewSelectedFail(view: LBSTagView, selectedItemModel: LBSBaseTagItemViewModel, failReason: LBSTagViewSelectFailReaon) {
         let msg = failReason == .beyond ? "不能再选择了" : "这个不能选喔"
         UIApplication.currentViewController()?.alert(message: msg)
     }
     
-    func LBSTagsViewSelected(view: LBSTagsView, selectedItemModel: LBSBaseTagsItemViewModel) {
+    func LBSTagViewSelected(view: LBSTagView, selectedItemModel: LBSBaseTagItemViewModel) {
         print("选中了\(selectedItemModel.title ?? "")")
     }
 }

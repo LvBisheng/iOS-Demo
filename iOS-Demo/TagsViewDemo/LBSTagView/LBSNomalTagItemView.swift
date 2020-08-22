@@ -1,5 +1,5 @@
 //
-//  LBSNomalTagsItemView.swift
+//  LBSNomalTagItemView.swift
 //  iOS-Demo
 //
 //  Created by lbs on 2020/8/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LBSNomalTagsItemView: LBSBaseTagsItemView {
+class LBSNomalTagItemView: LBSBaseTagItemView {
 
     let count = arc4random() % 2
     override init(frame: CGRect) {
@@ -26,9 +26,9 @@ class LBSNomalTagsItemView: LBSBaseTagsItemView {
         return titleLab
     }()
     
-    override var tagModel: LBSBaseTagsItemViewModel {
+    override var tagModel: LBSBaseTagItemViewModel {
         didSet {
-            if let tag = tagModel as? LBSNomalTagsItemViewModel {
+            if let tag = tagModel as? LBSNomalTagItemViewModel {
                 titleLab.text = tag.title
                 layer.cornerRadius = tag.cornerRadius
                 layer.borderWidth = tag.borderWidth
@@ -40,7 +40,7 @@ class LBSNomalTagsItemView: LBSBaseTagsItemView {
     /// 根据选中与否来设置对应的UI
     override var isSelected: Bool {
         didSet {
-            if let tag = tagModel as? LBSNomalTagsItemViewModel {
+            if let tag = tagModel as? LBSNomalTagItemViewModel {
                 backgroundColor = isSelected ? tag.selectedBackgroudColor : tag.nomalBackgroudColor
                 titleLab.textColor = isSelected ? tag.selectedTextColor : tag.nomalTextColor
                 layer.borderColor = isSelected ? tag.selectedBorderColor.cgColor : tag.normalBorderColor.cgColor
@@ -65,7 +65,7 @@ class LBSNomalTagsItemView: LBSBaseTagsItemView {
 }
 
 /// 普通的标签item
-class LBSNomalTagsItemViewModel: LBSBaseTagsItemViewModel {
+class LBSNomalTagItemViewModel: LBSBaseTagItemViewModel {
     var font: UIFont = .systemFont(ofSize: 12)
     
     var selectedTextColor = UIColor.white

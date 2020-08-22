@@ -1,5 +1,5 @@
 //
-//  LBSTagsViewItem.swift
+//  LBSTagViewItem.swift
 //  iOS-Demo
 //
 //  Created by lbs on 2020/8/17.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class LBSTagsItemView: LBSBaseTagsItemView {
+class LBSTagsItemView: LBSBaseTagItemView {
     
     private var titeLabFrame = CGRect.zero
     private var iconImgvFrame = CGRect.zero
 
-    override var tagModel: LBSBaseTagsItemViewModel {
+    override var tagModel: LBSBaseTagItemViewModel {
         didSet {
             self.isSelected = tagModel.isSelected ?? false
             titleLab.text = tagModel.title

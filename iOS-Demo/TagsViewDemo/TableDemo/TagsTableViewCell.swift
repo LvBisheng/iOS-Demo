@@ -9,7 +9,7 @@
 import UIKit
 
 class TagsTableViewCell: UITableViewCell {
-    @IBOutlet weak var tagsView: LBSTagsView!
+    @IBOutlet weak var tagsView: LBSTagView!
     @IBOutlet weak var titleLab: UILabel!
     @IBOutlet weak var contentLab: UILabel!
     
@@ -39,20 +39,20 @@ class TagsTableViewCell: UITableViewCell {
     
 }
 
-extension TagsTableViewCell: LBSTagsViewDelegate {
-    func LBSTagsViewSelectedFail(view: LBSTagsView, selectedItemModel: LBSBaseTagsItemViewModel, failReason: LBSTagsViewSelectFailReaon) {
+extension TagsTableViewCell: LBSTagViewDelegate {
+    func LBSTagViewSelectedFail(view: LBSTagView, selectedItemModel: LBSBaseTagItemViewModel, failReason: LBSTagViewSelectFailReaon) {
         let msg = failReason == .beyond ? "不能再选择了" : "这个不能选喔"
         UIApplication.currentViewController()?.alert(message: msg)
     }
     
-    func LBSTagsViewSelected(view: LBSTagsView, selectedItemModel: LBSBaseTagsItemViewModel) {
+    func LBSTagViewSelected(view: LBSTagView, selectedItemModel: LBSBaseTagItemViewModel) {
         UIApplication.currentViewController()?.alert(message: "选中了:\(selectedItemModel.title ?? "")")
     }
 }
 
 class TagsTableViewCellModel {
     var title: String?
-    var list: [LBSBaseTagsItemViewModel] = []
+    var list: [LBSBaseTagItemViewModel] = []
     var content: String?
     
     func test() {
@@ -78,7 +78,7 @@ class TagsTableViewCellModel {
         }
         
         for idx in 0...count {
-            let item = LBSBaseTagsItemViewModel.init()
+            let item = LBSBaseTagItemViewModel.init()
             if idx % 2 == 0 {
                 if idx % 3 == 0 {
                     item.title = "一个人的厨房"
