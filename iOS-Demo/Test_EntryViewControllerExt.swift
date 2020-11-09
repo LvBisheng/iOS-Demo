@@ -12,6 +12,14 @@ extension Test_EntryViewController {
     func other() -> [Test_CellModel] {
         var dataSource:[Test_CellModel] = []
 
+        
+        let toupiaojieguo = Test_CellModel.init(name: "投票结果展示") { () -> (Void) in
+            let ctrl = ToupiaoJIeGuoCtrl.init()
+            self.navigationController?.pushViewController(ctrl, animated: true)
+        }
+        dataSource.append(toupiaojieguo)
+
+        
         let html = Test_CellModel.init(name: "加载网络资源") { () -> (Void) in
             let ctrl = BaseWebViewController.init()
             ctrl.type = .loadURL(str: "https://www.baidu.com")
