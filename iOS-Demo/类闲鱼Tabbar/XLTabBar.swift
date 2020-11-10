@@ -60,7 +60,6 @@ class XLTabBar: UITabBar {
         
         let btnSize = CGSize(width: 60, height: 60)
         centerBtn.frame = CGRect(x: (self.bounds.width - btnSize.width) / 2.0, y: -20, width: btnSize.width, height: btnSize.height)
-//        titeLab.frame = CGRect(x: 0, y: 0, width: 50, height: 40)
         titeLab.frame = CGRect(x: (self.bounds.width - titeLab.intrinsicContentSize.width) * 0.5, y: centerBtn.frame.maxY - 5, width: titeLab.intrinsicContentSize.width, height: titeLab.intrinsicContentSize.height)
 
     }
@@ -77,9 +76,6 @@ class XLTabBar: UITabBar {
         let view = super.hitTest(point, with: event)
         if view == nil {
             let tempPoint = centerBtn.convert(point, from: self)
-//            if(centerBtn.bounds.contains(tempPoint)) {
-//                return centerBtn
-//            }
             if(centerBtn.bounds.contains(tempPoint)) {
                 return centerBtn
             }
