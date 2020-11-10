@@ -12,6 +12,11 @@ extension Test_EntryViewController {
     func other() -> [Test_CellModel] {
         var dataSource:[Test_CellModel] = []
 
+        let fishTabbar = Test_CellModel.init(name: "模仿闲鱼tabbar") { () -> (Void) in
+            let ctrl = XLTabbarCtr.init()
+            self.navigationController?.pushViewController(ctrl, animated: true)
+        }
+        dataSource.append(fishTabbar)
         
         let toupiaojieguo = Test_CellModel.init(name: "投票结果展示") { () -> (Void) in
             let ctrl = ToupiaoJIeGuoCtrl.init()
