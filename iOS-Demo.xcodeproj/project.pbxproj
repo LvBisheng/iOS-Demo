@@ -31,8 +31,10 @@
 		63A0B7A424EBB7FC00F2C9DA /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A0B7A324EBB7FC00F2C9DA /* UIColorExtension.swift */; };
 		63A0B7AC24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A0B7AA24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.swift */; };
 		63A0B7AD24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63A0B7AB24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.xib */; };
+		63AF1B17256F4B560076BCCB /* XLLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AF1B16256F4B560076BCCB /* XLLaunchViewController.swift */; };
 		63BDF749255A32D700FE8351 /* XLTabbarCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BDF748255A32D700FE8351 /* XLTabbarCtr.swift */; };
 		63BDF751255A392F00FE8351 /* XLTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BDF750255A392F00FE8351 /* XLTabBar.swift */; };
+		63DA0A5B2574C954001A3F2B /* XLNetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA0A5A2574C954001A3F2B /* XLNetworkHelper.swift */; };
 		63FC72D5255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC72D4255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift */; };
 		A44BF13FD125A5C13ECB2AEE /* Pods_iOS_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7DF4B8C2EDB705785DF511 /* Pods_iOS_Demo.framework */; };
 /* End PBXBuildFile section */
@@ -87,8 +89,10 @@
 		63A0B7A324EBB7FC00F2C9DA /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		63A0B7AA24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomalTagsDemoCtrl.swift; sourceTree = "<group>"; };
 		63A0B7AB24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NomalTagsDemoCtrl.xib; sourceTree = "<group>"; };
+		63AF1B16256F4B560076BCCB /* XLLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLLaunchViewController.swift; sourceTree = "<group>"; };
 		63BDF748255A32D700FE8351 /* XLTabbarCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLTabbarCtr.swift; sourceTree = "<group>"; };
 		63BDF750255A392F00FE8351 /* XLTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLTabBar.swift; sourceTree = "<group>"; };
+		63DA0A5A2574C954001A3F2B /* XLNetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLNetworkHelper.swift; sourceTree = "<group>"; };
 		63FC72D4255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToupiaoJIeGuoCtrl.swift; sourceTree = "<group>"; };
 		B19EB99AEB3AF6676AC58317 /* Pods-iOS-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Demo.debug.xcconfig"; path = "Target Support Files/Pods-iOS-Demo/Pods-iOS-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +157,8 @@
 		63490CA424EA619400E09BF5 /* iOS-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				63DA0A582574C919001A3F2B /* 基础服务类 */,
+				63AF1B16256F4B560076BCCB /* XLLaunchViewController.swift */,
 				63BDF747255A328C00FE8351 /* 类闲鱼Tabbar */,
 				63FC72D025599489003A3D18 /* 投票结果 */,
 				63A0B79C24EB700A00F2C9DA /* Extension */,
@@ -255,6 +261,22 @@
 				63BDF750255A392F00FE8351 /* XLTabBar.swift */,
 			);
 			path = "类闲鱼Tabbar";
+			sourceTree = "<group>";
+		};
+		63DA0A582574C919001A3F2B /* 基础服务类 */ = {
+			isa = PBXGroup;
+			children = (
+				63DA0A592574C92B001A3F2B /* 网络请求 */,
+			);
+			path = "基础服务类";
+			sourceTree = "<group>";
+		};
+		63DA0A592574C92B001A3F2B /* 网络请求 */ = {
+			isa = PBXGroup;
+			children = (
+				63DA0A5A2574C954001A3F2B /* XLNetworkHelper.swift */,
+			);
+			path = "网络请求";
 			sourceTree = "<group>";
 		};
 		63FC72D025599489003A3D18 /* 投票结果 */ = {
@@ -466,7 +488,9 @@
 				63490CE024EA84B400E09BF5 /* LBSJSHandleService.swift in Sources */,
 				63FC72D5255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift in Sources */,
 				63490CD824EA62E600E09BF5 /* Test_EntryViewControllerExt.swift in Sources */,
+				63DA0A5B2574C954001A3F2B /* XLNetworkHelper.swift in Sources */,
 				635E6D1B24EAC7BE000BACC9 /* LBSTagView.swift in Sources */,
+				63AF1B17256F4B560076BCCB /* XLLaunchViewController.swift in Sources */,
 				63BDF751255A392F00FE8351 /* XLTabBar.swift in Sources */,
 				63A0B7A224EBB41F00F2C9DA /* StringExtension.swift in Sources */,
 				635E6D1E24EAC95E000BACC9 /* TagsTableViewCell.swift in Sources */,

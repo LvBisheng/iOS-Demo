@@ -51,6 +51,10 @@ extension Test_EntryViewController {
         }
         dataSource.append(nomalTags)
         
+        let changeNet = Test_CellModel.init(name: "切换网络环境") { () -> (Void) in
+            XLNetworkHelper.showChangeNetworkEnvironment()
+        }
+        dataSource.append(changeNet)
         
         return dataSource
     }
