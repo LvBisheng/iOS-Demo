@@ -6,5 +6,5 @@ target 'iOS-Demo' do
   use_frameworks!
   
   pod 'GDPerformanceView-Swift', '~> 2.0.3'
-
+  pod 'RSKPlaceholderTextView'
 end

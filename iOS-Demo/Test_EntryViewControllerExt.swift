@@ -12,6 +12,12 @@ extension Test_EntryViewController {
     func other() -> [Test_CellModel] {
         var dataSource:[Test_CellModel] = []
 
+        let textViewDemo = Test_CellModel.init(name: "字数限制的textView") { () -> (Void) in
+            let ctrl = LimitCountTextViewDemo.init()
+            self.navigationController?.pushViewController(ctrl, animated: true)
+        }
+        dataSource.append(textViewDemo)
+        
         let fishTabbar = Test_CellModel.init(name: "模仿闲鱼tabbar") { () -> (Void) in
             let ctrl = XLTabbarCtr.init()
             self.navigationController?.pushViewController(ctrl, animated: true)

@@ -1,16 +1,20 @@
 PODS:
   - GDPerformanceView-Swift (2.0.3)
+  - RSKPlaceholderTextView (6.0.3)
 
 DEPENDENCIES:
   - GDPerformanceView-Swift (~> 2.0.3)
+  - RSKPlaceholderTextView
 
 SPEC REPOS:
   trunk:
     - GDPerformanceView-Swift
+    - RSKPlaceholderTextView
 
 SPEC CHECKSUMS:
   GDPerformanceView-Swift: ef3d05deb103e472a5494d3f60aeca5a58b88a7d
+  RSKPlaceholderTextView: fc8c8932546298ec9d5e5572284aa42adb87b066
 
-PODFILE CHECKSUM: 85af192ac30a2c93af6a3c07b84ed907afce6bd2
+PODFILE CHECKSUM: 54573fa81af41377a85cb5c9bc596884b31ab8fc
 
 COCOAPODS: 1.9.1

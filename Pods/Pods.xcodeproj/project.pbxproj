@@ -3,29 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		097B06F3516549A6CD8453F32450D60C /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1688E1CD477414185A0D5D03B24C6277 /* Protocols.swift */; };
-		0C15C1A2EA64893F3AE3DDA456B87571 /* PerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E23A26993D884AEAD80E97C3FF6DC19 /* PerformanceView.swift */; };
-		0E21F32D885E9D2D7C48E04D0B9EF0CE /* MarginLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3AF1F0B36CEB52DE2CD33B51D9094A /* MarginLabel.swift */; };
-		116B0875C1B9CF408BB2A3B29989C428 /* Pods-iOS-Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF55845631162A0C93F61FF81FA9E492 /* Pods-iOS-Demo-dummy.m */; };
+		097B06F3516549A6CD8453F32450D60C /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D318FAFA2426C4D26827F995EA9380 /* Protocols.swift */; };
+		0C15C1A2EA64893F3AE3DDA456B87571 /* PerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F789782EB77B175E92D1CBFFC0F95C66 /* PerformanceView.swift */; };
+		0E21F32D885E9D2D7C48E04D0B9EF0CE /* MarginLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9151118B6E983056BF9B08A506D1C61D /* MarginLabel.swift */; };
+		12691F5F019EB149737D8F3DB8008176 /* Pods-iOS-Demo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E9F792DB6EE5BF9DBD63B80521CC759 /* Pods-iOS-Demo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1981FCE93B0C7120BE8F17321F393595 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950B64BEB39CC506B65115EE95302D64 /* Foundation.framework */; };
-		19F574F9C8E8A6D9ED69919A115693CE /* PerformanceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADEC1196E9E92285F7E440906874F92 /* PerformanceMonitor.swift */; };
-		3BCD2F1B0A576E839A40713D6F3BBFB2 /* GDPerformanceView-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 744788D4E078D2CF0DB0DF719026DA48 /* GDPerformanceView-Swift-dummy.m */; };
-		4D0C3C31AE3B39E901C34FC7DE7160A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950B64BEB39CC506B65115EE95302D64 /* Foundation.framework */; };
+		19F574F9C8E8A6D9ED69919A115693CE /* PerformanceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8292FCC432FDC1F306B1406F7101D8 /* PerformanceMonitor.swift */; };
+		2717F43402FE3F7EE616E64B5B56D8EB /* RSKPlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451A4CD636257C2D85EA2EE02F3E9A49 /* RSKPlaceholderTextView.swift */; };
+		2BA736F67ED91679ECD259259BFD4C43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F545AB76C9016ECAD7D83A1129E704 /* UIKit.framework */; };
+		3BCD2F1B0A576E839A40713D6F3BBFB2 /* GDPerformanceView-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7CA1E85E5125918BAB9485C20111FE /* GDPerformanceView-Swift-dummy.m */; };
 		52565B2C689A878ADBD2B34487AD2E9C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F545AB76C9016ECAD7D83A1129E704 /* UIKit.framework */; };
-		77130D8F61AA44C7EC694EC47A8EA553 /* GDPerformanceView-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 434021399FB9A1918595FCD54A4A86FC /* GDPerformanceView-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8344AFE70F359280A8C32B8D25F37D05 /* PerformanceСalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB8F6C476E746F72999E3AE197932B /* PerformanceСalculator.swift */; };
-		914CDB43748E17721CC29731A67C68AD /* WindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2023955271E1E19098E6A7172F8104 /* WindowViewController.swift */; };
-		92C99E8372F8517FAD61A1C8FB3D82E7 /* LinkedFramesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF7C4F886C9DD838500C78ECBEC9A /* LinkedFramesList.swift */; };
+		5A20D97EDB79C77B53F4C07E052C48BA /* RSKPlaceholderTextView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE06131009E8E5C0C3714F7A05B81E /* RSKPlaceholderTextView-dummy.m */; };
+		66A2D413017DD8B55315B66EC1DAD5EA /* RSKPlaceholderTextView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB28F301113C1581B9A78647800E5E3E /* RSKPlaceholderTextView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77130D8F61AA44C7EC694EC47A8EA553 /* GDPerformanceView-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83C0553D0EE8BB871FCF8269E80C8F6F /* GDPerformanceView-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8344AFE70F359280A8C32B8D25F37D05 /* PerformanceСalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9D0032A85D09D38F545321B27E28F /* PerformanceСalculator.swift */; };
+		914CDB43748E17721CC29731A67C68AD /* WindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF03693C7E0A0E76CD877DDCDBAE8B7 /* WindowViewController.swift */; };
+		92C99E8372F8517FAD61A1C8FB3D82E7 /* LinkedFramesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67F895E3CE3446C30248B8ACB5C5EFF /* LinkedFramesList.swift */; };
 		A445B752EFB7064A1B3540F9A0941E4A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD5169B524477639A9A41855A47F99 /* QuartzCore.framework */; };
-		FC04D949241EF9FCCCB70290EEA7D1B0 /* Pods-iOS-Demo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E9F792DB6EE5BF9DBD63B80521CC759 /* Pods-iOS-Demo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6DC46D0D013C2B8E8E9B3396D29F57C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950B64BEB39CC506B65115EE95302D64 /* Foundation.framework */; };
+		EAA1CD71C855834619E28C320F84D5DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950B64BEB39CC506B65115EE95302D64 /* Foundation.framework */; };
+		FBFEAB8D31CE5CB7125FC8B0924112A9 /* Pods-iOS-Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF55845631162A0C93F61FF81FA9E492 /* Pods-iOS-Demo-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		590BFE763B8FE667CD6A5A5003A7EBDC /* PBXContainerItemProxy */ = {
+		10EFC5B0E46D6066843BF833F8033C14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD1947E4267C88431D9ABE181AB6D266;
+			remoteInfo = RSKPlaceholderTextView;
+		};
+		259C0F79FE7ACCC59AE6668E7ED9D32B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -36,34 +48,43 @@
 
 /* Begin PBXFileReference section */
 		03BAEBF8BC74CF75E503F395980FB851 /* Pods-iOS-Demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOS-Demo-frameworks.sh"; sourceTree = "<group>"; };
-		0ADEC1196E9E92285F7E440906874F92 /* PerformanceMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PerformanceMonitor.swift; path = "GDPerformanceView-Swift/GDPerformanceMonitoring/PerformanceMonitor.swift"; sourceTree = "<group>"; };
+		0839F83973156D2309CE4BC08EA63042 /* RSKPlaceholderTextView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RSKPlaceholderTextView-prefix.pch"; sourceTree = "<group>"; };
+		0929BA10EAAD4A2149BC195F96D81E60 /* RSKPlaceholderTextView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RSKPlaceholderTextView.debug.xcconfig; sourceTree = "<group>"; };
 		0E9F792DB6EE5BF9DBD63B80521CC759 /* Pods-iOS-Demo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iOS-Demo-umbrella.h"; sourceTree = "<group>"; };
-		0EDB8F6C476E746F72999E3AE197932B /* PerformanceСalculator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PerformanceСalculator.swift"; path = "GDPerformanceView-Swift/GDPerformanceMonitoring/PerformanceСalculator.swift"; sourceTree = "<group>"; };
-		134330CC7B94C0631878C27DF4C3D686 /* GDPerformanceView-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "GDPerformanceView-Swift.modulemap"; sourceTree = "<group>"; };
-		1688E1CD477414185A0D5D03B24C6277 /* Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = "GDPerformanceView-Swift/GDPerformanceMonitoring/Protocols.swift"; sourceTree = "<group>"; };
-		245FB2F74CA2FA917E5581462844BE8E /* GDPerformanceView-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GDPerformanceView-Swift.release.xcconfig"; sourceTree = "<group>"; };
-		28518AB6147704BAAEBFF948A3D147AA /* GDPerformanceView-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GDPerformanceView-Swift-prefix.pch"; sourceTree = "<group>"; };
+		13F54B74FEE1D2D8F38C3AF6F1499F61 /* RSKPlaceholderTextView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RSKPlaceholderTextView.modulemap; sourceTree = "<group>"; };
+		2A8292FCC432FDC1F306B1406F7101D8 /* PerformanceMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PerformanceMonitor.swift; path = "GDPerformanceView-Swift/GDPerformanceMonitoring/PerformanceMonitor.swift"; sourceTree = "<group>"; };
+		30D318FAFA2426C4D26827F995EA9380 /* Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = "GDPerformanceView-Swift/GDPerformanceMonitoring/Protocols.swift"; sourceTree = "<group>"; };
 		310ED6A0930F26D9E0DF59B0BF03DE1F /* Pods_iOS_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iOS_Demo.framework; path = "Pods-iOS-Demo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34D9D0032A85D09D38F545321B27E28F /* PerformanceСalculator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PerformanceСalculator.swift"; path = "GDPerformanceView-Swift/GDPerformanceMonitoring/PerformanceСalculator.swift"; sourceTree = "<group>"; };
 		384AE8B880BFFE5FB5D485E7202AD537 /* Pods-iOS-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		3AC704A6070D1F4B5A719CC298496B8E /* Pods-iOS-Demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iOS-Demo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3BF2BA0248AFA0D86F072E931B6A9592 /* Pods-iOS-Demo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iOS-Demo.modulemap"; sourceTree = "<group>"; };
+		3CF03693C7E0A0E76CD877DDCDBAE8B7 /* WindowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WindowViewController.swift; path = "GDPerformanceView-Swift/GDPerformanceMonitoring/WindowViewController.swift"; sourceTree = "<group>"; };
 		3F1296A45B799228597FBE0DD846937F /* Pods-iOS-Demo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iOS-Demo-Info.plist"; sourceTree = "<group>"; };
-		434021399FB9A1918595FCD54A4A86FC /* GDPerformanceView-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GDPerformanceView-Swift-umbrella.h"; sourceTree = "<group>"; };
+		451A4CD636257C2D85EA2EE02F3E9A49 /* RSKPlaceholderTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSKPlaceholderTextView.swift; path = RSKPlaceholderTextView/RSKPlaceholderTextView.swift; sourceTree = "<group>"; };
 		49F545AB76C9016ECAD7D83A1129E704 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		5E23A26993D884AEAD80E97C3FF6DC19 /* PerformanceView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PerformanceView.swift; path = "GDPerformanceView-Swift/GDPerformanceMonitoring/PerformanceView.swift"; sourceTree = "<group>"; };
+		58B070FA3C3828A7BA9F1515F6D8892B /* GDPerformanceView-Swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GDPerformanceView-Swift-Info.plist"; sourceTree = "<group>"; };
+		5EEE06131009E8E5C0C3714F7A05B81E /* RSKPlaceholderTextView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RSKPlaceholderTextView-dummy.m"; sourceTree = "<group>"; };
 		62319606F4E88D41C9F0FF6BDF8E759A /* Pods-iOS-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS-Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		744788D4E078D2CF0DB0DF719026DA48 /* GDPerformanceView-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GDPerformanceView-Swift-dummy.m"; sourceTree = "<group>"; };
+		649872BC6849ACBA4FD431721D67286E /* RSKPlaceholderTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RSKPlaceholderTextView.framework; path = RSKPlaceholderTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C6E3F9B6AC6648231418BA0CFBDAFF /* Pods-iOS-Demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iOS-Demo-acknowledgements.plist"; sourceTree = "<group>"; };
-		7C2023955271E1E19098E6A7172F8104 /* WindowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WindowViewController.swift; path = "GDPerformanceView-Swift/GDPerformanceMonitoring/WindowViewController.swift"; sourceTree = "<group>"; };
+		7B123A13468603A33AA3A23FD20EE74E /* GDPerformanceView-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GDPerformanceView-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		7EC88458506829EB37F91887B15A9888 /* RSKPlaceholderTextView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RSKPlaceholderTextView.release.xcconfig; sourceTree = "<group>"; };
+		83C0553D0EE8BB871FCF8269E80C8F6F /* GDPerformanceView-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GDPerformanceView-Swift-umbrella.h"; sourceTree = "<group>"; };
+		8C5AB3EFEF49625679BCFBEA192DC90E /* RSKPlaceholderTextView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RSKPlaceholderTextView-Info.plist"; sourceTree = "<group>"; };
+		9151118B6E983056BF9B08A506D1C61D /* MarginLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarginLabel.swift; path = "GDPerformanceView-Swift/GDPerformanceMonitoring/MarginLabel.swift"; sourceTree = "<group>"; };
 		950B64BEB39CC506B65115EE95302D64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C048D1F0AA3E00E33A29442ABEC96B18 /* GDPerformanceView-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GDPerformanceView-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		9F7CA1E85E5125918BAB9485C20111FE /* GDPerformanceView-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GDPerformanceView-Swift-dummy.m"; sourceTree = "<group>"; };
+		AB28F301113C1581B9A78647800E5E3E /* RSKPlaceholderTextView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RSKPlaceholderTextView-umbrella.h"; sourceTree = "<group>"; };
+		C4EBDCB88050F7B8BBBFA925B63D7901 /* GDPerformanceView-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GDPerformanceView-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		CBCD5169B524477639A9A41855A47F99 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		D4CBF7C4F886C9DD838500C78ECBEC9A /* LinkedFramesList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinkedFramesList.swift; path = "GDPerformanceView-Swift/GDPerformanceMonitoring/LinkedFramesList.swift"; sourceTree = "<group>"; };
+		DB2AB6E2C37C65EACEBD01FC39D27EF3 /* GDPerformanceView-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "GDPerformanceView-Swift.modulemap"; sourceTree = "<group>"; };
 		DF55845631162A0C93F61FF81FA9E492 /* Pods-iOS-Demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iOS-Demo-dummy.m"; sourceTree = "<group>"; };
-		FB3AF1F0B36CEB52DE2CD33B51D9094A /* MarginLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarginLabel.swift; path = "GDPerformanceView-Swift/GDPerformanceMonitoring/MarginLabel.swift"; sourceTree = "<group>"; };
-		FB5D522DCAD430685B23CAA6B56A1DE3 /* GDPerformanceView-Swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GDPerformanceView-Swift-Info.plist"; sourceTree = "<group>"; };
+		E67F895E3CE3446C30248B8ACB5C5EFF /* LinkedFramesList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinkedFramesList.swift; path = "GDPerformanceView-Swift/GDPerformanceMonitoring/LinkedFramesList.swift"; sourceTree = "<group>"; };
+		F789782EB77B175E92D1CBFFC0F95C66 /* PerformanceView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PerformanceView.swift; path = "GDPerformanceView-Swift/GDPerformanceMonitoring/PerformanceView.swift"; sourceTree = "<group>"; };
 		FCD4D12752A60C0926DB2C8C2BE5CF1F /* GDPerformanceView_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GDPerformanceView_Swift.framework; path = "GDPerformanceView-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEE948EDD1ED2A0FECBF3E31C7C4F75 /* GDPerformanceView-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GDPerformanceView-Swift-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +98,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A87FD3916DDEA4ADEAD69874557376E /* Frameworks */ = {
+		062AFECC3795E2922D1FB823307951E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D0C3C31AE3B39E901C34FC7DE7160A0 /* Foundation.framework in Frameworks */,
+				D6DC46D0D013C2B8E8E9B3396D29F57C /* Foundation.framework in Frameworks */,
+				2BA736F67ED91679ECD259259BFD4C43 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69AC59961CBC96AAB6BE91FDFF261B4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAA1CD71C855834619E28C320F84D5DD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,36 +126,55 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2D1D99DA6F49730D9D916CDBC8461A69 /* Support Files */ = {
+		3B85306E6093A5017EC55527C16862B0 /* RSKPlaceholderTextView */ = {
 			isa = PBXGroup;
 			children = (
-				134330CC7B94C0631878C27DF4C3D686 /* GDPerformanceView-Swift.modulemap */,
-				744788D4E078D2CF0DB0DF719026DA48 /* GDPerformanceView-Swift-dummy.m */,
-				FB5D522DCAD430685B23CAA6B56A1DE3 /* GDPerformanceView-Swift-Info.plist */,
-				28518AB6147704BAAEBFF948A3D147AA /* GDPerformanceView-Swift-prefix.pch */,
-				434021399FB9A1918595FCD54A4A86FC /* GDPerformanceView-Swift-umbrella.h */,
-				C048D1F0AA3E00E33A29442ABEC96B18 /* GDPerformanceView-Swift.debug.xcconfig */,
-				245FB2F74CA2FA917E5581462844BE8E /* GDPerformanceView-Swift.release.xcconfig */,
+				451A4CD636257C2D85EA2EE02F3E9A49 /* RSKPlaceholderTextView.swift */,
+				5EF45A72C20CCEAF78C9F5B35C13A3E0 /* Support Files */,
+			);
+			name = RSKPlaceholderTextView;
+			path = RSKPlaceholderTextView;
+			sourceTree = "<group>";
+		};
+		5EF45A72C20CCEAF78C9F5B35C13A3E0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				13F54B74FEE1D2D8F38C3AF6F1499F61 /* RSKPlaceholderTextView.modulemap */,
+				5EEE06131009E8E5C0C3714F7A05B81E /* RSKPlaceholderTextView-dummy.m */,
+				8C5AB3EFEF49625679BCFBEA192DC90E /* RSKPlaceholderTextView-Info.plist */,
+				0839F83973156D2309CE4BC08EA63042 /* RSKPlaceholderTextView-prefix.pch */,
+				AB28F301113C1581B9A78647800E5E3E /* RSKPlaceholderTextView-umbrella.h */,
+				0929BA10EAAD4A2149BC195F96D81E60 /* RSKPlaceholderTextView.debug.xcconfig */,
+				7EC88458506829EB37F91887B15A9888 /* RSKPlaceholderTextView.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/GDPerformanceView-Swift";
+			path = "../Target Support Files/RSKPlaceholderTextView";
 			sourceTree = "<group>";
 		};
-		7195CA599530A048E542CE80B102E59D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D21DD8344E35E70B36CDF38438817046 /* GDPerformanceView-Swift */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		978562E72FD0E3173AC49DCA79C48B72 /* Products */ = {
+		64938A88F34E11DB103164FC8FD269CE /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				FCD4D12752A60C0926DB2C8C2BE5CF1F /* GDPerformanceView_Swift.framework */,
 				310ED6A0930F26D9E0DF59B0BF03DE1F /* Pods_iOS_Demo.framework */,
+				649872BC6849ACBA4FD431721D67286E /* RSKPlaceholderTextView.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		79A122789F19A71E4FF60AF392C5B6A3 /* GDPerformanceView-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				E67F895E3CE3446C30248B8ACB5C5EFF /* LinkedFramesList.swift */,
+				9151118B6E983056BF9B08A506D1C61D /* MarginLabel.swift */,
+				2A8292FCC432FDC1F306B1406F7101D8 /* PerformanceMonitor.swift */,
+				F789782EB77B175E92D1CBFFC0F95C66 /* PerformanceView.swift */,
+				34D9D0032A85D09D38F545321B27E28F /* PerformanceСalculator.swift */,
+				30D318FAFA2426C4D26827F995EA9380 /* Protocols.swift */,
+				3CF03693C7E0A0E76CD877DDCDBAE8B7 /* WindowViewController.swift */,
+				C3B791D8C7907168E56F95CC59B5F3B7 /* Support Files */,
+			);
+			name = "GDPerformanceView-Swift";
+			path = "GDPerformanceView-Swift";
 			sourceTree = "<group>";
 		};
 		AD1C26646217B1ED6A805A610CFBE978 /* Targets Support Files */ = {
@@ -136,6 +185,15 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		AD95A8FAA1B9354AC2B67D35F939491B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79A122789F19A71E4FF60AF392C5B6A3 /* GDPerformanceView-Swift */,
+				3B85306E6093A5017EC55527C16862B0 /* RSKPlaceholderTextView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C18BABFF9523A33465B5A91496FF0C3D /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +202,21 @@
 				49F545AB76C9016ECAD7D83A1129E704 /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		C3B791D8C7907168E56F95CC59B5F3B7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB2AB6E2C37C65EACEBD01FC39D27EF3 /* GDPerformanceView-Swift.modulemap */,
+				9F7CA1E85E5125918BAB9485C20111FE /* GDPerformanceView-Swift-dummy.m */,
+				58B070FA3C3828A7BA9F1515F6D8892B /* GDPerformanceView-Swift-Info.plist */,
+				FDEE948EDD1ED2A0FECBF3E31C7C4F75 /* GDPerformanceView-Swift-prefix.pch */,
+				83C0553D0EE8BB871FCF8269E80C8F6F /* GDPerformanceView-Swift-umbrella.h */,
+				C4EBDCB88050F7B8BBBFA925B63D7901 /* GDPerformanceView-Swift.debug.xcconfig */,
+				7B123A13468603A33AA3A23FD20EE74E /* GDPerformanceView-Swift.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GDPerformanceView-Swift";
 			sourceTree = "<group>";
 		};
 		C7CA5BEAF7CD4CCA91109A7AF39322A4 /* Pods-iOS-Demo */ = {
@@ -168,31 +241,31 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
-				7195CA599530A048E542CE80B102E59D /* Pods */,
-				978562E72FD0E3173AC49DCA79C48B72 /* Products */,
+				AD95A8FAA1B9354AC2B67D35F939491B /* Pods */,
+				64938A88F34E11DB103164FC8FD269CE /* Products */,
 				AD1C26646217B1ED6A805A610CFBE978 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D21DD8344E35E70B36CDF38438817046 /* GDPerformanceView-Swift */ = {
-			isa = PBXGroup;
-			children = (
-				D4CBF7C4F886C9DD838500C78ECBEC9A /* LinkedFramesList.swift */,
-				FB3AF1F0B36CEB52DE2CD33B51D9094A /* MarginLabel.swift */,
-				0ADEC1196E9E92285F7E440906874F92 /* PerformanceMonitor.swift */,
-				5E23A26993D884AEAD80E97C3FF6DC19 /* PerformanceView.swift */,
-				0EDB8F6C476E746F72999E3AE197932B /* PerformanceСalculator.swift */,
-				1688E1CD477414185A0D5D03B24C6277 /* Protocols.swift */,
-				7C2023955271E1E19098E6A7172F8104 /* WindowViewController.swift */,
-				2D1D99DA6F49730D9D916CDBC8461A69 /* Support Files */,
-			);
-			name = "GDPerformanceView-Swift";
-			path = "GDPerformanceView-Swift";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0B02CE54317C93C13DE67D971E22EB6C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66A2D413017DD8B55315B66EC1DAD5EA /* RSKPlaceholderTextView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		728E7F26BE29C07AFC29AF8B01FFEAC4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12691F5F019EB149737D8F3DB8008176 /* Pods-iOS-Demo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9B6CBB6FF0C3C6A89CFBF2BE026194A7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,30 +274,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D87F780AF748A41A569E66C4B246D4AD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FC04D949241EF9FCCCB70290EEA7D1B0 /* Pods-iOS-Demo-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		7A94E53707CC4BC61B7C9C1E59BDF80F /* Pods-iOS-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E6518BA9E305DEEC89352A2F08866148 /* Build configuration list for PBXNativeTarget "Pods-iOS-Demo" */;
+			buildConfigurationList = 424A0F3A10974971F56D802B8271745C /* Build configuration list for PBXNativeTarget "Pods-iOS-Demo" */;
 			buildPhases = (
-				D87F780AF748A41A569E66C4B246D4AD /* Headers */,
-				56C5FBB5B4EBCE36868EE2B8985F0CCD /* Sources */,
-				6A87FD3916DDEA4ADEAD69874557376E /* Frameworks */,
-				13F290EA53A4A97D8198809E1224AFE0 /* Resources */,
+				728E7F26BE29C07AFC29AF8B01FFEAC4 /* Headers */,
+				804EFB7B2D899FF56E398D98186A3271 /* Sources */,
+				69AC59961CBC96AAB6BE91FDFF261B4B /* Frameworks */,
+				8E5C2633D2647B802676FEF2D8E342B3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				409BCAE7E8EA9EC3644B80D9A81483C0 /* PBXTargetDependency */,
+				D00F88E84D9ED8D26C698FD3B2E055C5 /* PBXTargetDependency */,
+				E0C3F87460A7BB282317548A744CD5A8 /* PBXTargetDependency */,
 			);
 			name = "Pods-iOS-Demo";
 			productName = "Pods-iOS-Demo";
@@ -249,6 +315,24 @@
 			productReference = FCD4D12752A60C0926DB2C8C2BE5CF1F /* GDPerformanceView_Swift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		CD1947E4267C88431D9ABE181AB6D266 /* RSKPlaceholderTextView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39B2024BC8F8A9118C95C886F3E84A4F /* Build configuration list for PBXNativeTarget "RSKPlaceholderTextView" */;
+			buildPhases = (
+				0B02CE54317C93C13DE67D971E22EB6C /* Headers */,
+				CB6B1312612FAFCC343DCF81486A58AF /* Sources */,
+				062AFECC3795E2922D1FB823307951E1 /* Frameworks */,
+				78E56B51FD69C88F856F8A197B2DD404 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSKPlaceholderTextView;
+			productName = RSKPlaceholderTextView;
+			productReference = 649872BC6849ACBA4FD431721D67286E /* RSKPlaceholderTextView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -259,7 +343,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -267,18 +351,26 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 978562E72FD0E3173AC49DCA79C48B72 /* Products */;
+			productRefGroup = 64938A88F34E11DB103164FC8FD269CE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8674A6F604977FE90C1CE085F3BCDDB7 /* GDPerformanceView-Swift */,
 				7A94E53707CC4BC61B7C9C1E59BDF80F /* Pods-iOS-Demo */,
+				CD1947E4267C88431D9ABE181AB6D266 /* RSKPlaceholderTextView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		13F290EA53A4A97D8198809E1224AFE0 /* Resources */ = {
+		78E56B51FD69C88F856F8A197B2DD404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E5C2633D2647B802676FEF2D8E342B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -295,11 +387,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		56C5FBB5B4EBCE36868EE2B8985F0CCD /* Sources */ = {
+		804EFB7B2D899FF56E398D98186A3271 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				116B0875C1B9CF408BB2A3B29989C428 /* Pods-iOS-Demo-dummy.m in Sources */,
+				FBFEAB8D31CE5CB7125FC8B0924112A9 /* Pods-iOS-Demo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB6B1312612FAFCC343DCF81486A58AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A20D97EDB79C77B53F4C07E052C48BA /* RSKPlaceholderTextView-dummy.m in Sources */,
+				2717F43402FE3F7EE616E64B5B56D8EB /* RSKPlaceholderTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,11 +422,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		409BCAE7E8EA9EC3644B80D9A81483C0 /* PBXTargetDependency */ = {
+		D00F88E84D9ED8D26C698FD3B2E055C5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "GDPerformanceView-Swift";
 			target = 8674A6F604977FE90C1CE085F3BCDDB7 /* GDPerformanceView-Swift */;
-			targetProxy = 590BFE763B8FE667CD6A5A5003A7EBDC /* PBXContainerItemProxy */;
+			targetProxy = 259C0F79FE7ACCC59AE6668E7ED9D32B /* PBXContainerItemProxy */;
+		};
+		E0C3F87460A7BB282317548A744CD5A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RSKPlaceholderTextView;
+			target = CD1947E4267C88431D9ABE181AB6D266 /* RSKPlaceholderTextView */;
+			targetProxy = 10EFC5B0E46D6066843BF833F8033C14 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -394,7 +501,43 @@
 			};
 			name = Debug;
 		};
-		4A58324FF430AFB2164A35D73C5347B0 /* Debug */ = {
+		3418A693B12FC79CA32C8384A9B88848 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EC88458506829EB37F91887B15A9888 /* RSKPlaceholderTextView.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RSKPlaceholderTextView/RSKPlaceholderTextView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RSKPlaceholderTextView/RSKPlaceholderTextView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/RSKPlaceholderTextView/RSKPlaceholderTextView.modulemap";
+				PRODUCT_MODULE_NAME = RSKPlaceholderTextView;
+				PRODUCT_NAME = RSKPlaceholderTextView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5C75DAE6D4020862213BBB150BB84C14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 62319606F4E88D41C9F0FF6BDF8E759A /* Pods-iOS-Demo.debug.xcconfig */;
 			buildSettings = {
@@ -432,7 +575,42 @@
 			};
 			name = Debug;
 		};
-		541A435D8B626EE301D010CF2CBEC68E /* Release */ = {
+		6FDF29F5534B43A3B1541090DD13EF68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4EBDCB88050F7B8BBBFA925B63D7901 /* GDPerformanceView-Swift.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GDPerformanceView-Swift/GDPerformanceView-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GDPerformanceView-Swift/GDPerformanceView-Swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/GDPerformanceView-Swift/GDPerformanceView-Swift.modulemap";
+				PRODUCT_MODULE_NAME = GDPerformanceView_Swift;
+				PRODUCT_NAME = GDPerformanceView_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		703C0AC4D2FE8F724DCB5F9E84012ED3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 384AE8B880BFFE5FB5D485E7202AD537 /* Pods-iOS-Demo.release.xcconfig */;
 			buildSettings = {
@@ -470,41 +648,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		6FDF29F5534B43A3B1541090DD13EF68 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C048D1F0AA3E00E33A29442ABEC96B18 /* GDPerformanceView-Swift.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GDPerformanceView-Swift/GDPerformanceView-Swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GDPerformanceView-Swift/GDPerformanceView-Swift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/GDPerformanceView-Swift/GDPerformanceView-Swift.modulemap";
-				PRODUCT_MODULE_NAME = GDPerformanceView_Swift;
-				PRODUCT_NAME = GDPerformanceView_Swift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -568,7 +711,7 @@
 		};
 		D767BFF4A1F6740304B86AABCB00E319 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 245FB2F74CA2FA917E5581462844BE8E /* GDPerformanceView-Swift.release.xcconfig */;
+			baseConfigurationReference = 7B123A13468603A33AA3A23FD20EE74E /* GDPerformanceView-Swift.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -602,9 +745,62 @@
 			};
 			name = Release;
 		};
+		E2A5818F6E3111A30FA0496D4682E2C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0929BA10EAAD4A2149BC195F96D81E60 /* RSKPlaceholderTextView.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RSKPlaceholderTextView/RSKPlaceholderTextView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RSKPlaceholderTextView/RSKPlaceholderTextView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/RSKPlaceholderTextView/RSKPlaceholderTextView.modulemap";
+				PRODUCT_MODULE_NAME = RSKPlaceholderTextView;
+				PRODUCT_NAME = RSKPlaceholderTextView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		39B2024BC8F8A9118C95C886F3E84A4F /* Build configuration list for PBXNativeTarget "RSKPlaceholderTextView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2A5818F6E3111A30FA0496D4682E2C1 /* Debug */,
+				3418A693B12FC79CA32C8384A9B88848 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		424A0F3A10974971F56D802B8271745C /* Build configuration list for PBXNativeTarget "Pods-iOS-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C75DAE6D4020862213BBB150BB84C14 /* Debug */,
+				703C0AC4D2FE8F724DCB5F9E84012ED3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -619,15 +815,6 @@
 			buildConfigurations = (
 				6FDF29F5534B43A3B1541090DD13EF68 /* Debug */,
 				D767BFF4A1F6740304B86AABCB00E319 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E6518BA9E305DEEC89352A2F08866148 /* Build configuration list for PBXNativeTarget "Pods-iOS-Demo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4A58324FF430AFB2164A35D73C5347B0 /* Debug */,
-				541A435D8B626EE301D010CF2CBEC68E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

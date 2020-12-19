@@ -77,7 +77,9 @@ class XLTabBar: UITabBar {
         if view == nil {
             let tempPoint = centerBtn.convert(point, from: self)
             if(centerBtn.bounds.contains(tempPoint)) {
-                return centerBtn
+                if isHidden == false {
+                    return centerBtn
+                }
             }
         }
         return view
