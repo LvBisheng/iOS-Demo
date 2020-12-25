@@ -11,6 +11,12 @@ import Foundation
 extension Test_EntryViewController {
     func other() -> [Test_CellModel] {
         var dataSource:[Test_CellModel] = []
+        
+        let spring = Test_CellModel.init(name: "spring动画") { () -> (Void) in
+            let ctrl = TextSpringAnimationCtrl.init()
+            self.navigationController?.pushViewController(ctrl, animated: true)
+        }
+        dataSource.append(spring)
 
         let textViewDemo = Test_CellModel.init(name: "字数限制的textView") { () -> (Void) in
             let ctrl = LimitCountTextViewDemo.init()

@@ -37,6 +37,8 @@
 		63BDF749255A32D700FE8351 /* XLTabbarCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BDF748255A32D700FE8351 /* XLTabbarCtr.swift */; };
 		63BDF751255A392F00FE8351 /* XLTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BDF750255A392F00FE8351 /* XLTabBar.swift */; };
 		63DA0A5B2574C954001A3F2B /* XLNetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA0A5A2574C954001A3F2B /* XLNetworkHelper.swift */; };
+		63F198C62595D53800804F59 /* TextSpringAnimationCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F198C42595D53800804F59 /* TextSpringAnimationCtrl.swift */; };
+		63F198C72595D53800804F59 /* TextSpringAnimationCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F198C52595D53800804F59 /* TextSpringAnimationCtrl.xib */; };
 		63F55D61258E4E4500F1259E /* XLLimiCountTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F55D60258E4E4500F1259E /* XLLimiCountTextView.swift */; };
 		63F55D69258E4EF000F1259E /* LimitCountTextViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F55D68258E4EF000F1259E /* LimitCountTextViewDemo.swift */; };
 		63FC72D5255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC72D4255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift */; };
@@ -99,6 +101,8 @@
 		63BDF748255A32D700FE8351 /* XLTabbarCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLTabbarCtr.swift; sourceTree = "<group>"; };
 		63BDF750255A392F00FE8351 /* XLTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLTabBar.swift; sourceTree = "<group>"; };
 		63DA0A5A2574C954001A3F2B /* XLNetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLNetworkHelper.swift; sourceTree = "<group>"; };
+		63F198C42595D53800804F59 /* TextSpringAnimationCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSpringAnimationCtrl.swift; sourceTree = "<group>"; };
+		63F198C52595D53800804F59 /* TextSpringAnimationCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextSpringAnimationCtrl.xib; sourceTree = "<group>"; };
 		63F55D60258E4E4500F1259E /* XLLimiCountTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLLimiCountTextView.swift; sourceTree = "<group>"; };
 		63F55D68258E4EF000F1259E /* LimitCountTextViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitCountTextViewDemo.swift; sourceTree = "<group>"; };
 		63FC72D4255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToupiaoJIeGuoCtrl.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 		63490CA424EA619400E09BF5 /* iOS-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				63F198B42595D49D00804F59 /* 动画 */,
 				63F55D5F258E4E2A00F1259E /* 常用控件 */,
 				63DA0A582574C919001A3F2B /* 基础服务类 */,
 				63AF1B16256F4B560076BCCB /* XLLaunchViewController.swift */,
@@ -288,6 +293,15 @@
 				63DA0A5A2574C954001A3F2B /* XLNetworkHelper.swift */,
 			);
 			path = "网络请求";
+			sourceTree = "<group>";
+		};
+		63F198B42595D49D00804F59 /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+				63F198C42595D53800804F59 /* TextSpringAnimationCtrl.swift */,
+				63F198C52595D53800804F59 /* TextSpringAnimationCtrl.xib */,
+			);
+			path = "动画";
 			sourceTree = "<group>";
 		};
 		63F55D5F258E4E2A00F1259E /* 常用控件 */ = {
@@ -422,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63490CB224EA619400E09BF5 /* LaunchScreen.storyboard in Resources */,
+				63F198C72595D53800804F59 /* TextSpringAnimationCtrl.xib in Resources */,
 				63490CAF24EA619400E09BF5 /* Assets.xcassets in Resources */,
 				635E6D1924EAC67E000BACC9 /* TableTagsDemoCtrl.xib in Resources */,
 				63A0B7AD24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.xib in Resources */,
@@ -513,6 +528,7 @@
 				63490CD824EA62E600E09BF5 /* Test_EntryViewControllerExt.swift in Sources */,
 				63DA0A5B2574C954001A3F2B /* XLNetworkHelper.swift in Sources */,
 				63F55D69258E4EF000F1259E /* LimitCountTextViewDemo.swift in Sources */,
+				63F198C62595D53800804F59 /* TextSpringAnimationCtrl.swift in Sources */,
 				635E6D1B24EAC7BE000BACC9 /* LBSTagView.swift in Sources */,
 				63AF1B17256F4B560076BCCB /* XLLaunchViewController.swift in Sources */,
 				63BDF751255A392F00FE8351 /* XLTabBar.swift in Sources */,
