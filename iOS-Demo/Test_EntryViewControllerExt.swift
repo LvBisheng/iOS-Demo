@@ -62,6 +62,12 @@ extension Test_EntryViewController {
         }
         dataSource.append(changeNet)
         
+        let uikit = Test_CellModel.init(name: "一些自定义的UI组件") { () -> (Void) in
+            let ctrl = TestUIKitViewController.init()
+            self.navigationController?.pushViewController(ctrl, animated: true)
+        }
+        dataSource.append(uikit)
+        
         return dataSource
     }
 }
