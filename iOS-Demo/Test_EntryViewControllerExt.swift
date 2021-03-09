@@ -63,6 +63,12 @@ extension Test_EntryViewController {
         }
         dataSource.append(nomalTags)
         
+        let customTags = Test_CellModel.init(name: "自定义的tags") { () -> (Void) in
+            let ctrl = CustomTagDemoCtrl.init()
+            self.navigationController?.pushViewController(ctrl, animated: true)
+        }
+        dataSource.append(customTags)
+        
         let changeNet = Test_CellModel.init(name: "切换网络环境") { () -> (Void) in
             XLNetworkHelper.showChangeNetworkEnvironment()
         }

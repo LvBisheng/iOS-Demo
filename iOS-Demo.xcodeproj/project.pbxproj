@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6317DAED24EBD2DE000E6DC4 /* LBSNomalTagItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6317DAEC24EBD2DE000E6DC4 /* LBSNomalTagItemView.swift */; };
+		6331827325E638080066476F /* CustomTagDemoCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6331827225E638070066476F /* CustomTagDemoCtrl.swift */; };
+		6331827825E63A260066476F /* LBSCanDeleteTagItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6331827725E63A260066476F /* LBSCanDeleteTagItemView.swift */; };
 		63490CA624EA619400E09BF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63490CA524EA619400E09BF5 /* AppDelegate.swift */; };
 		63490CAA24EA619400E09BF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63490CA924EA619400E09BF5 /* ViewController.swift */; };
 		63490CAD24EA619400E09BF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63490CAB24EA619400E09BF5 /* Main.storyboard */; };
@@ -66,6 +68,8 @@
 		2A7DF4B8C2EDB705785DF511 /* Pods_iOS_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E5D086D1DFF7B0A920D9FB /* Pods-iOS-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Demo.release.xcconfig"; path = "Target Support Files/Pods-iOS-Demo/Pods-iOS-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		6317DAEC24EBD2DE000E6DC4 /* LBSNomalTagItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBSNomalTagItemView.swift; sourceTree = "<group>"; };
+		6331827225E638070066476F /* CustomTagDemoCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTagDemoCtrl.swift; sourceTree = "<group>"; };
+		6331827725E63A260066476F /* LBSCanDeleteTagItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBSCanDeleteTagItemView.swift; sourceTree = "<group>"; };
 		63490CA224EA619400E09BF5 /* iOS-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63490CA524EA619400E09BF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63490CA924EA619400E09BF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +146,14 @@
 				44E5D086D1DFF7B0A920D9FB /* Pods-iOS-Demo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		6331827125E637CD0066476F /* CustomTagDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6331827225E638070066476F /* CustomTagDemoCtrl.swift */,
+			);
+			path = CustomTagDemo;
 			sourceTree = "<group>";
 		};
 		63490C9924EA619300E09BF5 = {
@@ -222,6 +234,7 @@
 		635E6D1324EAC63A000BACC9 /* TagsViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6331827125E637CD0066476F /* CustomTagDemo */,
 				63A0B7A724EBCAF100F2C9DA /* NomalDemo */,
 				63A0B7A624EBCAD900F2C9DA /* TableDemo */,
 				63A0B7A524EBCABB00F2C9DA /* LBSTagView */,
@@ -246,6 +259,7 @@
 			children = (
 				635E6D1A24EAC7BE000BACC9 /* LBSTagView.swift */,
 				6317DAEC24EBD2DE000E6DC4 /* LBSNomalTagItemView.swift */,
+				6331827725E63A260066476F /* LBSCanDeleteTagItemView.swift */,
 			);
 			path = LBSTagView;
 			sourceTree = "<group>";
@@ -531,7 +545,9 @@
 				63F198C62595D53800804F59 /* TextSpringAnimationCtrl.swift in Sources */,
 				635E6D1B24EAC7BE000BACC9 /* LBSTagView.swift in Sources */,
 				63AF1B17256F4B560076BCCB /* XLLaunchViewController.swift in Sources */,
+				6331827825E63A260066476F /* LBSCanDeleteTagItemView.swift in Sources */,
 				63BDF751255A392F00FE8351 /* XLTabBar.swift in Sources */,
+				6331827325E638080066476F /* CustomTagDemoCtrl.swift in Sources */,
 				63A0B7A224EBB41F00F2C9DA /* StringExtension.swift in Sources */,
 				635E6D1E24EAC95E000BACC9 /* TagsTableViewCell.swift in Sources */,
 			);
