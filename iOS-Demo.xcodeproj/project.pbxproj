@@ -27,6 +27,7 @@
 		635E6D1B24EAC7BE000BACC9 /* LBSTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D1A24EAC7BE000BACC9 /* LBSTagView.swift */; };
 		635E6D1E24EAC95E000BACC9 /* TagsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D1C24EAC95E000BACC9 /* TagsTableViewCell.swift */; };
 		635E6D1F24EAC95E000BACC9 /* TagsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635E6D1D24EAC95E000BACC9 /* TagsTableViewCell.xib */; };
+		638C30BD25F7709600D16EE4 /* TestPageTurningCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638C30BC25F7709600D16EE4 /* TestPageTurningCtrl.xib */; };
 		639E255325806410007CADF2 /* TestUIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E255225806410007CADF2 /* TestUIKitViewController.swift */; };
 		639E255B2580660E007CADF2 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E255A2580660E007CADF2 /* UIImageExtensions.swift */; };
 		63A0B79E24EB706F00F2C9DA /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A0B79D24EB706F00F2C9DA /* UIViewControllerExtension.swift */; };
@@ -38,6 +39,7 @@
 		63AF1B17256F4B560076BCCB /* XLLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AF1B16256F4B560076BCCB /* XLLaunchViewController.swift */; };
 		63BDF749255A32D700FE8351 /* XLTabbarCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BDF748255A32D700FE8351 /* XLTabbarCtr.swift */; };
 		63BDF751255A392F00FE8351 /* XLTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BDF750255A392F00FE8351 /* XLTabBar.swift */; };
+		63CDE67625F76F6C003A9638 /* TestPageTurningCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDE67525F76F6C003A9638 /* TestPageTurningCtrl.swift */; };
 		63DA0A5B2574C954001A3F2B /* XLNetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA0A5A2574C954001A3F2B /* XLNetworkHelper.swift */; };
 		63F198C62595D53800804F59 /* TextSpringAnimationCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F198C42595D53800804F59 /* TextSpringAnimationCtrl.swift */; };
 		63F198C72595D53800804F59 /* TextSpringAnimationCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F198C52595D53800804F59 /* TextSpringAnimationCtrl.xib */; };
@@ -93,6 +95,7 @@
 		635E6D1A24EAC7BE000BACC9 /* LBSTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBSTagView.swift; sourceTree = "<group>"; };
 		635E6D1C24EAC95E000BACC9 /* TagsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsTableViewCell.swift; sourceTree = "<group>"; };
 		635E6D1D24EAC95E000BACC9 /* TagsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagsTableViewCell.xib; sourceTree = "<group>"; };
+		638C30BC25F7709600D16EE4 /* TestPageTurningCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestPageTurningCtrl.xib; sourceTree = "<group>"; };
 		639E255225806410007CADF2 /* TestUIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIKitViewController.swift; sourceTree = "<group>"; };
 		639E255A2580660E007CADF2 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		63A0B79D24EB706F00F2C9DA /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 		63AF1B16256F4B560076BCCB /* XLLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLLaunchViewController.swift; sourceTree = "<group>"; };
 		63BDF748255A32D700FE8351 /* XLTabbarCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLTabbarCtr.swift; sourceTree = "<group>"; };
 		63BDF750255A392F00FE8351 /* XLTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLTabBar.swift; sourceTree = "<group>"; };
+		63CDE67525F76F6C003A9638 /* TestPageTurningCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPageTurningCtrl.swift; sourceTree = "<group>"; };
 		63DA0A5A2574C954001A3F2B /* XLNetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLNetworkHelper.swift; sourceTree = "<group>"; };
 		63F198C42595D53800804F59 /* TextSpringAnimationCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSpringAnimationCtrl.swift; sourceTree = "<group>"; };
 		63F198C52595D53800804F59 /* TextSpringAnimationCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextSpringAnimationCtrl.xib; sourceTree = "<group>"; };
@@ -312,6 +316,8 @@
 		63F198B42595D49D00804F59 /* 动画 */ = {
 			isa = PBXGroup;
 			children = (
+				63CDE67525F76F6C003A9638 /* TestPageTurningCtrl.swift */,
+				638C30BC25F7709600D16EE4 /* TestPageTurningCtrl.xib */,
 				63F198C42595D53800804F59 /* TextSpringAnimationCtrl.swift */,
 				63F198C52595D53800804F59 /* TextSpringAnimationCtrl.xib */,
 			);
@@ -455,6 +461,7 @@
 				635E6D1924EAC67E000BACC9 /* TableTagsDemoCtrl.xib in Resources */,
 				63A0B7AD24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.xib in Resources */,
 				63490CDE24EA7E5B00E09BF5 /* H5Bridge.html in Resources */,
+				638C30BD25F7709600D16EE4 /* TestPageTurningCtrl.xib in Resources */,
 				635E6D1F24EAC95E000BACC9 /* TagsTableViewCell.xib in Resources */,
 				63490CAD24EA619400E09BF5 /* Main.storyboard in Resources */,
 			);
@@ -544,6 +551,7 @@
 				63F55D69258E4EF000F1259E /* LimitCountTextViewDemo.swift in Sources */,
 				63F198C62595D53800804F59 /* TextSpringAnimationCtrl.swift in Sources */,
 				635E6D1B24EAC7BE000BACC9 /* LBSTagView.swift in Sources */,
+				63CDE67625F76F6C003A9638 /* TestPageTurningCtrl.swift in Sources */,
 				63AF1B17256F4B560076BCCB /* XLLaunchViewController.swift in Sources */,
 				6331827825E63A260066476F /* LBSCanDeleteTagItemView.swift in Sources */,
 				63BDF751255A392F00FE8351 /* XLTabBar.swift in Sources */,

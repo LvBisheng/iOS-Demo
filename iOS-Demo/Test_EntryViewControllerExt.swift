@@ -12,6 +12,12 @@ extension Test_EntryViewController {
     func other() -> [Test_CellModel] {
         var dataSource:[Test_CellModel] = []
         
+        let turn = Test_CellModel.init(name: "翻页动画") { () -> (Void) in
+            let ctrl = TestPageTurningCtrl.init()
+            self.navigationController?.pushViewController(ctrl, animated: true)
+        }
+        dataSource.append(turn)
+        
         let spring = Test_CellModel.init(name: "spring动画") { () -> (Void) in
             let ctrl = TextSpringAnimationCtrl.init()
             self.navigationController?.pushViewController(ctrl, animated: true)
