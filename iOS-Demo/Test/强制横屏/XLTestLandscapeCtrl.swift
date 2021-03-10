@@ -10,7 +10,7 @@ import UIKit
 
 class XLTestLandscapeCtrl: XLBaseViewController {
     
-    
+    // 屏幕旋转设置
     override var shouldAutorotate: Bool {
         return false
     }
@@ -21,6 +21,20 @@ class XLTestLandscapeCtrl: XLBaseViewController {
 
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
         return .landscapeRight
+    }
+    
+    
+    // 状态栏设置(iOS 13以上状态栏显示不出来，可以考虑自定义状态栏)
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
+
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .none
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     override func viewDidLoad() {
