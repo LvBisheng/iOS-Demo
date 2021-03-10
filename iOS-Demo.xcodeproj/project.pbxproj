@@ -27,6 +27,12 @@
 		635E6D1B24EAC7BE000BACC9 /* LBSTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D1A24EAC7BE000BACC9 /* LBSTagView.swift */; };
 		635E6D1E24EAC95E000BACC9 /* TagsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D1C24EAC95E000BACC9 /* TagsTableViewCell.swift */; };
 		635E6D1F24EAC95E000BACC9 /* TagsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635E6D1D24EAC95E000BACC9 /* TagsTableViewCell.xib */; };
+		637DF0F525F86D5600C3B383 /* XLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DF0F425F86D5600C3B383 /* XLBaseViewController.swift */; };
+		637DF0FE25F86E1700C3B383 /* MacroTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DF0FD25F86E1700C3B383 /* MacroTool.swift */; };
+		637DF10825F8704800C3B383 /* XLTestLandscapeCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DF10725F8704800C3B383 /* XLTestLandscapeCtrl.swift */; };
+		637DF11025F871CC00C3B383 /* XLBaseNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DF10F25F871CC00C3B383 /* XLBaseNavViewController.swift */; };
+		637DF11825F876A800C3B383 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DF11725F876A800C3B383 /* UINavigationControllerExtension.swift */; };
+		637DF11D25F876B800C3B383 /* UITabbarControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DF11C25F876B800C3B383 /* UITabbarControllerExtension.swift */; };
 		638C30BD25F7709600D16EE4 /* TestPageTurningCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638C30BC25F7709600D16EE4 /* TestPageTurningCtrl.xib */; };
 		639E255325806410007CADF2 /* TestUIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E255225806410007CADF2 /* TestUIKitViewController.swift */; };
 		639E255B2580660E007CADF2 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E255A2580660E007CADF2 /* UIImageExtensions.swift */; };
@@ -95,6 +101,12 @@
 		635E6D1A24EAC7BE000BACC9 /* LBSTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBSTagView.swift; sourceTree = "<group>"; };
 		635E6D1C24EAC95E000BACC9 /* TagsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsTableViewCell.swift; sourceTree = "<group>"; };
 		635E6D1D24EAC95E000BACC9 /* TagsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagsTableViewCell.xib; sourceTree = "<group>"; };
+		637DF0F425F86D5600C3B383 /* XLBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLBaseViewController.swift; sourceTree = "<group>"; };
+		637DF0FD25F86E1700C3B383 /* MacroTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroTool.swift; sourceTree = "<group>"; };
+		637DF10725F8704800C3B383 /* XLTestLandscapeCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLTestLandscapeCtrl.swift; sourceTree = "<group>"; };
+		637DF10F25F871CC00C3B383 /* XLBaseNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLBaseNavViewController.swift; sourceTree = "<group>"; };
+		637DF11725F876A800C3B383 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		637DF11C25F876B800C3B383 /* UITabbarControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabbarControllerExtension.swift; sourceTree = "<group>"; };
 		638C30BC25F7709600D16EE4 /* TestPageTurningCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestPageTurningCtrl.xib; sourceTree = "<group>"; };
 		639E255225806410007CADF2 /* TestUIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIKitViewController.swift; sourceTree = "<group>"; };
 		639E255A2580660E007CADF2 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
@@ -185,16 +197,12 @@
 		63490CA424EA619400E09BF5 /* iOS-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				63F198B42595D49D00804F59 /* 动画 */,
+				637DF10525F86FC700C3B383 /* Test */,
 				63F55D5F258E4E2A00F1259E /* 常用控件 */,
 				63DA0A582574C919001A3F2B /* 基础服务类 */,
-				63AF1B16256F4B560076BCCB /* XLLaunchViewController.swift */,
-				63BDF747255A328C00FE8351 /* 类闲鱼Tabbar */,
-				63FC72D025599489003A3D18 /* 投票结果 */,
 				63A0B79C24EB700A00F2C9DA /* Extension */,
-				635E6D1324EAC63A000BACC9 /* TagsViewDemo */,
-				63490CD924EA65F600E09BF5 /* Web */,
 				63490CA524EA619400E09BF5 /* AppDelegate.swift */,
+				63AF1B16256F4B560076BCCB /* XLLaunchViewController.swift */,
 				63490CD524EA625300E09BF5 /* Test_EntryViewController.swift */,
 				63490CD724EA62E600E09BF5 /* Test_EntryViewControllerExt.swift */,
 				63490CA924EA619400E09BF5 /* ViewController.swift */,
@@ -246,10 +254,57 @@
 			path = TagsViewDemo;
 			sourceTree = "<group>";
 		};
+		637DF0F225F86D2100C3B383 /* 基类 */ = {
+			isa = PBXGroup;
+			children = (
+				637DF0F325F86D3300C3B383 /* UIKit */,
+			);
+			path = "基类";
+			sourceTree = "<group>";
+		};
+		637DF0F325F86D3300C3B383 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				637DF0F425F86D5600C3B383 /* XLBaseViewController.swift */,
+				637DF10F25F871CC00C3B383 /* XLBaseNavViewController.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		637DF0FC25F86DF900C3B383 /* 常用宏 */ = {
+			isa = PBXGroup;
+			children = (
+				637DF0FD25F86E1700C3B383 /* MacroTool.swift */,
+			);
+			path = "常用宏";
+			sourceTree = "<group>";
+		};
+		637DF10525F86FC700C3B383 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				637DF10625F8700D00C3B383 /* 强制横屏 */,
+				63BDF747255A328C00FE8351 /* 类闲鱼Tabbar */,
+				63FC72D025599489003A3D18 /* 投票结果 */,
+				635E6D1324EAC63A000BACC9 /* TagsViewDemo */,
+				63F198B42595D49D00804F59 /* 动画 */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		637DF10625F8700D00C3B383 /* 强制横屏 */ = {
+			isa = PBXGroup;
+			children = (
+				637DF10725F8704800C3B383 /* XLTestLandscapeCtrl.swift */,
+			);
+			path = "强制横屏";
+			sourceTree = "<group>";
+		};
 		63A0B79C24EB700A00F2C9DA /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				63A0B79D24EB706F00F2C9DA /* UIViewControllerExtension.swift */,
+				637DF11725F876A800C3B383 /* UINavigationControllerExtension.swift */,
+				637DF11C25F876B800C3B383 /* UITabbarControllerExtension.swift */,
 				63A0B79F24EB720B00F2C9DA /* UIApplicatonExtension.swift */,
 				63A0B7A324EBB7FC00F2C9DA /* UIColorExtension.swift */,
 				63A0B7A124EBB41F00F2C9DA /* StringExtension.swift */,
@@ -300,6 +355,9 @@
 		63DA0A582574C919001A3F2B /* 基础服务类 */ = {
 			isa = PBXGroup;
 			children = (
+				63490CD924EA65F600E09BF5 /* Web */,
+				637DF0FC25F86DF900C3B383 /* 常用宏 */,
+				637DF0F225F86D2100C3B383 /* 基类 */,
 				63DA0A592574C92B001A3F2B /* 网络请求 */,
 			);
 			path = "基础服务类";
@@ -542,6 +600,7 @@
 				6317DAED24EBD2DE000E6DC4 /* LBSNomalTagItemView.swift in Sources */,
 				63490CDB24EA664900E09BF5 /* BaseWebViewController.swift in Sources */,
 				635E6D1824EAC67E000BACC9 /* TableTagsDemoCtrl.swift in Sources */,
+				637DF0FE25F86E1700C3B383 /* MacroTool.swift in Sources */,
 				63490CD624EA625300E09BF5 /* Test_EntryViewController.swift in Sources */,
 				63490CA624EA619400E09BF5 /* AppDelegate.swift in Sources */,
 				63490CE024EA84B400E09BF5 /* LBSJSHandleService.swift in Sources */,
@@ -550,11 +609,16 @@
 				63DA0A5B2574C954001A3F2B /* XLNetworkHelper.swift in Sources */,
 				63F55D69258E4EF000F1259E /* LimitCountTextViewDemo.swift in Sources */,
 				63F198C62595D53800804F59 /* TextSpringAnimationCtrl.swift in Sources */,
+				637DF0F525F86D5600C3B383 /* XLBaseViewController.swift in Sources */,
 				635E6D1B24EAC7BE000BACC9 /* LBSTagView.swift in Sources */,
+				637DF11D25F876B800C3B383 /* UITabbarControllerExtension.swift in Sources */,
 				63CDE67625F76F6C003A9638 /* TestPageTurningCtrl.swift in Sources */,
+				637DF10825F8704800C3B383 /* XLTestLandscapeCtrl.swift in Sources */,
 				63AF1B17256F4B560076BCCB /* XLLaunchViewController.swift in Sources */,
 				6331827825E63A260066476F /* LBSCanDeleteTagItemView.swift in Sources */,
 				63BDF751255A392F00FE8351 /* XLTabBar.swift in Sources */,
+				637DF11025F871CC00C3B383 /* XLBaseNavViewController.swift in Sources */,
+				637DF11825F876A800C3B383 /* UINavigationControllerExtension.swift in Sources */,
 				6331827325E638080066476F /* CustomTagDemoCtrl.swift in Sources */,
 				63A0B7A224EBB41F00F2C9DA /* StringExtension.swift in Sources */,
 				635E6D1E24EAC95E000BACC9 /* TagsTableViewCell.swift in Sources */,

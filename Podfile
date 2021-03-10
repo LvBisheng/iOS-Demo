@@ -8,5 +8,4 @@ target 'iOS-Demo' do
   pod 'GDPerformanceView-Swift', '~> 2.0.3'
   pod 'RSKPlaceholderTextView'
   pod 'SnapKit', '~> 4.2.0'
-
 end

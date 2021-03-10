@@ -37,17 +37,18 @@ class TestPageTurningCtrl: UIViewController {
     }
     
     @IBAction func next(_ sender: Any) {
-        index = index + 1
-        if(index >= imgList.count) {
-            index = 0
-        }
-        bgImgv.image = UIImage(named: imgList[index])
+//        index = index + 1
+//        if(index >= imgList.count) {
+//            index = 0
+//        }
+//        bgImgv.image = UIImage(named: imgList[index])
         
         let transion = CATransition.init()
         transion.type = CATransitionType.init(rawValue: "pageCurl")
         transion.subtype = .fromRight
         transion.duration = 1.5
         transion.delegate = self
+        transion.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeInEaseOut)
         self.bgImgv.layer.add(transion, forKey: nil)
     }
     

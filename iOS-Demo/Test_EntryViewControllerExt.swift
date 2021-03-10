@@ -7,10 +7,19 @@
 //
 
 import Foundation
+import UIKit
 
 extension Test_EntryViewController {
     func other() -> [Test_CellModel] {
         var dataSource:[Test_CellModel] = []
+        
+        let landspace = Test_CellModel.init(name: "横屏") { () -> (Void) in
+            let ctrl = XLTestLandscapeCtrl.init()
+            let nav = XLBaseNavViewController.init(rootViewController: ctrl)
+            nav.modalPresentationStyle = .fullScreen
+            self.navigationController?.topViewController?.present(nav, animated: true, completion: nil)
+        }
+        dataSource.append(landspace)
         
         let turn = Test_CellModel.init(name: "翻页动画") { () -> (Void) in
             let ctrl = TestPageTurningCtrl.init()
