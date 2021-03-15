@@ -28,6 +28,7 @@ class BaseWebViewController: UIViewController {
         configuration.userContentController = userContentCtrl
         let webView = WKWebView(frame: view.bounds, configuration: configuration)
         view.addSubview(webView)
+        webView.uiDelegate = self
         return webView
     }()
     
@@ -51,6 +52,8 @@ class BaseWebViewController: UIViewController {
         super.viewDidLoad()
         setup()
         loadData()
+        
+        testUI()
     }
     
     private func setup() {
@@ -119,6 +122,28 @@ class BaseWebViewController: UIViewController {
     }
 }
 
+// 一些测试代码
+extension BaseWebViewController {
+    private func testUI() {
+        let btn = UIButton.init(frame: CGRect.zero)
+        btn.setTitle("测试(Native调用JS)", for: UIControl.State.normal)
+        btn.frame = CGRect(x: 100, y: view.bounds.size.height - btn.intrinsicContentSize.height - 100, width: btn.intrinsicContentSize.width, height: btn.intrinsicContentSize.height)
+        btn.setTitleColor(UIColor.red, for: UIControl.State.normal)
+        view.addSubview(btn)
+        btn.addTarget(self, action: #selector(testAction), for: UIControl.Event.touchUpInside)
+    }
+    
+    @objc private func testAction() {
+        webView.evaluateJavaScript("nativeToJsMsgMethod('ABCD')") { (result, error) in
+            if let e = error {
+                print("Native 调用 JS失败 \(e)")
+            } else {
+                print("Native 调用 JS成功")
+            }
+        }
+    }
+}
+
 extension BaseWebViewController {
     // MARK:- 监听 进度条、标题
     open override func observeValue(forKeyPath keyPath: String?,
@@ -156,5 +181,42 @@ extension BaseWebViewController {
 extension BaseWebViewController: WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         LBSJSHandleService.shared.handleJSMessage(message, currentController: self)
+    }
+}
+
+/// 自定义弹框
+extension BaseWebViewController: WKUIDelegate {
+    func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
+        let alertCtrl = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction.init(title: "确定", style: .default) { (alert) in
+            completionHandler()
+        }
+        alertCtrl.addAction(okAction)
+        present(alertCtrl, animated: true, completion: nil)
+    }
+    
+    func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
+        let alertCtrl = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "取消", style: .default) { (_) in
+            completionHandler(false)
+        }
+        let okAction = UIAlertAction.init(title: "确定", style: .default) { (alert) in
+            completionHandler(true)
+        }
+        alertCtrl.addAction(cancelAction)
+        alertCtrl.addAction(okAction)
+        present(alertCtrl, animated: true, completion: nil)
+    }
+    
+    func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
+        let alertCtrl = UIAlertController(title: prompt, message: "", preferredStyle: .alert)
+        alertCtrl.addTextField { (tf) in
+            tf.text = defaultText
+        }
+        let okAction = UIAlertAction.init(title: "确定", style: .default) { (alert) in
+            completionHandler(alertCtrl.textFields?.first?.text ?? "")
+        }
+        alertCtrl.addAction(okAction)
+        present(alertCtrl, animated: true, completion: nil)
     }
 }

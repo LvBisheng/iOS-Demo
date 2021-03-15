@@ -10,14 +10,22 @@
     <h1>WebViewJavascriptBridge Demo</h1>
     <script>
         
-        function navtiveGotoHome() {
+        function fun1() {
             window.webkit.messageHandlers.jsToNativeMsgMethod.postMessage(null)
-            alert('H5调用Native')
         }
+    
+    function fun2() {
+        window.webkit.messageHandlers.jsToNativeMsgMethod.postMessage("{'data': '哈哈'}")
+    }
+    
+    function nativeToJsMsgMethod(param) {
+        alert("JS监听到Natvie的调用, 参数:" + param);
+    }
         
     </script>
-    <div> <button onclick="navtiveGotoHome()">Js调用原生</button> </div>
-    
+    <div> <button onclick="fun1()">Js调用原生(不带参数)</button> </div>
+    <div> <button onclick="fun2()">Js调用原生(带参数)</button> </div>
+
 </body></html>
 
 
