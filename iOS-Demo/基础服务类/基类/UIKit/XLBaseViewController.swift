@@ -34,6 +34,7 @@ class XLBaseViewController: UIViewController {
         super.viewDidLoad()
         // 不想要四个边缘均延伸
         self.edgesForExtendedLayout = []
+        
         self.view.backgroundColor = UIColor.lightGray
         
         setupNav()

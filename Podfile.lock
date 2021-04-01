@@ -1,24 +1,28 @@
 PODS:
+  - FDFullscreenPopGesture (1.1)
   - GDPerformanceView-Swift (2.0.3)
   - RSKPlaceholderTextView (6.0.3)
   - SnapKit (4.2.0)
 
 DEPENDENCIES:
+  - FDFullscreenPopGesture (~> 1.1)
   - GDPerformanceView-Swift (~> 2.0.3)
   - RSKPlaceholderTextView
   - SnapKit (~> 4.2.0)
 
 SPEC REPOS:
   trunk:
+    - FDFullscreenPopGesture
     - GDPerformanceView-Swift
     - RSKPlaceholderTextView
     - SnapKit
 
 SPEC CHECKSUMS:
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   GDPerformanceView-Swift: ef3d05deb103e472a5494d3f60aeca5a58b88a7d
   RSKPlaceholderTextView: fc8c8932546298ec9d5e5572284aa42adb87b066
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 802118b4f9c6df60bcb192bf133df84397e0c549
+PODFILE CHECKSUM: a7f4148215e0220e3c68b8e0a11884f3978bbf5d
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
