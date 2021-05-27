@@ -29,13 +29,14 @@ class TestUIKitViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         testSegment()
+        testSlider()
     }
     
 
     func testSegment() {
         let segment = UISegmentedControl.init(items: ["我审核的","我发起的"])
         bgScrollView.addSubview(segment)
-        segment.frame = CGRect(x: 15, y: lastViewMaxY, width: 166, height: 30)
+        segment.frame = CGRect(x: 15, y: lastViewMaxY + 20, width: 166, height: 30)
         segment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)], for: .normal)
         segment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)], for: .selected)
 
@@ -57,5 +58,16 @@ class TestUIKitViewController: UIViewController {
         bgScrollView.contentSize = CGSize(width: view.bounds.size.width, height: segment.frame.maxY)
     }
   
+    func testSlider() {
+        let slider = XLCustomSlider.init()
+        slider.customHeight = 10
+        slider.minimumTrackTintColor = .white
+        slider.maximumTrackTintColor = .gray
+        bgScrollView.addSubview(slider)
+        slider.frame = .init(x: 15, y: lastViewMaxY + 20, width: view.bounds.size.width - 30, height: 0)
+        
+        lastView = slider
+        bgScrollView.contentSize = .init(width: view.bounds.size.width, height: slider.frame.maxY)
+    }
 
 }

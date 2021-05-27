@@ -10,7 +10,6 @@
 		6317DAED24EBD2DE000E6DC4 /* LBSNomalTagItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6317DAEC24EBD2DE000E6DC4 /* LBSNomalTagItemView.swift */; };
 		6331827325E638080066476F /* CustomTagDemoCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6331827225E638070066476F /* CustomTagDemoCtrl.swift */; };
 		6331827825E63A260066476F /* LBSCanDeleteTagItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6331827725E63A260066476F /* LBSCanDeleteTagItemView.swift */; };
-		6336C0D22615B61400E702A5 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6336C0D12615B61400E702A5 /* UIApplicationExtensions.swift */; };
 		63490CA624EA619400E09BF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63490CA524EA619400E09BF5 /* AppDelegate.swift */; };
 		63490CAA24EA619400E09BF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63490CA924EA619400E09BF5 /* ViewController.swift */; };
 		63490CAD24EA619400E09BF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63490CAB24EA619400E09BF5 /* Main.storyboard */; };
@@ -47,6 +46,7 @@
 		63BDF749255A32D700FE8351 /* XLTabbarCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BDF748255A32D700FE8351 /* XLTabbarCtr.swift */; };
 		63BDF751255A392F00FE8351 /* XLTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BDF750255A392F00FE8351 /* XLTabBar.swift */; };
 		63CDE67625F76F6C003A9638 /* TestPageTurningCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDE67525F76F6C003A9638 /* TestPageTurningCtrl.swift */; };
+		63CFEB4F265F70CC00F92A60 /* XLCustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CFEB4E265F70CC00F92A60 /* XLCustomSlider.swift */; };
 		63DA0A5B2574C954001A3F2B /* XLNetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA0A5A2574C954001A3F2B /* XLNetworkHelper.swift */; };
 		63F198C62595D53800804F59 /* TextSpringAnimationCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F198C42595D53800804F59 /* TextSpringAnimationCtrl.swift */; };
 		63F198C72595D53800804F59 /* TextSpringAnimationCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F198C52595D53800804F59 /* TextSpringAnimationCtrl.xib */; };
@@ -79,7 +79,6 @@
 		6317DAEC24EBD2DE000E6DC4 /* LBSNomalTagItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBSNomalTagItemView.swift; sourceTree = "<group>"; };
 		6331827225E638070066476F /* CustomTagDemoCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTagDemoCtrl.swift; sourceTree = "<group>"; };
 		6331827725E63A260066476F /* LBSCanDeleteTagItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBSCanDeleteTagItemView.swift; sourceTree = "<group>"; };
-		6336C0D12615B61400E702A5 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
 		63490CA224EA619400E09BF5 /* iOS-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63490CA524EA619400E09BF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63490CA924EA619400E09BF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +121,7 @@
 		63BDF748255A32D700FE8351 /* XLTabbarCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLTabbarCtr.swift; sourceTree = "<group>"; };
 		63BDF750255A392F00FE8351 /* XLTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLTabBar.swift; sourceTree = "<group>"; };
 		63CDE67525F76F6C003A9638 /* TestPageTurningCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPageTurningCtrl.swift; sourceTree = "<group>"; };
+		63CFEB4E265F70CC00F92A60 /* XLCustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLCustomSlider.swift; sourceTree = "<group>"; };
 		63DA0A5A2574C954001A3F2B /* XLNetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLNetworkHelper.swift; sourceTree = "<group>"; };
 		63F198C42595D53800804F59 /* TextSpringAnimationCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSpringAnimationCtrl.swift; sourceTree = "<group>"; };
 		63F198C52595D53800804F59 /* TextSpringAnimationCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextSpringAnimationCtrl.xib; sourceTree = "<group>"; };
@@ -306,7 +306,6 @@
 			children = (
 				63A0B79D24EB706F00F2C9DA /* UIViewControllerExtension.swift */,
 				637DF11725F876A800C3B383 /* UINavigationControllerExtension.swift */,
-				6336C0D12615B61400E702A5 /* UIApplicationExtensions.swift */,
 				637DF11C25F876B800C3B383 /* UITabbarControllerExtension.swift */,
 				63A0B79F24EB720B00F2C9DA /* UIApplicatonExtension.swift */,
 				63A0B7A324EBB7FC00F2C9DA /* UIColorExtension.swift */,
@@ -390,6 +389,7 @@
 			children = (
 				63F55D60258E4E4500F1259E /* XLLimiCountTextView.swift */,
 				63F55D68258E4EF000F1259E /* LimitCountTextViewDemo.swift */,
+				63CFEB4E265F70CC00F92A60 /* XLCustomSlider.swift */,
 			);
 			path = "常用控件";
 			sourceTree = "<group>";
@@ -604,10 +604,10 @@
 				63490CDB24EA664900E09BF5 /* BaseWebViewController.swift in Sources */,
 				635E6D1824EAC67E000BACC9 /* TableTagsDemoCtrl.swift in Sources */,
 				637DF0FE25F86E1700C3B383 /* MacroTool.swift in Sources */,
+				63CFEB4F265F70CC00F92A60 /* XLCustomSlider.swift in Sources */,
 				63490CD624EA625300E09BF5 /* Test_EntryViewController.swift in Sources */,
 				63490CA624EA619400E09BF5 /* AppDelegate.swift in Sources */,
 				63490CE024EA84B400E09BF5 /* LBSJSHandleService.swift in Sources */,
-				6336C0D22615B61400E702A5 /* UIApplicationExtensions.swift in Sources */,
 				63FC72D5255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift in Sources */,
 				63490CD824EA62E600E09BF5 /* Test_EntryViewControllerExt.swift in Sources */,
 				63DA0A5B2574C954001A3F2B /* XLNetworkHelper.swift in Sources */,
