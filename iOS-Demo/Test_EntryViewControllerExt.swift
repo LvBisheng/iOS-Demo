@@ -13,6 +13,11 @@ extension Test_EntryViewController {
     func other() -> [Test_CellModel] {
         var dataSource:[Test_CellModel] = []
         
+        let binarySort = Test_CellModel.init(name: "输出二进制重排的符号") { () -> (Void) in
+            LBSBinarySort.record()
+        }
+        dataSource.append(binarySort)
+        
         let landspace = Test_CellModel.init(name: "横屏") { () -> (Void) in
             let ctrl = XLTestLandscapeCtrl.init()
             let nav = XLBaseNavViewController.init(rootViewController: ctrl)
