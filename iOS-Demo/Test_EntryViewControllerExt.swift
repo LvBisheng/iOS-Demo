@@ -13,6 +13,12 @@ extension Test_EntryViewController {
     func other() -> [Test_CellModel] {
         var dataSource:[Test_CellModel] = []
         
+        let sensitveData = Test_CellModel.init(name: "敏感数据") {
+            let vc = SensitiveDataSaveCtrl.init()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        dataSource.append(sensitveData)
+        
         let binarySort = Test_CellModel.init(name: "输出二进制重排的符号") { () -> (Void) in
             LBSBinarySort.record()
         }

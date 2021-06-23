@@ -49,6 +49,9 @@
 		63CDE67625F76F6C003A9638 /* TestPageTurningCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDE67525F76F6C003A9638 /* TestPageTurningCtrl.swift */; };
 		63CFEB4F265F70CC00F92A60 /* XLCustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CFEB4E265F70CC00F92A60 /* XLCustomSlider.swift */; };
 		63DA0A5B2574C954001A3F2B /* XLNetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA0A5A2574C954001A3F2B /* XLNetworkHelper.swift */; };
+		63EE92392682E796004B50CD /* LBSKeyChainUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EE92382682E796004B50CD /* LBSKeyChainUtil.m */; };
+		63EE923D268314EB004B50CD /* SensitiveDataSaveCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE923B268314EB004B50CD /* SensitiveDataSaveCtrl.swift */; };
+		63EE923E268314EB004B50CD /* SensitiveDataSaveCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EE923C268314EB004B50CD /* SensitiveDataSaveCtrl.xib */; };
 		63F198C62595D53800804F59 /* TextSpringAnimationCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F198C42595D53800804F59 /* TextSpringAnimationCtrl.swift */; };
 		63F198C72595D53800804F59 /* TextSpringAnimationCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F198C52595D53800804F59 /* TextSpringAnimationCtrl.xib */; };
 		63F55D61258E4E4500F1259E /* XLLimiCountTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F55D60258E4E4500F1259E /* XLLimiCountTextView.swift */; };
@@ -127,6 +130,10 @@
 		63CDE67525F76F6C003A9638 /* TestPageTurningCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPageTurningCtrl.swift; sourceTree = "<group>"; };
 		63CFEB4E265F70CC00F92A60 /* XLCustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLCustomSlider.swift; sourceTree = "<group>"; };
 		63DA0A5A2574C954001A3F2B /* XLNetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLNetworkHelper.swift; sourceTree = "<group>"; };
+		63EE92372682E796004B50CD /* LBSKeyChainUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBSKeyChainUtil.h; sourceTree = "<group>"; };
+		63EE92382682E796004B50CD /* LBSKeyChainUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBSKeyChainUtil.m; sourceTree = "<group>"; };
+		63EE923B268314EB004B50CD /* SensitiveDataSaveCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensitiveDataSaveCtrl.swift; sourceTree = "<group>"; };
+		63EE923C268314EB004B50CD /* SensitiveDataSaveCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SensitiveDataSaveCtrl.xib; sourceTree = "<group>"; };
 		63F198C42595D53800804F59 /* TextSpringAnimationCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSpringAnimationCtrl.swift; sourceTree = "<group>"; };
 		63F198C52595D53800804F59 /* TextSpringAnimationCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextSpringAnimationCtrl.xib; sourceTree = "<group>"; };
 		63F55D60258E4E4500F1259E /* XLLimiCountTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLLimiCountTextView.swift; sourceTree = "<group>"; };
@@ -213,6 +220,7 @@
 				63490CD724EA62E600E09BF5 /* Test_EntryViewControllerExt.swift */,
 				63490CA924EA619400E09BF5 /* ViewController.swift */,
 				639E255225806410007CADF2 /* TestUIKitViewController.swift */,
+				63A7D4722680797E00523F4A /* iOS-Demo-Bridging-Header.h */,
 				63490CAB24EA619400E09BF5 /* Main.storyboard */,
 				63490CAE24EA619400E09BF5 /* Assets.xcassets */,
 				63490CB024EA619400E09BF5 /* LaunchScreen.storyboard */,
@@ -288,6 +296,7 @@
 		637DF10525F86FC700C3B383 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				63EE923A268314A1004B50CD /* 敏感数据保存 */,
 				637DF10625F8700D00C3B383 /* 强制横屏 */,
 				63BDF747255A328C00FE8351 /* 类闲鱼Tabbar */,
 				63FC72D025599489003A3D18 /* 投票结果 */,
@@ -354,7 +363,6 @@
 			children = (
 				63A7D4732680797F00523F4A /* LBSBinarySort.h */,
 				63A7D4742680797F00523F4A /* LBSBinarySort.m */,
-				63A7D4722680797E00523F4A /* iOS-Demo-Bridging-Header.h */,
 			);
 			path = "二进制重排";
 			sourceTree = "<group>";
@@ -371,6 +379,7 @@
 		63DA0A582574C919001A3F2B /* 基础服务类 */ = {
 			isa = PBXGroup;
 			children = (
+				63EE92362682E778004B50CD /* KeyChain */,
 				63A7D4712680795F00523F4A /* 二进制重排 */,
 				63490CD924EA65F600E09BF5 /* Web */,
 				637DF0FC25F86DF900C3B383 /* 常用宏 */,
@@ -386,6 +395,24 @@
 				63DA0A5A2574C954001A3F2B /* XLNetworkHelper.swift */,
 			);
 			path = "网络请求";
+			sourceTree = "<group>";
+		};
+		63EE92362682E778004B50CD /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				63EE92372682E796004B50CD /* LBSKeyChainUtil.h */,
+				63EE92382682E796004B50CD /* LBSKeyChainUtil.m */,
+			);
+			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		63EE923A268314A1004B50CD /* 敏感数据保存 */ = {
+			isa = PBXGroup;
+			children = (
+				63EE923B268314EB004B50CD /* SensitiveDataSaveCtrl.swift */,
+				63EE923C268314EB004B50CD /* SensitiveDataSaveCtrl.xib */,
+			);
+			path = "敏感数据保存";
 			sourceTree = "<group>";
 		};
 		63F198B42595D49D00804F59 /* 动画 */ = {
@@ -532,6 +559,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63EE923E268314EB004B50CD /* SensitiveDataSaveCtrl.xib in Resources */,
 				63490CB224EA619400E09BF5 /* LaunchScreen.storyboard in Resources */,
 				63F198C72595D53800804F59 /* TextSpringAnimationCtrl.xib in Resources */,
 				63490CAF24EA619400E09BF5 /* Assets.xcassets in Resources */,
@@ -617,6 +645,7 @@
 				639E255325806410007CADF2 /* TestUIKitViewController.swift in Sources */,
 				63A0B7AC24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.swift in Sources */,
 				6317DAED24EBD2DE000E6DC4 /* LBSNomalTagItemView.swift in Sources */,
+				63EE92392682E796004B50CD /* LBSKeyChainUtil.m in Sources */,
 				63490CDB24EA664900E09BF5 /* BaseWebViewController.swift in Sources */,
 				635E6D1824EAC67E000BACC9 /* TableTagsDemoCtrl.swift in Sources */,
 				637DF0FE25F86E1700C3B383 /* MacroTool.swift in Sources */,
@@ -628,6 +657,7 @@
 				63FC72D5255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift in Sources */,
 				63490CD824EA62E600E09BF5 /* Test_EntryViewControllerExt.swift in Sources */,
 				63DA0A5B2574C954001A3F2B /* XLNetworkHelper.swift in Sources */,
+				63EE923D268314EB004B50CD /* SensitiveDataSaveCtrl.swift in Sources */,
 				63F55D69258E4EF000F1259E /* LimitCountTextViewDemo.swift in Sources */,
 				63F198C62595D53800804F59 /* TextSpringAnimationCtrl.swift in Sources */,
 				637DF0F525F86D5600C3B383 /* XLBaseViewController.swift in Sources */,
@@ -831,7 +861,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -sanitize-coverage=func -sanitize=undefined";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Lbs.iOS-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "iOS-Demo/基础服务类/二进制重排/iOS-Demo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS-Demo/iOS-Demo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -858,7 +888,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -sanitize-coverage=func -sanitize=undefined";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Lbs.iOS-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "iOS-Demo/基础服务类/二进制重排/iOS-Demo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS-Demo/iOS-Demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
