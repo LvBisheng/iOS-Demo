@@ -17,7 +17,11 @@ class SensitiveDataSaveCtrl: UIViewController {
         super.viewDidLoad()
         
         query("随便写")
-
+        
+        let nsString = NSString(string: "123")
+       let result = NSString(string: nsString.lbs_encryptWithAES())
+        XLLog("\(result), \(result.lbs_decryptWithAES())")
+        
         // Do any additional setup after loading the view.
     }
 
@@ -25,8 +29,8 @@ class SensitiveDataSaveCtrl: UIViewController {
         let dict = LBSKeyChainUtil.queryData(withIdentifier: kID) as? [AnyHashable: Any]
         let user = dict?["user"] as? String
         let pwd = dict?["pwd"] as? String
-        userNameTF.text = user
-        pwdTF.text = pwd
+        userNameTF.text = NSString(string: user ?? "").lbs_decryptWithAES()
+        pwdTF.text = NSString(string: pwd ?? "").lbs_decryptWithAES()
     }
 
     @IBAction func del(_ sender: Any) {
@@ -34,16 +38,17 @@ class SensitiveDataSaveCtrl: UIViewController {
     }
     
     @IBAction func save(_ sender: Any) {
-        let user = userNameTF.text
-        let pwd = pwdTF.text
-        let dict = ["user": user, "pwd": pwd]
+        let user = userNameTF.text ?? ""
+        let pwd = pwdTF.text ?? ""
+        // 先对称加密再存储
+        let dict = ["user": NSString(string: user).lbs_encryptWithAES(), "pwd": NSString(string: pwd).lbs_encryptWithAES()] as [String : Any]
         LBSKeyChainUtil.saveData(dict, forIdentifier: kID)
     }
     
     @IBAction func update(_ sender: Any) {
-        let user = userNameTF.text
-        let pwd = pwdTF.text
-        let dict = ["user": user, "pwd": pwd]
+        let user = userNameTF.text ?? ""
+        let pwd = pwdTF.text ?? ""
+        let dict = ["user": NSString(string: user).lbs_encryptWithAES(), "pwd": NSString(string: pwd).lbs_encryptWithAES()] as [String : Any]
         LBSKeyChainUtil.updateData(dict, forIdentifier: kID)
     }
    
