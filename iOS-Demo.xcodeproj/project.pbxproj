@@ -27,6 +27,10 @@
 		635E6D1B24EAC7BE000BACC9 /* LBSTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D1A24EAC7BE000BACC9 /* LBSTagView.swift */; };
 		635E6D1E24EAC95E000BACC9 /* TagsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E6D1C24EAC95E000BACC9 /* TagsTableViewCell.swift */; };
 		635E6D1F24EAC95E000BACC9 /* TagsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635E6D1D24EAC95E000BACC9 /* TagsTableViewCell.xib */; };
+		637B14C9268B1C1D00687149 /* TestLottieCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637B14C7268B1C1D00687149 /* TestLottieCtrl.swift */; };
+		637B14CA268B1C1D00687149 /* TestLottieCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637B14C8268B1C1D00687149 /* TestLottieCtrl.xib */; };
+		637B14CC268B1CD100687149 /* coffee.json in Resources */ = {isa = PBXBuildFile; fileRef = 637B14CB268B1CD100687149 /* coffee.json */; };
+		637B14CE268B40DB00687149 /* download.json in Resources */ = {isa = PBXBuildFile; fileRef = 637B14CD268B40DB00687149 /* download.json */; };
 		637DF0F525F86D5600C3B383 /* XLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DF0F425F86D5600C3B383 /* XLBaseViewController.swift */; };
 		637DF0FE25F86E1700C3B383 /* MacroTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DF0FD25F86E1700C3B383 /* MacroTool.swift */; };
 		637DF10825F8704800C3B383 /* XLTestLandscapeCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637DF10725F8704800C3B383 /* XLTestLandscapeCtrl.swift */; };
@@ -107,6 +111,10 @@
 		635E6D1A24EAC7BE000BACC9 /* LBSTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBSTagView.swift; sourceTree = "<group>"; };
 		635E6D1C24EAC95E000BACC9 /* TagsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsTableViewCell.swift; sourceTree = "<group>"; };
 		635E6D1D24EAC95E000BACC9 /* TagsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagsTableViewCell.xib; sourceTree = "<group>"; };
+		637B14C7268B1C1D00687149 /* TestLottieCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLottieCtrl.swift; sourceTree = "<group>"; };
+		637B14C8268B1C1D00687149 /* TestLottieCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestLottieCtrl.xib; sourceTree = "<group>"; };
+		637B14CB268B1CD100687149 /* coffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coffee.json; sourceTree = "<group>"; };
+		637B14CD268B40DB00687149 /* download.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = download.json; sourceTree = "<group>"; };
 		637DF0F425F86D5600C3B383 /* XLBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLBaseViewController.swift; sourceTree = "<group>"; };
 		637DF0FD25F86E1700C3B383 /* MacroTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroTool.swift; sourceTree = "<group>"; };
 		637DF10725F8704800C3B383 /* XLTestLandscapeCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLTestLandscapeCtrl.swift; sourceTree = "<group>"; };
@@ -271,6 +279,17 @@
 			path = TagsViewDemo;
 			sourceTree = "<group>";
 		};
+		637B14C6268B1BF500687149 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				637B14CB268B1CD100687149 /* coffee.json */,
+				637B14CD268B40DB00687149 /* download.json */,
+				637B14C7268B1C1D00687149 /* TestLottieCtrl.swift */,
+				637B14C8268B1C1D00687149 /* TestLottieCtrl.xib */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		637DF0F225F86D2100C3B383 /* 基类 */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +318,7 @@
 		637DF10525F86FC700C3B383 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				637B14C6268B1BF500687149 /* Lottie */,
 				63EE923A268314A1004B50CD /* 敏感数据保存 */,
 				637DF10625F8700D00C3B383 /* 强制横屏 */,
 				63BDF747255A328C00FE8351 /* 类闲鱼Tabbar */,
@@ -567,11 +587,14 @@
 				63EE923E268314EB004B50CD /* SensitiveDataSaveCtrl.xib in Resources */,
 				63490CB224EA619400E09BF5 /* LaunchScreen.storyboard in Resources */,
 				63F198C72595D53800804F59 /* TextSpringAnimationCtrl.xib in Resources */,
+				637B14CC268B1CD100687149 /* coffee.json in Resources */,
 				63490CAF24EA619400E09BF5 /* Assets.xcassets in Resources */,
 				635E6D1924EAC67E000BACC9 /* TableTagsDemoCtrl.xib in Resources */,
 				63A0B7AD24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.xib in Resources */,
 				63490CDE24EA7E5B00E09BF5 /* H5Bridge.html in Resources */,
 				638C30BD25F7709600D16EE4 /* TestPageTurningCtrl.xib in Resources */,
+				637B14CE268B40DB00687149 /* download.json in Resources */,
+				637B14CA268B1C1D00687149 /* TestLottieCtrl.xib in Resources */,
 				635E6D1F24EAC95E000BACC9 /* TagsTableViewCell.xib in Resources */,
 				63490CAD24EA619400E09BF5 /* Main.storyboard in Resources */,
 			);
@@ -645,6 +668,7 @@
 				639E255B2580660E007CADF2 /* UIImageExtensions.swift in Sources */,
 				63BDF749255A32D700FE8351 /* XLTabbarCtr.swift in Sources */,
 				63A0B7A424EBB7FC00F2C9DA /* UIColorExtension.swift in Sources */,
+				637B14C9268B1C1D00687149 /* TestLottieCtrl.swift in Sources */,
 				63F55D61258E4E4500F1259E /* XLLimiCountTextView.swift in Sources */,
 				63A0B79E24EB706F00F2C9DA /* UIViewControllerExtension.swift in Sources */,
 				63490CAA24EA619400E09BF5 /* ViewController.swift in Sources */,

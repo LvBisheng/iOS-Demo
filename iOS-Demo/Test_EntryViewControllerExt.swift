@@ -13,6 +13,12 @@ extension Test_EntryViewController {
     func other() -> [Test_CellModel] {
         var dataSource:[Test_CellModel] = []
         
+        let lottie = Test_CellModel.init(name: "lottie动画") {
+            let vc = TestLottieCtrl.init()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        dataSource.append(lottie)
+        
         let sensitveData = Test_CellModel.init(name: "敏感数据") {
             let vc = SensitiveDataSaveCtrl.init()
             self.navigationController?.pushViewController(vc, animated: true)
