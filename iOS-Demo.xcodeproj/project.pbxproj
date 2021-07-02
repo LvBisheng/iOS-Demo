@@ -48,14 +48,18 @@
 		63A0B7AD24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63A0B7AB24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.xib */; };
 		63A7D4752680797F00523F4A /* LBSBinarySort.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A7D4742680797F00523F4A /* LBSBinarySort.m */; };
 		63AF1B17256F4B560076BCCB /* XLLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AF1B16256F4B560076BCCB /* XLLaunchViewController.swift */; };
+		63B047D1268EF42400C85FA4 /* hee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B047D0268EF42400C85FA4 /* hee.swift */; };
+		63B04815268F2F3800C85FA4 /* LBSRSACryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B04813268F2F3800C85FA4 /* LBSRSACryptor.m */; };
+		63B04818268F332A00C85FA4 /* rsacert.der in Resources */ = {isa = PBXBuildFile; fileRef = 63B04816268F332A00C85FA4 /* rsacert.der */; };
+		63B04819268F332A00C85FA4 /* p.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 63B04817268F332A00C85FA4 /* p.p12 */; };
 		63BDF749255A32D700FE8351 /* XLTabbarCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BDF748255A32D700FE8351 /* XLTabbarCtr.swift */; };
 		63BDF751255A392F00FE8351 /* XLTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BDF750255A392F00FE8351 /* XLTabBar.swift */; };
 		63CDE67625F76F6C003A9638 /* TestPageTurningCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDE67525F76F6C003A9638 /* TestPageTurningCtrl.swift */; };
 		63CFEB4F265F70CC00F92A60 /* XLCustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CFEB4E265F70CC00F92A60 /* XLCustomSlider.swift */; };
 		63DA0A5B2574C954001A3F2B /* XLNetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA0A5A2574C954001A3F2B /* XLNetworkHelper.swift */; };
 		63EE92392682E796004B50CD /* LBSKeyChainUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EE92382682E796004B50CD /* LBSKeyChainUtil.m */; };
-		63EE923D268314EB004B50CD /* SensitiveDataSaveCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE923B268314EB004B50CD /* SensitiveDataSaveCtrl.swift */; };
-		63EE923E268314EB004B50CD /* SensitiveDataSaveCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EE923C268314EB004B50CD /* SensitiveDataSaveCtrl.xib */; };
+		63EE923D268314EB004B50CD /* TestSecurityCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE923B268314EB004B50CD /* TestSecurityCtrl.swift */; };
+		63EE923E268314EB004B50CD /* TestSecurityCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EE923C268314EB004B50CD /* TestSecurityCtrl.xib */; };
 		63EE924126833656004B50CD /* NSString+LBSAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EE924026833656004B50CD /* NSString+LBSAES.m */; };
 		63F198C62595D53800804F59 /* TextSpringAnimationCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F198C42595D53800804F59 /* TextSpringAnimationCtrl.swift */; };
 		63F198C72595D53800804F59 /* TextSpringAnimationCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F198C52595D53800804F59 /* TextSpringAnimationCtrl.xib */; };
@@ -134,6 +138,11 @@
 		63A7D4732680797F00523F4A /* LBSBinarySort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBSBinarySort.h; sourceTree = "<group>"; };
 		63A7D4742680797F00523F4A /* LBSBinarySort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBSBinarySort.m; sourceTree = "<group>"; };
 		63AF1B16256F4B560076BCCB /* XLLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLLaunchViewController.swift; sourceTree = "<group>"; };
+		63B047D0268EF42400C85FA4 /* hee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hee.swift; sourceTree = "<group>"; };
+		63B04813268F2F3800C85FA4 /* LBSRSACryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBSRSACryptor.m; sourceTree = "<group>"; };
+		63B04814268F2F3800C85FA4 /* LBSRSACryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBSRSACryptor.h; sourceTree = "<group>"; };
+		63B04816268F332A00C85FA4 /* rsacert.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = rsacert.der; sourceTree = "<group>"; };
+		63B04817268F332A00C85FA4 /* p.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = p.p12; sourceTree = "<group>"; };
 		63BDF748255A32D700FE8351 /* XLTabbarCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLTabbarCtr.swift; sourceTree = "<group>"; };
 		63BDF750255A392F00FE8351 /* XLTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLTabBar.swift; sourceTree = "<group>"; };
 		63CDE67525F76F6C003A9638 /* TestPageTurningCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPageTurningCtrl.swift; sourceTree = "<group>"; };
@@ -141,8 +150,8 @@
 		63DA0A5A2574C954001A3F2B /* XLNetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLNetworkHelper.swift; sourceTree = "<group>"; };
 		63EE92372682E796004B50CD /* LBSKeyChainUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBSKeyChainUtil.h; sourceTree = "<group>"; };
 		63EE92382682E796004B50CD /* LBSKeyChainUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBSKeyChainUtil.m; sourceTree = "<group>"; };
-		63EE923B268314EB004B50CD /* SensitiveDataSaveCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensitiveDataSaveCtrl.swift; sourceTree = "<group>"; };
-		63EE923C268314EB004B50CD /* SensitiveDataSaveCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SensitiveDataSaveCtrl.xib; sourceTree = "<group>"; };
+		63EE923B268314EB004B50CD /* TestSecurityCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSecurityCtrl.swift; sourceTree = "<group>"; };
+		63EE923C268314EB004B50CD /* TestSecurityCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestSecurityCtrl.xib; sourceTree = "<group>"; };
 		63EE923F26833656004B50CD /* NSString+LBSAES.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LBSAES.h"; sourceTree = "<group>"; };
 		63EE924026833656004B50CD /* NSString+LBSAES.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LBSAES.m"; sourceTree = "<group>"; };
 		63F198C42595D53800804F59 /* TextSpringAnimationCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSpringAnimationCtrl.swift; sourceTree = "<group>"; };
@@ -227,6 +236,7 @@
 				63A0B79C24EB700A00F2C9DA /* Extension */,
 				63490CA524EA619400E09BF5 /* AppDelegate.swift */,
 				63AF1B16256F4B560076BCCB /* XLLaunchViewController.swift */,
+				63B047D0268EF42400C85FA4 /* hee.swift */,
 				63490CD524EA625300E09BF5 /* Test_EntryViewController.swift */,
 				63490CD724EA62E600E09BF5 /* Test_EntryViewControllerExt.swift */,
 				63490CA924EA619400E09BF5 /* ViewController.swift */,
@@ -319,7 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				637B14C6268B1BF500687149 /* Lottie */,
-				63EE923A268314A1004B50CD /* 敏感数据保存 */,
+				63EE923A268314A1004B50CD /* 安全 */,
 				637DF10625F8700D00C3B383 /* 强制横屏 */,
 				63BDF747255A328C00FE8351 /* 类闲鱼Tabbar */,
 				63FC72D025599489003A3D18 /* 投票结果 */,
@@ -392,6 +402,15 @@
 			path = "二进制重排";
 			sourceTree = "<group>";
 		};
+		63B04812268F2F1F00C85FA4 /* 非对称加密 */ = {
+			isa = PBXGroup;
+			children = (
+				63B04814268F2F3800C85FA4 /* LBSRSACryptor.h */,
+				63B04813268F2F3800C85FA4 /* LBSRSACryptor.m */,
+			);
+			path = "非对称加密";
+			sourceTree = "<group>";
+		};
 		63BDF747255A328C00FE8351 /* 类闲鱼Tabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +423,7 @@
 		63DA0A582574C919001A3F2B /* 基础服务类 */ = {
 			isa = PBXGroup;
 			children = (
+				63B04812268F2F1F00C85FA4 /* 非对称加密 */,
 				63EE92362682E778004B50CD /* KeyChain */,
 				63A7D4712680795F00523F4A /* 二进制重排 */,
 				63490CD924EA65F600E09BF5 /* Web */,
@@ -431,13 +451,15 @@
 			path = KeyChain;
 			sourceTree = "<group>";
 		};
-		63EE923A268314A1004B50CD /* 敏感数据保存 */ = {
+		63EE923A268314A1004B50CD /* 安全 */ = {
 			isa = PBXGroup;
 			children = (
-				63EE923B268314EB004B50CD /* SensitiveDataSaveCtrl.swift */,
-				63EE923C268314EB004B50CD /* SensitiveDataSaveCtrl.xib */,
+				63B04817268F332A00C85FA4 /* p.p12 */,
+				63B04816268F332A00C85FA4 /* rsacert.der */,
+				63EE923B268314EB004B50CD /* TestSecurityCtrl.swift */,
+				63EE923C268314EB004B50CD /* TestSecurityCtrl.xib */,
 			);
-			path = "敏感数据保存";
+			path = "安全";
 			sourceTree = "<group>";
 		};
 		63F198B42595D49D00804F59 /* 动画 */ = {
@@ -584,14 +606,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63EE923E268314EB004B50CD /* SensitiveDataSaveCtrl.xib in Resources */,
+				63EE923E268314EB004B50CD /* TestSecurityCtrl.xib in Resources */,
 				63490CB224EA619400E09BF5 /* LaunchScreen.storyboard in Resources */,
 				63F198C72595D53800804F59 /* TextSpringAnimationCtrl.xib in Resources */,
+				63B04819268F332A00C85FA4 /* p.p12 in Resources */,
 				637B14CC268B1CD100687149 /* coffee.json in Resources */,
 				63490CAF24EA619400E09BF5 /* Assets.xcassets in Resources */,
 				635E6D1924EAC67E000BACC9 /* TableTagsDemoCtrl.xib in Resources */,
 				63A0B7AD24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.xib in Resources */,
 				63490CDE24EA7E5B00E09BF5 /* H5Bridge.html in Resources */,
+				63B04818268F332A00C85FA4 /* rsacert.der in Resources */,
 				638C30BD25F7709600D16EE4 /* TestPageTurningCtrl.xib in Resources */,
 				637B14CE268B40DB00687149 /* download.json in Resources */,
 				637B14CA268B1C1D00687149 /* TestLottieCtrl.xib in Resources */,
@@ -675,6 +699,7 @@
 				639E255325806410007CADF2 /* TestUIKitViewController.swift in Sources */,
 				63A0B7AC24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.swift in Sources */,
 				6317DAED24EBD2DE000E6DC4 /* LBSNomalTagItemView.swift in Sources */,
+				63B04815268F2F3800C85FA4 /* LBSRSACryptor.m in Sources */,
 				63EE92392682E796004B50CD /* LBSKeyChainUtil.m in Sources */,
 				63490CDB24EA664900E09BF5 /* BaseWebViewController.swift in Sources */,
 				635E6D1824EAC67E000BACC9 /* TableTagsDemoCtrl.swift in Sources */,
@@ -687,7 +712,7 @@
 				63FC72D5255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift in Sources */,
 				63490CD824EA62E600E09BF5 /* Test_EntryViewControllerExt.swift in Sources */,
 				63DA0A5B2574C954001A3F2B /* XLNetworkHelper.swift in Sources */,
-				63EE923D268314EB004B50CD /* SensitiveDataSaveCtrl.swift in Sources */,
+				63EE923D268314EB004B50CD /* TestSecurityCtrl.swift in Sources */,
 				63F55D69258E4EF000F1259E /* LimitCountTextViewDemo.swift in Sources */,
 				63F198C62595D53800804F59 /* TextSpringAnimationCtrl.swift in Sources */,
 				637DF0F525F86D5600C3B383 /* XLBaseViewController.swift in Sources */,
@@ -702,6 +727,7 @@
 				637DF11825F876A800C3B383 /* UINavigationControllerExtension.swift in Sources */,
 				6331827325E638080066476F /* CustomTagDemoCtrl.swift in Sources */,
 				63A0B7A224EBB41F00F2C9DA /* StringExtension.swift in Sources */,
+				63B047D1268EF42400C85FA4 /* hee.swift in Sources */,
 				635E6D1E24EAC95E000BACC9 /* TagsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

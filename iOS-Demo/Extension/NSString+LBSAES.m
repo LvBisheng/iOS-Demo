@@ -15,7 +15,7 @@ static NSString *const AES_IV_PARAMETER = @"AES00IVPARAMETER";
 
 @implementation NSString (LBSAES)
 
-// base128加密
+// AES128加密
 - (NSString*)lbs_encryptWithAES {
     
     NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
@@ -23,12 +23,14 @@ static NSString *const AES_IV_PARAMETER = @"AES00IVPARAMETER";
                                        data:data
                                         key:PSW_AES_KEY
                                          iv:AES_IV_PARAMETER];
+    // 将二进制数据进行base64编码
     NSString *baseStr = [AESData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
     return baseStr;
 }
 
-/// base128解密
+/// AES128解密
 - (NSString*)lbs_decryptWithAES {
+    // base64字符串解码成二进制数据
     NSData *baseData = [[NSData alloc]initWithBase64EncodedString:self options:0];
     
     NSData *AESData = [self AES128operation:kCCDecrypt
@@ -40,12 +42,12 @@ static NSString *const AES_IV_PARAMETER = @"AES00IVPARAMETER";
 }
 
 /**
- *  AES加解密算法
+ *  AES加解密算法。CBC密文分组链接模式
  *
  *  @param operation kCCEncrypt（加密）kCCDecrypt（解密）
  *  @param contentData      待操作Data数据
  *  @param key       key
- *  @param iv        向量
+ *  @param iv        向量（CBC模式才有）
  */
 - (NSData *)AES128operation:(CCOperation)operation data:(NSData *)contentData key:(NSString *)key iv:(NSString *)iv {
     

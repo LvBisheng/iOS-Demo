@@ -19,8 +19,8 @@ extension Test_EntryViewController {
         }
         dataSource.append(lottie)
         
-        let sensitveData = Test_CellModel.init(name: "敏感数据") {
-            let vc = SensitiveDataSaveCtrl.init()
+        let sensitveData = Test_CellModel.init(name: "数据安全") {
+            let vc = TestSecurityCtrl.init()
             self.navigationController?.pushViewController(vc, animated: true)
         }
         dataSource.append(sensitveData)

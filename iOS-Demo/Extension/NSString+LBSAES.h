@@ -12,10 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (LBSAES)
 
-// base128加密
+/// AES128加密
 - (NSString*)lbs_encryptWithAES;
 
-/// base128解密
+/// AES128解密
 - (NSString*)lbs_decryptWithAES;
 
 @end
