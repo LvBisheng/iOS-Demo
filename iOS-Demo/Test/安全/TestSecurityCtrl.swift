@@ -23,15 +23,17 @@ class TestSecurityCtrl: UIViewController {
     @IBOutlet weak var waitHashTF: UITextField!
     @IBOutlet weak var doneHashTF: UITextField!
     
+    let AESKey = "abc"
+    private lazy var IVData: Data = {
+        let AESIV: [UInt8] = [1, 2, 3, 4, 5, 6, 7, 8]
+        let data = Data.init(bytes: AESIV, count: AESIV.count)
+        return data
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         query("随便写")
-        
-        let nsString = NSString(string: "123")
-       let result = NSString(string: nsString.lbs_encryptWithAES())
-        XLLog("\(result), \(result.lbs_decryptWithAES())")
         
         //1.加载公钥
         LBSRSACryptor.shared().loadPublicKey(Bundle.main.path(forResource: "rsacert.der", ofType: nil))
@@ -50,8 +52,8 @@ extension TestSecurityCtrl {
         let dict = LBSKeyChainUtil.queryData(withIdentifier: kID) as? [AnyHashable: Any]
         let user = dict?["user"] as? String
         let pwd = dict?["pwd"] as? String
-        userNameTF.text = NSString(string: user ?? "").lbs_decryptWithAES()
-        pwdTF.text = NSString(string: pwd ?? "").lbs_decryptWithAES()
+        userNameTF.text =  LBSEncryptionTools.shared().decryptString(user ?? "", keyString: AESKey, iv: IVData)
+        pwdTF.text = LBSEncryptionTools.shared().decryptString(pwd ?? "", keyString: AESKey, iv: IVData)
     }
 
     @IBAction func del(_ sender: Any) {
@@ -62,14 +64,18 @@ extension TestSecurityCtrl {
         let user = userNameTF.text ?? ""
         let pwd = pwdTF.text ?? ""
         // 先对称加密再存储
-        let dict = ["user": NSString(string: user).lbs_encryptWithAES(), "pwd": NSString(string: pwd).lbs_encryptWithAES()] as [String : Any]
+        let userResult = LBSEncryptionTools.shared().encryptString(user, keyString: AESKey, iv: IVData) ?? ""
+        let pwdResult = LBSEncryptionTools.shared().encryptString(pwd, keyString: AESKey, iv: IVData) ?? ""
+        let dict = ["user": userResult, "pwd": pwdResult] as [String : Any]
         LBSKeyChainUtil.saveData(dict, forIdentifier: kID)
     }
     
     @IBAction func update(_ sender: Any) {
         let user = userNameTF.text ?? ""
         let pwd = pwdTF.text ?? ""
-        let dict = ["user": NSString(string: user).lbs_encryptWithAES(), "pwd": NSString(string: pwd).lbs_encryptWithAES()] as [String : Any]
+        let userResult = LBSEncryptionTools.shared().encryptString(user, keyString: AESKey, iv: IVData) ?? ""
+        let pwdResult = LBSEncryptionTools.shared().encryptString(pwd, keyString: AESKey, iv: IVData) ?? ""
+        let dict = ["user": userResult, "pwd": pwdResult] as [String : Any]
         LBSKeyChainUtil.updateData(dict, forIdentifier: kID)
     }
 }
@@ -104,7 +110,8 @@ extension TestSecurityCtrl {
 extension TestSecurityCtrl {
     @IBAction func hmac(_ sender: Any) {
         view.endEditing(true)
+
         let pwd = waitHashTF.text ?? ""
-        doneHashTF.text = NSString(string: pwd).hmacMD5String(withKey: "hank")
+        doneHashTF.text = NSString(string: pwd).hmacMD5String(withKey: "hank") // key一般是服务器给的
     }
 }

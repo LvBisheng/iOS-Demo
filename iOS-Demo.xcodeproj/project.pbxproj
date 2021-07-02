@@ -53,6 +53,7 @@
 		63B04818268F332A00C85FA4 /* rsacert.der in Resources */ = {isa = PBXBuildFile; fileRef = 63B04816268F332A00C85FA4 /* rsacert.der */; };
 		63B04819268F332A00C85FA4 /* p.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 63B04817268F332A00C85FA4 /* p.p12 */; };
 		63B0481C268F3B2100C85FA4 /* NSString+LBSHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B0481A268F3B2100C85FA4 /* NSString+LBSHash.m */; };
+		63B04821268F3F5D00C85FA4 /* LBSEncryptionTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B0481F268F3F5D00C85FA4 /* LBSEncryptionTools.m */; };
 		63BDF749255A32D700FE8351 /* XLTabbarCtr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BDF748255A32D700FE8351 /* XLTabbarCtr.swift */; };
 		63BDF751255A392F00FE8351 /* XLTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BDF750255A392F00FE8351 /* XLTabBar.swift */; };
 		63CDE67625F76F6C003A9638 /* TestPageTurningCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDE67525F76F6C003A9638 /* TestPageTurningCtrl.swift */; };
@@ -61,7 +62,6 @@
 		63EE92392682E796004B50CD /* LBSKeyChainUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EE92382682E796004B50CD /* LBSKeyChainUtil.m */; };
 		63EE923D268314EB004B50CD /* TestSecurityCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE923B268314EB004B50CD /* TestSecurityCtrl.swift */; };
 		63EE923E268314EB004B50CD /* TestSecurityCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EE923C268314EB004B50CD /* TestSecurityCtrl.xib */; };
-		63EE924126833656004B50CD /* NSString+LBSAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EE924026833656004B50CD /* NSString+LBSAES.m */; };
 		63F198C62595D53800804F59 /* TextSpringAnimationCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F198C42595D53800804F59 /* TextSpringAnimationCtrl.swift */; };
 		63F198C72595D53800804F59 /* TextSpringAnimationCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F198C52595D53800804F59 /* TextSpringAnimationCtrl.xib */; };
 		63F55D61258E4E4500F1259E /* XLLimiCountTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F55D60258E4E4500F1259E /* XLLimiCountTextView.swift */; };
@@ -146,6 +146,8 @@
 		63B04817268F332A00C85FA4 /* p.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = p.p12; sourceTree = "<group>"; };
 		63B0481A268F3B2100C85FA4 /* NSString+LBSHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LBSHash.m"; sourceTree = "<group>"; };
 		63B0481B268F3B2100C85FA4 /* NSString+LBSHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LBSHash.h"; sourceTree = "<group>"; };
+		63B0481F268F3F5D00C85FA4 /* LBSEncryptionTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBSEncryptionTools.m; sourceTree = "<group>"; };
+		63B04820268F3F5D00C85FA4 /* LBSEncryptionTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBSEncryptionTools.h; sourceTree = "<group>"; };
 		63BDF748255A32D700FE8351 /* XLTabbarCtr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLTabbarCtr.swift; sourceTree = "<group>"; };
 		63BDF750255A392F00FE8351 /* XLTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLTabBar.swift; sourceTree = "<group>"; };
 		63CDE67525F76F6C003A9638 /* TestPageTurningCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPageTurningCtrl.swift; sourceTree = "<group>"; };
@@ -155,8 +157,6 @@
 		63EE92382682E796004B50CD /* LBSKeyChainUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBSKeyChainUtil.m; sourceTree = "<group>"; };
 		63EE923B268314EB004B50CD /* TestSecurityCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSecurityCtrl.swift; sourceTree = "<group>"; };
 		63EE923C268314EB004B50CD /* TestSecurityCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestSecurityCtrl.xib; sourceTree = "<group>"; };
-		63EE923F26833656004B50CD /* NSString+LBSAES.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LBSAES.h"; sourceTree = "<group>"; };
-		63EE924026833656004B50CD /* NSString+LBSAES.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LBSAES.m"; sourceTree = "<group>"; };
 		63F198C42595D53800804F59 /* TextSpringAnimationCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSpringAnimationCtrl.swift; sourceTree = "<group>"; };
 		63F198C52595D53800804F59 /* TextSpringAnimationCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextSpringAnimationCtrl.xib; sourceTree = "<group>"; };
 		63F55D60258E4E4500F1259E /* XLLimiCountTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLLimiCountTextView.swift; sourceTree = "<group>"; };
@@ -415,13 +415,20 @@
 		63B0481D268F3B2800C85FA4 /* String */ = {
 			isa = PBXGroup;
 			children = (
-				63EE923F26833656004B50CD /* NSString+LBSAES.h */,
-				63EE924026833656004B50CD /* NSString+LBSAES.m */,
 				63B0481B268F3B2100C85FA4 /* NSString+LBSHash.h */,
 				63B0481A268F3B2100C85FA4 /* NSString+LBSHash.m */,
 				63A0B7A124EBB41F00F2C9DA /* StringExtension.swift */,
 			);
 			path = String;
+			sourceTree = "<group>";
+		};
+		63B0481E268F3F5200C85FA4 /* 对称加密 */ = {
+			isa = PBXGroup;
+			children = (
+				63B04820268F3F5D00C85FA4 /* LBSEncryptionTools.h */,
+				63B0481F268F3F5D00C85FA4 /* LBSEncryptionTools.m */,
+			);
+			path = "对称加密";
 			sourceTree = "<group>";
 		};
 		63BDF747255A328C00FE8351 /* 类闲鱼Tabbar */ = {
@@ -436,6 +443,7 @@
 		63DA0A582574C919001A3F2B /* 基础服务类 */ = {
 			isa = PBXGroup;
 			children = (
+				63B0481E268F3F5200C85FA4 /* 对称加密 */,
 				63B04812268F2F1F00C85FA4 /* 非对称加密 */,
 				63EE92362682E778004B50CD /* KeyChain */,
 				63A7D4712680795F00523F4A /* 二进制重排 */,
@@ -701,7 +709,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				63A0B7A024EB720B00F2C9DA /* UIApplicatonExtension.swift in Sources */,
-				63EE924126833656004B50CD /* NSString+LBSAES.m in Sources */,
 				639E255B2580660E007CADF2 /* UIImageExtensions.swift in Sources */,
 				63BDF749255A32D700FE8351 /* XLTabbarCtr.swift in Sources */,
 				63A0B7A424EBB7FC00F2C9DA /* UIColorExtension.swift in Sources */,
@@ -736,6 +743,7 @@
 				63AF1B17256F4B560076BCCB /* XLLaunchViewController.swift in Sources */,
 				6331827825E63A260066476F /* LBSCanDeleteTagItemView.swift in Sources */,
 				63BDF751255A392F00FE8351 /* XLTabBar.swift in Sources */,
+				63B04821268F3F5D00C85FA4 /* LBSEncryptionTools.m in Sources */,
 				637DF11025F871CC00C3B383 /* XLBaseNavViewController.swift in Sources */,
 				637DF11825F876A800C3B383 /* UINavigationControllerExtension.swift in Sources */,
 				6331827325E638080066476F /* CustomTagDemoCtrl.swift in Sources */,
