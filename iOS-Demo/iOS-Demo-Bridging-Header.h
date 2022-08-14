@@ -8,3 +8,4 @@
 #import "LBSRSACryptor.h"
 #import "NSString+LBSHash.h"
 #import "LBSEncryptionTools.h"
+#import "CaptureVideoManager.h"

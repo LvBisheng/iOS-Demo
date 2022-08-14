@@ -67,6 +67,8 @@
 		63F55D61258E4E4500F1259E /* XLLimiCountTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F55D60258E4E4500F1259E /* XLLimiCountTextView.swift */; };
 		63F55D69258E4EF000F1259E /* LimitCountTextViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F55D68258E4EF000F1259E /* LimitCountTextViewDemo.swift */; };
 		63FC72D5255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC72D4255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift */; };
+		9BE8FC9328A88A6F008DD27E /* CaptureVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8FC9128A88A6F008DD27E /* CaptureVideoManager.m */; };
+		9BE8FC9628A88B39008DD27E /* TestCaptureVideoCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8FC9528A88B39008DD27E /* TestCaptureVideoCtrl.swift */; };
 		A44BF13FD125A5C13ECB2AEE /* Pods_iOS_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7DF4B8C2EDB705785DF511 /* Pods_iOS_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -162,6 +164,9 @@
 		63F55D60258E4E4500F1259E /* XLLimiCountTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLLimiCountTextView.swift; sourceTree = "<group>"; };
 		63F55D68258E4EF000F1259E /* LimitCountTextViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitCountTextViewDemo.swift; sourceTree = "<group>"; };
 		63FC72D4255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToupiaoJIeGuoCtrl.swift; sourceTree = "<group>"; };
+		9BE8FC8F28A88A6F008DD27E /* CaptureVideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureVideoManager.h; sourceTree = "<group>"; };
+		9BE8FC9128A88A6F008DD27E /* CaptureVideoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureVideoManager.m; sourceTree = "<group>"; };
+		9BE8FC9528A88B39008DD27E /* TestCaptureVideoCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCaptureVideoCtrl.swift; sourceTree = "<group>"; };
 		B19EB99AEB3AF6676AC58317 /* Pods-iOS-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Demo.debug.xcconfig"; path = "Target Support Files/Pods-iOS-Demo/Pods-iOS-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -331,6 +336,7 @@
 		637DF10525F86FC700C3B383 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				9BE8FC9428A88AE1008DD27E /* 视频采集　 */,
 				637B14C6268B1BF500687149 /* Lottie */,
 				63EE923A268314A1004B50CD /* 安全 */,
 				637DF10625F8700D00C3B383 /* 强制横屏 */,
@@ -443,6 +449,7 @@
 		63DA0A582574C919001A3F2B /* 基础服务类 */ = {
 			isa = PBXGroup;
 			children = (
+				9BE8FC8D28A8899C008DD27E /* 视频采集 */,
 				63B0481E268F3F5200C85FA4 /* 对称加密 */,
 				63B04812268F2F1F00C85FA4 /* 非对称加密 */,
 				63EE92362682E778004B50CD /* KeyChain */,
@@ -518,6 +525,23 @@
 				2A7DF4B8C2EDB705785DF511 /* Pods_iOS_Demo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BE8FC8D28A8899C008DD27E /* 视频采集 */ = {
+			isa = PBXGroup;
+			children = (
+				9BE8FC8F28A88A6F008DD27E /* CaptureVideoManager.h */,
+				9BE8FC9128A88A6F008DD27E /* CaptureVideoManager.m */,
+			);
+			path = "视频采集";
+			sourceTree = "<group>";
+		};
+		9BE8FC9428A88AE1008DD27E /* 视频采集　 */ = {
+			isa = PBXGroup;
+			children = (
+				9BE8FC9528A88B39008DD27E /* TestCaptureVideoCtrl.swift */,
+			);
+			path = "视频采集　";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -726,8 +750,10 @@
 				637DF0FE25F86E1700C3B383 /* MacroTool.swift in Sources */,
 				63CFEB4F265F70CC00F92A60 /* XLCustomSlider.swift in Sources */,
 				63490CD624EA625300E09BF5 /* Test_EntryViewController.swift in Sources */,
+				9BE8FC9328A88A6F008DD27E /* CaptureVideoManager.m in Sources */,
 				63490CA624EA619400E09BF5 /* AppDelegate.swift in Sources */,
 				63A7D4752680797F00523F4A /* LBSBinarySort.m in Sources */,
+				9BE8FC9628A88B39008DD27E /* TestCaptureVideoCtrl.swift in Sources */,
 				63490CE024EA84B400E09BF5 /* LBSJSHandleService.swift in Sources */,
 				63FC72D5255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift in Sources */,
 				63490CD824EA62E600E09BF5 /* Test_EntryViewControllerExt.swift in Sources */,
