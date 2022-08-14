@@ -47,6 +47,7 @@ devicePosition:(AVCaptureDevicePosition)devicePosition
         self.delegate = delegate;
         self.sessionPeset = sessionPeset;
         self.devicePosition = devicePosition;
+        self.movieManager = [[CCMovieManager alloc] init];
         _videoQueue = dispatch_queue_create("com.lbs.test", DISPATCH_QUEUE_SERIAL);
         self.maxFrame = 30;
         [self _initialSesion];
@@ -201,8 +202,32 @@ devicePosition:(AVCaptureDevicePosition)devicePosition
     
 }
 
+// 开始录像
+- (void)startRecordVideoAction {
+    _movieManager.currentDevice = self.videoInput.device;
+    _movieManager.currentorientation = AVCaptureVideoOrientationLandscapeLeft;
+    [_movieManager start:^(NSError * _Nonnull error) {
+        if(error) {
+            NSLog(@"start record error:%@", error);
+        }
+    }];
+}
+
+// 停止录像
+- (void)stopRecordVideoAction:(void(^)(NSString *videoUrl))completeBlock {
+    [_movieManager stop:^(NSURL * _Nonnull url, NSError * _Nonnull error) {
+        if(error) {
+            NSLog(@"stop record error:%@", error);
+            completeBlock(nil);
+        } else {
+            completeBlock([url path]);
+        }
+    }];
+}
+
 #pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
 - (void)captureOutput:(AVCaptureOutput *)output didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
+    [self.movieManager writeData:connection video:_videoConnection audio:nil buffer:sampleBuffer];
     @autoreleasepool {
         if(connection == self.videoConnection) {
 //            CMFormatDescriptionRef formatDescription = CMSampleBufferGetFormatDescription(sampleBuffer);

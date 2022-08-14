@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
+#import "CCMovieManager.h"
 
 @protocol CaptureVideoManagerDelegate <NSObject>
 
@@ -26,6 +27,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 /// 视频流的预览layer。默认全屏大小
 @property (nonatomic, strong, readonly) AVCaptureVideoPreviewLayer *videoPreviewLayer;
 @property (nonatomic, assign, readonly) AVCaptureDevicePosition devicePosition;
+@property (nonatomic, strong) CCMovieManager *movieManager;
 
 + (instancetype)videoPreset:(NSString *)sessionPeset
 devicePosition:(AVCaptureDevicePosition)devicePosition
@@ -46,6 +48,12 @@ devicePosition:(AVCaptureDevicePosition)devicePosition
 /// 前后摄像头的切换
 /// @param position 摄像头类型
 - (void)toggleCamera:(AVCaptureDevicePosition)position;
+
+// 开始录像
+- (void)startRecordVideoAction;
+
+// 停止录像
+- (void)stopRecordVideoAction:(void(^)(NSString *videoUrl))completeBlock;
 
 + (UIImage *) imageFromSampleBuffer:(CMSampleBufferRef) sampleBuffer;
 
