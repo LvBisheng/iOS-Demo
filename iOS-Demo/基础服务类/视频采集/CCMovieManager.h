@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
-
 NS_ASSUME_NONNULL_BEGIN
 @interface CCMovieManager:NSObject
 
@@ -18,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)stop:(void(^)(NSURL *url,NSError *error))handle;
 
--(void)writeData:(AVCaptureConnection*)connection
-      video:(AVCaptureConnection*)video audio:(AVCaptureConnection *)audio buffer:(CMSampleBufferRef)buffer;
+-(void)writeData:(AVCaptureConnection *)connection video:(nullable AVCaptureConnection *)video audio:(nullable AVCaptureConnection *)audio
+          buffer:(CMSampleBufferRef)buffer;
 @end
 NS_ASSUME_NONNULL_END

@@ -969,7 +969,7 @@
 				ORDER_FILE = "$(SRCROOT)/lb.order";
 				OTHER_CFLAGS = "-fsanitize-coverage=func,trace-pc-guard";
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -sanitize-coverage=func -sanitize=undefined";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Lbs.iOS-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lbs.iOS-Demo1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS-Demo/iOS-Demo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -996,7 +996,7 @@
 				ORDER_FILE = "$(SRCROOT)/lb.order";
 				OTHER_CFLAGS = "-fsanitize-coverage=func,trace-pc-guard";
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -sanitize-coverage=func -sanitize=undefined";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Lbs.iOS-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lbs.iOS-Demo1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS-Demo/iOS-Demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

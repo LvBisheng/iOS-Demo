@@ -21,17 +21,27 @@ class TestCaptureVideoCtrl: XLBaseViewController {
         self.fd_prefersNavigationBarHidden = true
         manager = CaptureVideoManager.videoPreset(AVCaptureSession.Preset.hd4K3840x2160.rawValue, devicePosition: AVCaptureDevice.Position.back, deletate: self)
         manager.videoPermission()
+        
+
     }
     
-
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         manager.startRunning()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.manager.startRecordVideoAction()
+    }
+    
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         manager.stopRunning()
+        manager.stopRecordVideoAction { url in
+            
+        }
     }
 }
 

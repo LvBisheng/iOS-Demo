@@ -8,6 +8,7 @@
 #import "CaptureVideoManager.h"
 #import <AVFoundation/AVCaptureDevice.h>
 #import <UIKit/UIKit.h>
+#import <Photos/Photos.h>
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -202,6 +203,7 @@ devicePosition:(AVCaptureDevicePosition)devicePosition
     
 }
 
+#pragma mark - 视频录制
 // 开始录像
 - (void)startRecordVideoAction {
     _movieManager.currentDevice = self.videoInput.device;
@@ -220,8 +222,26 @@ devicePosition:(AVCaptureDevicePosition)devicePosition
             NSLog(@"stop record error:%@", error);
             completeBlock(nil);
         } else {
+            [self saveMovieToCameraRoll:url];
             completeBlock([url path]);
         }
+    }];
+}
+
+- (void)saveMovieToCameraRoll:(NSURL *)url {
+    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+        if(status != PHAuthorizationStatusAuthorized) {
+            return;
+        }
+        [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+            PHAssetCreationRequest *videoRequest = [PHAssetCreationRequest creationRequestForAsset];
+            [videoRequest addResourceWithType:PHAssetResourceTypeVideo fileURL:url options:nil];
+        } completionHandler:^(BOOL success, NSError * _Nullable error) {
+            if(error) {
+                NSLog(@"save video error: %@", error);
+            }
+        }];
+        
     }];
 }
 

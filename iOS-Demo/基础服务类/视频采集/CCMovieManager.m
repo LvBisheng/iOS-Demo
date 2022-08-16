@@ -56,23 +56,23 @@
 }
 
 
--(void)writeData:(AVCaptureConnection *)connection video:(AVCaptureConnection*)video audio:(AVCaptureConnection *)audio
+-(void)writeData:(AVCaptureConnection *)connection video:(nullable AVCaptureConnection *)video audio:(nullable AVCaptureConnection *)audio
           buffer:(CMSampleBufferRef)buffer {
     CFRetain(buffer);
     dispatch_async(_movieWritingQueue,^{
         if (connection == video){
             if(!self->_readyToRecordVideo){
-                self->_readyToRecordVideo = [self setupAssetWriterAudioInput:CMSampleBufferGetFormatDescription(buffer)] != nil;
+                self->_readyToRecordVideo = [self setupAssetWriteVideoInput:CMSampleBufferGetFormatDescription(buffer)] == nil;
             }
             if([self inputsReadyToRecord]) {
-                [self WriteSampleBuffer:buffer ofType:AVMediaTypeVideo];
+                [self writeSampleBuffer:buffer ofType:AVMediaTypeVideo];
             }
         } else if(connection == audio) {
             if(!self->_readyToRecordAudio){
                 self->_readyToRecordAudio = [self setupAssetWriterAudioInput:CMSampleBufferGetFormatDescription(buffer)] == nil;
             }
             if([self inputsReadyToRecord]){
-                [self WriteSampleBuffer:buffer ofType:AVMediaTypeAudio];
+                [self writeSampleBuffer:buffer ofType:AVMediaTypeAudio];
             }
         }
         CFRelease(buffer);
@@ -82,7 +82,7 @@
 }
 
 
-- (void)WriteSampleBuffer:(CMSampleBufferRef)sampleBuffer ofType:(NSString *)mediaType {
+- (void)writeSampleBuffer:(CMSampleBufferRef)sampleBuffer ofType:(NSString *)mediaType {
     if(_movieWriter.status == AVAssetWriterStatusUnknown) {
         if([_movieWriter startWriting]){
             [_movieWriter startSessionAtSourceTime:CMSampleBufferGetPresentationTimeStamp(sampleBuffer)];
@@ -124,7 +124,9 @@
     CMVideoDimensions dimensions = CMVideoFormatDescriptionGetDimensions(currentFormatDescription);
     NSUInteger numPixels = dimensions.width * dimensions.height;
     CGFloat bitsPerPixel = numPixels <= (640 * 480) ? 3.0 : 11.0;
-    NSDictionary *compression = @{AVVideoAverageBitRateKey: [NSNumber numberWithInteger:numPixels * bitsPerPixel],};
+    NSDictionary *compression = @{AVVideoAverageBitRateKey: [NSNumber numberWithInteger:numPixels * bitsPerPixel],
+                                  AVVideoMaxKeyFrameIntervalKey: [NSNumber numberWithInteger:30]
+    };
     NSDictionary *settings = @{AVVideoCodecKey: AVVideoCodecH264,
                                AVVideoWidthKey: [NSNumber numberWithInteger:dimensions.width],
                                AVVideoHeightKey: [NSNumber numberWithInteger:dimensions.height],
@@ -147,7 +149,7 @@
 }
 
 // 获取视频旋转矩阵
-- (CGAffineTransform)transformFromCurrentVideoOrientationToOrientation:(AVCaptureVideoOrientation)orientation {
+-(CGAffineTransform)transformFromCurrentVideoOrientationToOrientation:(AVCaptureVideoOrientation)orientation {
     CGFloat orientationAngleOfffset = [self angleOffsetFromPortraiOrientationToOrientation:orientation];
     CGFloat videoOrientationAngleOffset = [self angleOffsetFromPortraiOrientationToOrientation:self.currentorientation];
     CGFloat angleOffset;
