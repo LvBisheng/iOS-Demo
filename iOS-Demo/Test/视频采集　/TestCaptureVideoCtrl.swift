@@ -11,44 +11,47 @@ import FDFullscreenPopGesture
 
 class TestCaptureVideoCtrl: XLBaseViewController {
     
-    var manager: CaptureVideoManager!;
+    var manager: LBSCatureVideoManager!;
 
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor.black
         self.fd_prefersNavigationBarHidden = true
-        manager = CaptureVideoManager.videoPreset(AVCaptureSession.Preset.hd4K3840x2160.rawValue, devicePosition: AVCaptureDevice.Position.back, deletate: self)
+        manager = LBSCatureVideoManager.videoPreset(AVCaptureSession.Preset.hd4K3840x2160.rawValue, devicePosition: AVCaptureDevice.Position.back, deletate: self)
         manager.videoPermission()
         
+        manager.startRunning()
+
+        self.manager.startRecordVideoAction()
 
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        manager.startRunning()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        self.manager.startRecordVideoAction()
+        
+        manager.stopRecordVideoAction { url in
+
+        }
     }
     
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         manager.stopRunning()
-        manager.stopRecordVideoAction { url in
-            
-        }
+      
     }
 }
 
 extension TestCaptureVideoCtrl {
     private func _setupPreviewView() {
         let current = UIApplication.shared.statusBarOrientation
-        let previewLayer = manager.videoPreviewLayer
+        let previewLayer = manager.previewlayer
         // 摆正摄像头镜像
         var rotationAngle: CGFloat = 0
         if(UIInterfaceOrientation.landscapeLeft == current) {
@@ -64,7 +67,7 @@ extension TestCaptureVideoCtrl {
     }
 }
 
-extension TestCaptureVideoCtrl:CaptureVideoManagerDelegate {
+extension TestCaptureVideoCtrl:LBSCatureVideoManagerDelegate {
     func onPermissionOfCamer(_ camerState: AVAuthorizationStatus) {
         if(camerState == .authorized) {
             _setupPreviewView()

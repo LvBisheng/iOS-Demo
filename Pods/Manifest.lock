@@ -13,11 +13,10 @@ DEPENDENCIES:
   - SnapKit (~> 4.2.0)
 
 SPEC REPOS:
-  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
-    - lottie-ios
   trunk:
     - FDFullscreenPopGesture
     - GDPerformanceView-Swift
+    - lottie-ios
     - RSKPlaceholderTextView
     - SnapKit
 
@@ -28,6 +27,6 @@ SPEC CHECKSUMS:
   RSKPlaceholderTextView: fc8c8932546298ec9d5e5572284aa42adb87b066
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: f9a1111f22b32f0988ab5e10017cd5904f29c4b8
+PODFILE CHECKSUM: 86b406270481d423d654cc7c5b2d3e1856a0ca0a
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3

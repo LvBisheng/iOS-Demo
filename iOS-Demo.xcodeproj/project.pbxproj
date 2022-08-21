@@ -67,9 +67,10 @@
 		63F55D61258E4E4500F1259E /* XLLimiCountTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F55D60258E4E4500F1259E /* XLLimiCountTextView.swift */; };
 		63F55D69258E4EF000F1259E /* LimitCountTextViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F55D68258E4EF000F1259E /* LimitCountTextViewDemo.swift */; };
 		63FC72D5255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC72D4255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift */; };
-		9BE8FC9328A88A6F008DD27E /* CaptureVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8FC9128A88A6F008DD27E /* CaptureVideoManager.m */; };
 		9BE8FC9628A88B39008DD27E /* TestCaptureVideoCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8FC9528A88B39008DD27E /* TestCaptureVideoCtrl.swift */; };
-		9BE8FC9928A899E6008DD27E /* CCMovieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8FC9828A899E6008DD27E /* CCMovieManager.m */; };
+		9BE8FC9C28B122DC008DD27E /* LBSCatureVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8FC9B28B122DC008DD27E /* LBSCatureVideoManager.m */; };
+		9BE8FC9F28B12EDD008DD27E /* AVAssetWriteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8FC9E28B12EDD008DD27E /* AVAssetWriteManager.m */; };
+		9BE8FCA228B26BD7008DD27E /* XCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8FCA128B26BD7008DD27E /* XCFileManager.m */; };
 		A44BF13FD125A5C13ECB2AEE /* Pods_iOS_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7DF4B8C2EDB705785DF511 /* Pods_iOS_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -165,11 +166,13 @@
 		63F55D60258E4E4500F1259E /* XLLimiCountTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLLimiCountTextView.swift; sourceTree = "<group>"; };
 		63F55D68258E4EF000F1259E /* LimitCountTextViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitCountTextViewDemo.swift; sourceTree = "<group>"; };
 		63FC72D4255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToupiaoJIeGuoCtrl.swift; sourceTree = "<group>"; };
-		9BE8FC8F28A88A6F008DD27E /* CaptureVideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureVideoManager.h; sourceTree = "<group>"; };
-		9BE8FC9128A88A6F008DD27E /* CaptureVideoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureVideoManager.m; sourceTree = "<group>"; };
 		9BE8FC9528A88B39008DD27E /* TestCaptureVideoCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCaptureVideoCtrl.swift; sourceTree = "<group>"; };
-		9BE8FC9728A899E6008DD27E /* CCMovieManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCMovieManager.h; sourceTree = "<group>"; };
-		9BE8FC9828A899E6008DD27E /* CCMovieManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCMovieManager.m; sourceTree = "<group>"; };
+		9BE8FC9A28B122DC008DD27E /* LBSCatureVideoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBSCatureVideoManager.h; sourceTree = "<group>"; };
+		9BE8FC9B28B122DC008DD27E /* LBSCatureVideoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBSCatureVideoManager.m; sourceTree = "<group>"; };
+		9BE8FC9D28B12EDD008DD27E /* AVAssetWriteManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVAssetWriteManager.h; sourceTree = "<group>"; };
+		9BE8FC9E28B12EDD008DD27E /* AVAssetWriteManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVAssetWriteManager.m; sourceTree = "<group>"; };
+		9BE8FCA028B26BD7008DD27E /* XCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCFileManager.h; sourceTree = "<group>"; };
+		9BE8FCA128B26BD7008DD27E /* XCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCFileManager.m; sourceTree = "<group>"; };
 		B19EB99AEB3AF6676AC58317 /* Pods-iOS-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Demo.debug.xcconfig"; path = "Target Support Files/Pods-iOS-Demo/Pods-iOS-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -533,10 +536,12 @@
 		9BE8FC8D28A8899C008DD27E /* 视频采集 */ = {
 			isa = PBXGroup;
 			children = (
-				9BE8FC8F28A88A6F008DD27E /* CaptureVideoManager.h */,
-				9BE8FC9128A88A6F008DD27E /* CaptureVideoManager.m */,
-				9BE8FC9728A899E6008DD27E /* CCMovieManager.h */,
-				9BE8FC9828A899E6008DD27E /* CCMovieManager.m */,
+				9BE8FCA028B26BD7008DD27E /* XCFileManager.h */,
+				9BE8FCA128B26BD7008DD27E /* XCFileManager.m */,
+				9BE8FC9A28B122DC008DD27E /* LBSCatureVideoManager.h */,
+				9BE8FC9B28B122DC008DD27E /* LBSCatureVideoManager.m */,
+				9BE8FC9D28B12EDD008DD27E /* AVAssetWriteManager.h */,
+				9BE8FC9E28B12EDD008DD27E /* AVAssetWriteManager.m */,
 			);
 			path = "视频采集";
 			sourceTree = "<group>";
@@ -745,19 +750,21 @@
 				63F55D61258E4E4500F1259E /* XLLimiCountTextView.swift in Sources */,
 				63A0B79E24EB706F00F2C9DA /* UIViewControllerExtension.swift in Sources */,
 				63490CAA24EA619400E09BF5 /* ViewController.swift in Sources */,
+				9BE8FC9C28B122DC008DD27E /* LBSCatureVideoManager.m in Sources */,
 				639E255325806410007CADF2 /* TestUIKitViewController.swift in Sources */,
 				63A0B7AC24EBCCEF00F2C9DA /* NomalTagsDemoCtrl.swift in Sources */,
 				6317DAED24EBD2DE000E6DC4 /* LBSNomalTagItemView.swift in Sources */,
 				63B04815268F2F3800C85FA4 /* LBSRSACryptor.m in Sources */,
+				9BE8FC9F28B12EDD008DD27E /* AVAssetWriteManager.m in Sources */,
 				63EE92392682E796004B50CD /* LBSKeyChainUtil.m in Sources */,
 				63490CDB24EA664900E09BF5 /* BaseWebViewController.swift in Sources */,
 				635E6D1824EAC67E000BACC9 /* TableTagsDemoCtrl.swift in Sources */,
 				637DF0FE25F86E1700C3B383 /* MacroTool.swift in Sources */,
 				63CFEB4F265F70CC00F92A60 /* XLCustomSlider.swift in Sources */,
 				63490CD624EA625300E09BF5 /* Test_EntryViewController.swift in Sources */,
-				9BE8FC9328A88A6F008DD27E /* CaptureVideoManager.m in Sources */,
 				63490CA624EA619400E09BF5 /* AppDelegate.swift in Sources */,
 				63A7D4752680797F00523F4A /* LBSBinarySort.m in Sources */,
+				9BE8FCA228B26BD7008DD27E /* XCFileManager.m in Sources */,
 				9BE8FC9628A88B39008DD27E /* TestCaptureVideoCtrl.swift in Sources */,
 				63490CE024EA84B400E09BF5 /* LBSJSHandleService.swift in Sources */,
 				63FC72D5255994BD003A3D18 /* ToupiaoJIeGuoCtrl.swift in Sources */,
@@ -775,7 +782,6 @@
 				6331827825E63A260066476F /* LBSCanDeleteTagItemView.swift in Sources */,
 				63BDF751255A392F00FE8351 /* XLTabBar.swift in Sources */,
 				63B04821268F3F5D00C85FA4 /* LBSEncryptionTools.m in Sources */,
-				9BE8FC9928A899E6008DD27E /* CCMovieManager.m in Sources */,
 				637DF11025F871CC00C3B383 /* XLBaseNavViewController.swift in Sources */,
 				637DF11825F876A800C3B383 /* UINavigationControllerExtension.swift in Sources */,
 				6331827325E638080066476F /* CustomTagDemoCtrl.swift in Sources */,
